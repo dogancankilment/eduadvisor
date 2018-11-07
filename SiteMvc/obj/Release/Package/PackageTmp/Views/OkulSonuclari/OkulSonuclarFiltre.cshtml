@@ -1,0 +1,79 @@
+﻿<div class="col-lg-3 col-md-3 col-sm-3" id="okul_sonuc_filtreleme">
+    <div class="col-xs-12 marginbottom15 margintop20">
+        @for (int i = 0; i < 5; i++)
+        {
+            <div class="yildizsatir">
+                <span class="yildizchck">
+                    <input class="chck_yildizbes" type="checkbox" value="@i">
+                </span>
+                <ul>
+                    @for (int k = i; k < 5; k++)
+                    {
+                        <li>
+                            <img src="/Content/images/filtreleme_yildiz_dolu.png" class="yildiz_bos" alt="EduAdvisor @Resources.Varsayilan.b_puani">
+                        </li>
+                    }
+                    @for (int k = 0; k < i; k++)
+                    {
+                        <li>
+                            <img src="/Content/images/filtreleme_yildiz_bos.png" class="yildiz_bos" alt="EduAdvisor @Resources.Varsayilan.b_puani">
+                        </li>
+                    }
+                </ul>
+            </div>
+        }
+    </div>
+    <div class="aramaokulsonuc">
+        <div class="col-xs-12">
+            <div class="form-group">
+                <h6 class="marginbottom10">@Resources.Varsayilan.b_egitimturu</h6>
+                <select id="okul_filtre_egitim_turu" class="form-control">
+                    @{
+                        List<dll.Models.egitim_turleri> EgitimTurleri = (List<dll.Models.egitim_turleri>)ViewBag.EgitimTurleri;
+                        for (int i = 0; i < EgitimTurleri.Count; i++)
+                        {
+                            <option value="@EgitimTurleri[i].seo_url" @(ViewBag.egitim_id == EgitimTurleri[i].id.ToString() ? "selected" : "" )>@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri[i].adi : EgitimTurleri[i].adi_ingilizce)</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="form-group">
+                <h6 class="marginbottom10">@Resources.Varsayilan.b_aranacakkelime</h6>
+                <input type="text" id="okul_filtre_aramakelime" class="form-control" style="border-bottom-right-radius: 0; border-top-right-radius: 0;" value="@ViewBag.aranacak_kelime" />
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="form-group">
+                <h6 class="marginbottom10">@Resources.Varsayilan.b_ulke</h6>
+                <select id="okul_filtre_ulke" class="form-control" onchange="UlkeDegisti(event, 'okul_filtre_sehir')">
+                    @{
+                        List<EduApi.SiteModels.ValueTextModel> Ulkeler = (List<EduApi.SiteModels.ValueTextModel>)ViewBag.Ulkeler;
+                        for (int i = 0; i < Ulkeler.Count; i++)
+                        {
+                            <option @(ViewBag.ulke_id == Ulkeler[i].value ? "selected" : "") value="@Ulkeler[i].value">@Ulkeler[i].text</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-12 marginbottom10" id="eyalet_ust" style="display:none">
+            <h6 class="marginbottom10">@Resources.Varsayilan.b_eyalet</h6>
+            <select name="drpeyaletler" id="drpeyaletler" class="form-control" onchange="EyaletDegisti(event, 'okul_filtre_sehir')">
+                <option value="-1">@Resources.Varsayilan.b_eyaletsec</option>
+            </select>
+        </div>
+        <div class="col-xs-12 marginbottom10">
+            <h6 class="marginbottom10">@Resources.Varsayilan.b_sehir</h6>
+            <select id="okul_filtre_sehir" class="form-control">
+                <option value="-1">@Resources.Varsayilan.b_seciniz</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-xs-12 marginbottom10">
+        <a id="btnAra" class="morbutton pull-right" href="#" onclick="OkulSonuclariGetir(event)">@Resources.Varsayilan.b_filtrele</a>
+        <a id="temizle" class="morbutton pull-right marginright10" href="#">@Resources.Varsayilan.b_temizle</a>
+        <input type="hidden" id="listelenen_egitim_turu" value="@ViewBag.egitim_id" />
+    </div>
+</div>

@@ -1,0 +1,51 @@
+﻿@model List<dll.Models.okullar>
+<div class="tab-pane" id="tab_ziyaret" style="margin-left: 36px;">
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        <div class="nobottommargin col-md-6">
+            <div class="mpost clearfix">
+                <div class="entry-image" style="width:105px;height:105px;">
+                    <a href="@Url.RouteUrl("OkulDetay", new { GrupSeo = Model[i].okul_grup_iliski.FirstOrDefault().okul_gruplari.seo_url, OkulSeo = Model[i].seo_url })">
+                        <img src="~/Content/img/okul/@Model[i].logo" class="img-responsive" alt="@Model[i].okul_grup_iliski.FirstOrDefault().okul_gruplari.adi" style="height:105px !important;width:auto !important;">
+                    </a>
+                </div>
+                <div class="entry-c pull-left">
+                    <div class="entry-title">
+                        <h4>
+                            <a href="@Url.RouteUrl("OkulDetay", new { GrupSeo = Model[i].okul_grup_iliski.FirstOrDefault().okul_gruplari.seo_url, OkulSeo = Model[i].seo_url })" class="text-center">
+                                <label class="marginbottom0">@Model[i].okul_grup_iliski.FirstOrDefault().okul_gruplari.adi</label>
+                                <br />
+                                <small>@Model[i].adi</small>
+                            </a>
+                        </h4>
+                        <ul class="clearfix marginbottom5">
+                            <li>
+                                <a href='@Url.RouteUrl("OkulDetay", new { GrupSeo = Model[i].okul_grup_iliski.FirstOrDefault().okul_gruplari.seo_url, OkulSeo = Model[i].seo_url })'>
+                                    <i class="icon-comments"></i>@(Resources.Varsayilan.b_yorumlar + " :" + Model[i].yorums.Where (x =>x.onay == 1 && x.uye_sildi == false).ToList().Count)
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="rating-container rating-lg fontawesome-icon okulortpuanyuzde" data-content="★★★★★">
+                            <div class="rating-stars" data-content="★★★★★" style="width:@(Model[i].okul_grup_iliski.FirstOrDefault().okullar.yorums.Where (c =>c.onay == 1 && c.uye_sildi == false).ToList().Count > 1 ?
+                                        (Model[i].okul_grup_iliski.FirstOrDefault().okullar.yorums.Where (c =>c.onay == 1 && c.uye_sildi == false).Select(c => c.puani).Sum() / (decimal)Model[i].okul_grup_iliski.FirstOrDefault().okullar.yorums.Where (c =>c.onay == 1 && c.uye_sildi == false).ToList().Count).ToString()
+                                         : (Model[i].okul_grup_iliski.FirstOrDefault().okullar.yorums.Where (c =>c.onay == 1 && c.uye_sildi == false).ToList().Count > 0 ? Model[i].okul_grup_iliski.FirstOrDefault().okullar.yorums.Where (c =>c.onay == 1 && c.uye_sildi == false).Select(c => c.puani).FirstOrDefault().ToString() : "0"))"></div>
+                        </div>
+                        <a class="btn btngoruntule" href="@Url.RouteUrl("OkulDetay", new { GrupSeo = Model[i].okul_grup_iliski.FirstOrDefault().okul_gruplari.seo_url, OkulSeo = Model[i].seo_url })">
+                            @Resources.Varsayilan.b_simdigor
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+    }
+    @if (Model.Count == 0)
+    {
+        <div class="alert alert-success">
+            <i class="icon-gift"></i><strong>
+                @Resources.Varsayilan.i_eduziyaret<br />
+                @Resources.Varsayilan.i_eduziyareticerik.<br />
+            </strong>
+        </div>
+    }
+</div>

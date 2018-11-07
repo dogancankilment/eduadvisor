@@ -1,0 +1,337 @@
+﻿@model EduApi.SiteModels.OkulDetayModel
+@{
+    ViewBag.Title = Model.grupadi + " / " + Model.okul.adi;
+}
+
+@section sayfa_css{
+    <link rel="stylesheet" href="~/Content/css/datepicker.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/css/components/timepicker.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/css/components/daterangepicker.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/css/components/bs-rating.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/css/components/bs-datatable.css" type="text/css" />
+}
+
+<div class="container margintop15" id="okul_detay_ust" style="transform: none;">
+    <input type="hidden" id="drm" value="@(HttpContext.Current.Session["giris_yapan"] == null ? "0" : "1")" />
+    @{ Html.RenderPartial("UstBilgi", Model); }
+    <div class="col-xs-12 padding0 tabs tabs-alt tabs-justify clearfix" id="tab-10" style="transform: none;">
+        <ul class="tab-nav clearfix">
+            <li id="detaytabs1" class="yanadondur">
+                <a href="#tabs-37">
+                    <i class="icon-camera" aria-hidden="true" style="font-size: 18px; line-height: 2.5; color: #78c6bb;"></i>
+                    <label class="tabsyoket">@Resources.Varsayilan.b_kurumsalfoto</label>
+                </a>
+            </li>
+            @if (Model.okul.okul_lokasyon != null)
+            {
+                <li id="detaytabs3" class="yanadondur">
+                    <a href="#harita">
+                        <i class="icon-map-marker" style="font-size: 18px; line-height: 2.5; color: #78c6bb;"></i>
+                        <label class="tabsyoket">@Resources.Varsayilan.b_harita</label>
+                    </a>
+                </li>
+            }
+            <li id="detaytabs4" class="yanadondur">
+                <a href="#tabs-40" id="yorumagitari">
+                    <i class="icon-comments-alt" style="font-size: 18px; line-height: 2.5; color: #78c6bb;"></i>
+                    <label class="tabsyoket">@Resources.Varsayilan.b_biryorumyaz</label>
+                </a>
+            </li>
+            @if (Model.okul.fiyats.Count > 0)
+            {
+                <li id="detaytabs4" class="yanadondur">
+                    <a href="#tabs-fiyat" id="fiyatlistesigit">
+                        <i class="icon-money" style="font-size: 18px; line-height: 2.5; color: #78c6bb;"></i>
+                        <label class="tabsyoket">@Resources.Varsayilan.fiyat_listesi</label>
+                    </a>
+                </li>
+            }
+        </ul>
+        <div class="tab-container">
+            <div class="tab-content clearfix" id="tabs-37">
+                <div class="col-lg-8  col-md-8 col-sm-8 col-xs-8 pull-left" style="float: left; padding: 0">
+                    <div id="jssor_1" class="leftver" style="position: relative; margin: 0px auto; top: 0px; width: 760px; height: 433.2px; overflow: hidden; visibility: hidden; background-color: rgb(36, 38, 46);">
+                        <div style="position: absolute; top: 0px; left: 0px; width: 800px; height: 456px; transform-origin: 0px 0px 0px; transform: scale(0.95);">
+                            <div class="leftver" style="position: relative; margin: 0px auto; top: 0px; width: 800px; height: 456px; overflow: visible; visibility: visible; background-color: rgb(36, 38, 46); display: block; left: 0px;">
+                                <div data-u="loading" style="position: absolute; top: 0px; left: 0px; background-color: rgba(0,0,0,0.7);">
+                                    <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                                </div>
+
+                                <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 800px; height: 356px; overflow: hidden;">
+                                    @{
+                                        List<EduApi.SiteModels.ValueTextModel> resimler = Model.okul.okul_fotograflar.Select(c => new EduApi.SiteModels.ValueTextModel
+                                        {
+                                            value = "https://eduadvisor.co.uk/Content/img/okul/" + c.resim_adi,
+                                            text = Resources.Varsayilan.yonetim
+                                        }).ToList();
+                                        var yorumlar = Model.okul.yorums.Where(x => x.onay == 1 && x.uye_sildi == false).ToList();
+                                        for (int i = 0; i < yorumlar.Count; i++)
+                                        {
+                                            List<dll.Models.yorum_resimleri> tmp = yorumlar[i].yorum_resimleri.ToList();
+                                            for (int j = 0; j < tmp.Count; j++)
+                                            {
+                                                resimler.Add(new EduApi.SiteModels.ValueTextModel
+                                                {
+                                                    value = "https://eduadvisor.co.uk/Content/img/yorum/" + tmp[j].resim_adi,
+                                                    text = yorumlar[i].baslik
+                                                });
+                                            }
+                                        }
+                                        for (int i = 0; i < resimler.Count; i++)
+                                        {
+                                            <div>
+                                                <span class="labelbireysel">@resimler[i].text</span>
+                                                <img data-u="image" src="@resimler[i].value" alt="EduAdvisor/@Model.okul.adi/@resimler[i].text" />
+                                                <img data-u="thumb" src="@resimler[i].value" alt="EduAdvisor/@Model.okul.adi/@resimler[i].text thumb" />
+                                            </div>
+                                        }
+                                    }
+                                </div>
+                                <div data-u="thumbnavigator" class="jssort01" style="position: absolute; left: 0px; bottom: 0px; width: 800px; height: 100px;" data-autocenter="1">
+                                    <div data-u="slides" style="cursor: default;">
+                                        <div data-u="prototype" class="p">
+                                            <div class="w">
+                                                <div data-u="thumbnailtemplate" class="t"></div>
+                                            </div>
+                                            <div class="c"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span data-u="arrowleft" class="jssora05l" style="top: 158px; left: 8px; width: 40px; height: 40px;"></span>
+                                <span data-u="arrowright" class="jssora05r" style="top: 158px; right: 8px; width: 40px; height: 40px;"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @if (Model.okul.okul_indirimleri.Count > 0)
+                {
+                    <div id="Govde_indirim_panel1" class="col-lg-4  col-md-4 col-sm-4 col-xs-4 pull-left" style="float: left; padding-right: 0;">
+                        <div class="reflection-container reflection-content">
+                            <label id="Govde_indirim_orani" style="color: #a02f89 !important;">@Model.okul.okul_indirimleri.FirstOrDefault().orani%</label>
+                            <img src="https://eduadvisor.co.uk/Content/images/maskot1.png" class="img-responsive maskot" alt="EduAdvisor @Resources.Varsayilan.maskot">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-lg-8  col-md-8 col-sm-8 col-xs-12 pull-left" style="float: left; padding: 0"></div>
+                        <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12 pull-left" style="float: left; padding-right: 0; z-index: 2;">
+                            <a href="@Url.RouteUrl("KampanyaBilgi")" target="_blank" class="detaylibigisag btn btn-danger bgcolor border-color" id="Govde_detaylibilgi1">@Resources.Varsayilan.b_detaylibilgi</a>
+                            <input type="submit" value="@Resources.Varsayilan.b_kayitolmakistiyorum" id="onkayit" class="btn btn-danger bgcolor border-color" onclick="OnKayitSayfasiGetir('@Model.okul.okul_grup_iliski.FirstOrDefault().okul_gruplari.seo_url','@Model.okul.seo_url',@(HttpContext.Current.Session["giris_yapan"] == null ? "0" : "1"))">
+                            <div id="onkayituyari" style="position: absolute; top: 0;display:none;">
+                                <div class="alert alert-danger">
+                                    <a style="font-size:33px;" onclick="gorunmezyap(e,onkayituyari)" href="#" class="close">&times;</a>
+                                    <i class="icon-gift"></i><strong>@Resources.Varsayilan.u_eduoturumac</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            @if (Model.okul.okul_lokasyon != null)
+            {
+                <div id="harita" class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-2" role="tabpanel" aria-hidden="true" style="display: none;">
+                    <input type="hidden" id="lat" value="@Model.okul.okul_lokasyon.lat" />
+                    <input type="hidden" id="lng" value="@Model.okul.okul_lokasyon.lng" />
+                    <div id="okuldetay-map" class="gmap" style="height:584px"></div>
+                </div>
+            }
+            <div id="tabs-40" class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="yorumagitari" role="tabpanel" aria-hidden="true" style="display: none;">
+                @{ Html.RenderPartial("OkulDetayYorumForm", Model.okul); }
+            </div>
+            @if (Model.okul.fiyats.Count > 0)
+            {
+                Html.RenderPartial("FiyatListesi", Model.okul);
+            }
+        </div>
+        <div class="col-md-12 margintop40" id="yorum_ozellikler" style="padding-left: 0px !important; padding-right: 0px !important; transform: none;">
+            <aside class="col-md-3" id="sidebar" style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px; padding-left: 0px !important;">
+                <div class="theiaStickySidebar" style="padding-top: 0px; padding-bottom: 1px; position: static; top: 215px; left: 381.5px;">
+                    <div class="box_style_1 expose" id="booking_box">
+                        <div class="row">
+                            <nav style="text-align: left;">
+                                <a class="btn outline kutubutton" href="#detay">@Resources.Varsayilan.b_detay</a>
+                                <a id="okul_programlari" class="btn outline kutubutton" href="#okul_programlari">@Resources.Varsayilan.b_okulprog</a>
+                                <a class="btn outline kutubutton" href="#yorumlarpanel">@Resources.Varsayilan.b_yorumlar</a>
+                                <a id="yorumyazbtnd" class="btn outline kutubutton yorumyazbtn" href="#">@Resources.Varsayilan.b_biryorumyaz</a>
+                            </nav>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </aside>
+            <div class="col-sm-9" style="padding-left: 15px !important; padding-right: 0 !important;">
+                <div class="clearfix">
+                    @if (Model.okul.egitim_turleri.program_var)
+                    {
+                        List<EduApi.SiteModels.ValueTextModel> bolumler =
+                            Model.okul.yorums.Where(x => x.onay == 1 && x.uye_sildi == false).
+                            Select(x => x.program_havuzu.adi).
+                            GroupBy(x => x).
+                            Select(b => new EduApi.SiteModels.ValueTextModel
+                            {
+                                text = b.Key + " (" + b.Count() + ")",
+                                value = Model.okul.yorums.Where(c => c.program_havuzu.adi == b.Key && c.onay == 1 && c.uye_sildi == false).FirstOrDefault().program_id.ToString()
+                            }).ToList();
+                        if (bolumler.Count > 0)
+                        {
+                            <div id="comments-title" class="begeni" style="font-size: 18px; margin: 10px 0 20px 0;">
+                                <div id="yorumdrop" class="col-xs-6" style="padding: 0;">
+                                    <select id="drpyorumtur" class="form-control" onchange="OkulDetayYorumlariFiltrele(event)">
+                                        <option selected="selected" value="-1">@Resources.Varsayilan.b_tumu</option>
+                                        @if (bolumler.Count > 1)
+                                        {
+                                            for (int i = 0; i < bolumler.Count; i++)
+                                            {
+                                                <option value="@bolumler[i].value">@bolumler[i].text</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                                <span id="yorumsayisi" style="top: 8px; left: 7px; position: relative;">@(Resources.Varsayilan.toplam_yorum + " :" + Model.okul.yorums.Where(x => x.onay == 1 && x.uye_sildi == false).ToList().Count)</span>
+                            </div>
+                            <hr />
+                        }
+                    }
+                    @if (yorumlar.Count > 0)
+                    {
+                        <div id="okul_detay_yorumlar">
+                            @for (int i = 0; i < yorumlar.Count; i++)
+                            {
+                                <div class="col-md-12 filtre_hepsi filtre_@(yorumlar[i].program_id)">
+                                    <div class="avatar pull-left marginright10">
+                                        <img src="~/Content/img/kul_profil/@yorumlar[i].uyeler.fotograf" height="100" alt="EduAdvisor @(yorumlar[i].uyeler.adi + " " + yorumlar[i].uyeler.soyadi)">
+                                    </div>
+                                    <div class="comment_right clearfix">
+                                        <div class="comment_info">
+                                            <span>
+                                                @(yorumlar[i].uyeler.adi + " " + yorumlar[i].uyeler.soyadi + " | " + yorumlar[i].tarih.ToString("dd MMMMM yyyy"))
+                                                @for (int j = 0; j < yorumlar[i].puani; j++)
+                                                {
+                                                    <i class="icon-star3" style="color: #9f2f89;"></i>
+                                                }
+                                            </span>
+                                            <span class="yorumbegeni_sayisi"> | @(Resources.Varsayilan.begeni + " : ") </span><span id="yorum_begeni_sayisi_@yorumlar[i].id">@(yorumlar[i].yorum_begeniler.Count + yorumlar[i].yorum_begeni_okul.Count)</span>
+                                        </div>
+                                        <p style="margin: 0">
+                                            @if (Model.okul.egitim_turleri.program_var)
+                                            {
+                                                <span style="color: #9f2f89;">
+                                                    @(yorumlar[i].onkayit_egitim_turleri.adi + " - " + yorumlar[i].program_havuzu.adi)<br>
+                                                </span>
+                                            }
+                                            <strong>@yorumlar[i].baslik</strong>
+                                            <br>
+                                            @yorumlar[i].icerik
+                                        </p>
+                                        <a data-s="@(yorumlar[i].yorum_begeniler.Where(x => x.uyeler.mail == (HttpContext.Current.Session["giris_yapan"] == null ? "-1" : HttpContext.Current.Session["giris_yapan"].ToString())).ToList().Count)" onclick="btnbegen(event,@yorumlar[i].id)" class="btnbegen" href="#">
+                                            @(yorumlar[i].yorum_begeniler.Where(x => x.uyeler.mail == (HttpContext.Current.Session["giris_yapan"] == null ? "-1" : HttpContext.Current.Session["giris_yapan"].ToString())).ToList().Count == 0 ? Resources.Varsayilan.begen : Resources.Varsayilan.begenmekten_vazgec)
+                                        </a>
+                                        <span>| </span>
+                                        <a class="yorum_sikayet_et" data-v="@yorumlar[i].id" href="#" data-target="#YorumSikayetModal" data-toggle="modal">@Resources.Varsayilan.sikayet_et</a>
+                                    </div>
+                                    @if (yorumlar[i].yorum_yanitlari != null && yorumlar[i].yorum_yanitlari.onay == 1)
+                                    {
+                                        <div class="col-md-offset-1 pull-left margintop10">
+                                            <div class="avatar pull-left marginright10 pull-left">
+                                                <a href="#">
+                                                    <img src="@("https://eduadvisor.co.uk/Content/img/okul/" + yorumlar[i].okullar.logo)" height="100" alt="EduAdvisor @Model.okul.adi Logo">
+                                                </a>
+                                            </div>
+                                            <div class="comment_right clearfix pull-left">
+                                                <p style="margin: 0">
+                                                    <strong class="erguvan">@yorumlar[i].okullar.adi</strong><br />
+                                                    <span>@yorumlar[i].yorum_yanitlari.yanit</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            }
+                        </div>
+                    }
+                    @if (yorumlar.Count == 0)
+                    {
+                        <div class="col-xs-12 text-center">
+                            <img src="@Resources.Varsayilan.yorum_bulunamadi" style="height: 300px; margin: 0 auto;" class="img-responsive" alt="EduAdvisor @Resources.Varsayilan.b_yorumyazmayabasla" />
+                            <button id="yorumyazmayabasla" class="button button-small button-circle button-green yorumyazbtn">@Resources.Varsayilan.b_yorumyazmayabasla</button>
+                        </div>
+                    }
+                    <div class="col-xs-12 paddingsagsol0 margintop35" id="detay">
+                        @if (Model.okul.aciklama != null && Model.okul.aciklama.Length > 10)
+                        {
+                            <div id="Govde_okul_hakkindaaciklama" class="fancy-title title-bottom-border marginbottom5">
+                                <h4 class="marginbottom0">@Resources.Varsayilan.b_okulhakaciklama</h4>
+                            </div>
+                            <div id="okul_aciklama" class="col-xs-12 paddingsagsol0">
+                                @Html.Raw(Model.okul.aciklama.Replace("\\n", "<br/>").Replace("\\r", "").Replace("\n", "<br/>").Replace("\r", ""))
+                            </div>
+                        }
+                        @if (Model.okul.okul_ozellikleri.Count > 0)
+                        {
+                            var ozellikler = Model.okul.okul_ozellikleri.ToList();
+                            <div class="fancy-title title-bottom-border marginbottom5" style="top:5px">
+                                <h4 class="marginbottom0">@Resources.Varsayilan.okul_ozellikleri</h4>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <ul class="okyerlestir">
+                                        @for (int i = 0; i < ozellikler.Count; i++)
+                                        {
+                                            <li class="col-sm-6" style="position: relative; padding: 15px 5px 10px 70px; min-height: 65px; border-bottom: 1px solid #ededed; display: table;">
+                                                <span class="glyphicon glyphicon-tick" aria-hidden="true"></span>
+                                                @ozellikler[i].egitim_ozellikleri.ozellikler.adi
+                                            </li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    @if (Model.okul.okul_programlari.Count > 0 && Model.okul.egitim_turleri.program_var)
+                    {
+                        var programlari = Model.okul.okul_programlari.ToList();
+                        <div class="col-xs-12 paddingsagsol0 margintop35">
+                            <div class="fancy-title title-bottom-border marginbottom5">
+                                <h4 class="marginbottom0">@Resources.Varsayilan.b_okulprog</h4>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <ul class="okyerlestir">
+                                        @for (int i = 0; i < programlari.Count; i++)
+                                        {
+                                            <li class="col-sm-6" style="position: relative; padding: 15px 5px 10px 70px; min-height: 65px; border-bottom: 1px solid #ededed; display: table;">
+                                                <span class="glyphicon glyphicon-tick" aria-hidden="true"></span>
+                                                @programlari[i].program_havuzu.adi
+                                            </li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        @Html.Partial("YorumSikayet")
+        <div class="modal fade" id="YorumSonrasiAnket" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            @Html.Partial("YorumSonrasiAnket")
+        </div>
+    </div>
+</div>
+
+
+@section sayfa_js{
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOn_vQHWDPeYYEQCQDMmuBYLOEzS6BsfA&libraries=places"></script>
+    <script type="text/javascript" src="~/Content/js/jssor.slider-23.1.5.mini.js"></script>
+    <script type="text/javascript" src="~/Content/js/components/moment.js"></script>
+    <script type="text/javascript" src="~/Content/js/datepicker.js"></script>
+    <script type="text/javascript" src="~/Content/js/components/timepicker.js"></script>
+    <script type="text/javascript" src="~/Content/js/components/daterangepicker.js"></script>
+    <script type="text/javascript" src="~/Content/locales/bootstrap-datepicker.tr.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/components/star-rating.js"></script>
+    <script type="text/javascript" src="~/Content/js/theia-sticky-sidebar.js"></script>
+    <script type="text/javascript" src="~/Content/js/indirim.js"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.vmap.js"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.gmap.js"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.cropit.js"></script>
+    <script type="text/javascript" src="~/Content/js/components/bs-datatable.js"></script>
+}

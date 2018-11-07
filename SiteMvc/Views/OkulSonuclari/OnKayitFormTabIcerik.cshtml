@@ -1,0 +1,201 @@
+﻿@model EduApi.SiteModels.OnKayitModel
+<div>
+    <div id="ptab1">
+        <div class="col_half">
+            <label>@Resources.Varsayilan.b_adi <small class="okayildiz">*</small></label>
+            <input type="text" id="txt_kisiadi" class="sm-form-control onkayit-js" value="@Model.Uye_Adi" name="adi" />
+        </div>
+        <div class="col_half col_last">
+            <label>@Resources.Varsayilan.b_soyadi <small class="okayildiz">*</small></label>
+            <input type="text" id="txt_kisisoyadi" class="sm-form-control onkayit-js" value="@Model.Uye_Soyadi" name="soyadi" />
+        </div>
+        <div class="col_half">
+            <label>@Resources.Varsayilan.b_cinsiyet</label>
+            <select id="drp_cinsiyet" class="form-control onkayit-js" name="cinsiyet">
+                <option value="0" @(Model.Cinsiyet == "0" ? "selected" : "")>@Resources.Varsayilan.b_bayan</option>
+                <option value="1" @(Model.Cinsiyet == "1" ? "selected" : "")>@Resources.Varsayilan.b_bay</option>
+                <option value="2" @(Model.Cinsiyet == "2" ? "selected" : "")>@Resources.Varsayilan.b_belirtmekistemiyorum</option>
+            </select>
+        </div>
+        <div class="col_half col_last">
+            <label>@Resources.Varsayilan.b_milliyeti</label>
+            <select id="drp_milliyeti" class="form-control onkayit-js" name="milliyet">
+                @{
+                    List<EduApi.SiteModels.ValueTextModel> Ulkeler = (List<EduApi.SiteModels.ValueTextModel>)ViewBag.Ulkeler;
+                    for (int i = 0; i < Ulkeler.Count; i++)
+                    {
+                        <option value="@Ulkeler[i].value" @(Model.ulke_id.ToString() == Ulkeler[i].value ? "selected" : "")>@Ulkeler[i].text</option>
+                    }
+                }
+            </select>
+        </div>
+        <div class="col_half">
+            <label>@Resources.Varsayilan.b_dogumtarihi <small class="okayildiz">*</small></label>
+            <div id="dogumtarihi" class="input-daterange">
+                <div class="input-daterange input-group" style="display: block">
+                    <input type="text" id="kisidogumtarihi" name="dogum_tarih" onblur="BosKontrol(this)" class="sm-form-control tleft format deger-girilmicek onkayit-js" data-date-end-date="0d" />
+                </div>
+            </div>
+        </div>
+        <div class="col_full"></div>
+        <a href="#" class="button button-3d nomargin fright tab-linker" onclick="OnKayitIlkAdimIleri(event)">@Resources.Varsayilan.b_ileri &rArr;</a>
+        <a href="#" class="button button-3d nomargin fright tab-linker asililkileri hide" rel="2">@Resources.Varsayilan.b_ileri  &rArr;</a>
+    </div>
+    <div id="ptab2" style="display:none">
+        <div>
+            <div class="col_full">
+                <label>@Resources.Varsayilan.b_dogumyerulke <small class="okayildiz">*</small></label>
+                <select id="on_kayit_dogum_ulke" class="form-control onkayit-js" onchange="UlkeDegisti(event, 'on_kayit_dogum_sehir')" name="dogum_ulke">
+                    @{
+                        for (int i = 0; i < Ulkeler.Count; i++)
+                        {
+                            <option value="@Ulkeler[i].value" @(Model.ulke_id.ToString() == Ulkeler[i].value ? "selected" : "")>@Ulkeler[i].text</option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="col_full" id="eyalet_ust" style="display:none">
+                <label>@Resources.Varsayilan.b_dogumeyalet <small class="okayildiz">*</small></label>
+                <select name="drpeyaletler" id="drpeyaletler" class="form-control" onchange="EyaletDegisti(event, 'on_kayit_dogum_sehir')">
+                    <option value="-1">@Resources.Varsayilan.b_eyaletsec</option>
+                </select>
+            </div>
+            <div class="col_full">
+                <label>@Resources.Varsayilan.b_dogumyersehir <small class="okayildiz">*</small></label>
+                <select id="on_kayit_dogum_sehir" Class="form-control onkayit-js" name="dogum_sehir">
+                    <option value="-1">@Resources.Varsayilan.b_seciniz</option>
+                </select>
+            </div>
+            <div class="col_full">
+                <label>@Resources.Varsayilan.b_yasadiginizulke <small class="okayildiz">*</small></label>
+                <select id="on_kayit_yasadigi_ulke" Class="form-control onkayit-js" onchange="UlkeDegisti(event, 'on_kayit_yasadigi_sehir')" name="yasadigi_ulke">
+                    @{
+                        for (int i = 0; i < Ulkeler.Count; i++)
+                        {
+                            <option value="@Ulkeler[i].value" @(Model.ulke_id.ToString() == Ulkeler[i].value ? "selected" : "")>@Ulkeler[i].text</option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="col_full" id="eyalet_ust1" style="display:none">
+                <label>@Resources.Varsayilan.b_yasadigieyalet <small class="okayildiz">*</small></label>
+                <select name="drpeyaletler" id="drpeyaletler1" class="form-control" onchange="EyaletDegisti(event, 'on_kayit_yasadigi_sehir')">
+                    <option value="-1">@Resources.Varsayilan.b_eyaletsec</option>
+                </select>
+            </div>
+            <div class="col_full">
+                <label>@Resources.Varsayilan.b_yasadiginsehir <small class="okayildiz">*</small></label>
+                <select id="on_kayit_yasadigi_sehir" Class="form-control onkayit-js" name="yasadigi_sehir">
+                    <option value="-1">@Resources.Varsayilan.b_seciniz</option>
+                </select>
+            </div>
+        </div>
+        <div class="col_half ">
+            <label>@Resources.Varsayilan.b_passno </label>
+            <input type="text" id="txtpassNo" class="sm-form-control onkayit-js" name="pass_no" />
+        </div>
+        <div class="col_half col_last">
+            <label>@Resources.Varsayilan.b_passgectarih </label>
+            <div id="passtarihi" class="input-daterange">
+                <div class="input-daterange input-group" style="display: block">
+                    <input type="text" id="kisipasstarihi" class="sm-form-control tleft format deger-girilmicek onkayit-js" name="pass_tarih" />
+                </div>
+            </div>
+        </div>
+        <a href="#" class="button button-3d nomargin tab-linker" rel="1">@Resources.Varsayilan.b_geri</a>
+        <a href="#" class="button button-3d nomargin fright tab-linker" onclick="OnKayitIkinciAdimIleri(event)">@Resources.Varsayilan.b_ileri</a>
+        <a href="#" class="button button-3d nomargin fright tab-linker asilikinciileri hide" rel="3">@Resources.Varsayilan.b_ileri</a>
+    </div>
+    <div id="ptab3" style="display:none">
+        <div class="col_full">
+            <label>@Resources.Varsayilan.b_acikadres</label>
+            <textarea id="txtacikadres" class="sm-form-control bottommargin-sm onkayit-js" rows="4" style="resize:none" name="acik_adres">@Model.uye_adres</textarea>
+        </div>
+        <div class="col_full ">
+            <label>@Resources.Varsayilan.b_telnoev</label>
+            <input type="text" id="txt_evnum" class="sm-form-control telefon-girilecek onkayit-js" name="ev_no" />
+        </div>
+        <div class="col_full">
+            <label>@Resources.Varsayilan.b_telcep <small class="okayildiz">*</small></label>
+            <input type="text" id="txt_cepno" class="sm-form-control telefon-girilecek onkayit-js" value="@Model.Telefon" onblur="BosKontrol(this)" name="cep_no" />
+        </div>
+        <div class="col_full">
+            <label>@Resources.Varsayilan.bslk_email <small class="okayildiz">*</small></label>
+            <input type="text" id="txt_kisiemail" class="sm-form-control onkayit-js" value="@Model.Email" onblur="BosKontrol(this)" name="mail" />
+        </div>
+        <a href="#" class="button button-3d nomargin tab-linker" rel="2">@Resources.Varsayilan.b_geri</a>
+        <a href="#" class="button button-3d nomargin fright tab-linker" onclick="OnKayitUcuncuAdimIleri(event)">@Resources.Varsayilan.b_ileri</a>
+        <a href="#" class="button button-3d nomargin fright tab-linker asilucuncuileri hide" rel="4">@Resources.Varsayilan.b_ileri</a>
+    </div>
+    <div id="ptab4" style="display:none">
+        <div class="col_full">
+            <label>@Resources.Varsayilan.b_egitimdusuntarih <small class="okayildiz">*</small></label>
+            <div id="egitimtarihi" class="input-daterange onkayitformujs">
+                <div class="input-daterange input-group" style="display: block">
+                    <input type="text" id="txt_egitimtarihi" class="sm-form-control tleft format deger-girilmicek onkayit-js" onblur="BosKontrol(this)" name="baslama_tarih" />
+                </div>
+            </div>
+        </div>
+        @if (Model.egitim_turu.program_var)
+        {
+            <div class="col_half">
+                <label>@Resources.Varsayilan.b_progturu</label>
+                <select id="on_kayit_program_turu" class="form-control onkayit-js" name="program_tur_id">
+                    @for (int i = 0; i < Model.program_turleri.Count; i++)
+                {
+                        <option value="@Model.program_turleri[i].value">@Model.program_turleri[i].text</option>
+                    }
+                </select>
+            </div>
+            <div class="col_half col_last">
+                <label>@Resources.Varsayilan.b_programadi</label>
+                <select id="on_kayit_program_adi" class="form-control onkayit-js" name="program_id">
+                    @for (int i = 0; i < Model.programlar.Count; i++)
+                {
+                        <option value="@Model.programlar[i].value">@Model.programlar[i].text</option>
+                    }
+                </select>
+            </div>
+        }
+        else
+        {
+            <input type="hidden" value="-1" name="program_id" class="onkayit-js" />
+            <input type="hidden" value="-1" name="program_tur_id" class="onkayit-js" />
+        }
+        @if (Model.egitim_turu.kurs_hafta_alinacak || Model.egitim_turu.dil_bilgisi_alinacak)
+        {
+            <div id="dil">
+                @if (Model.egitim_turu.kurs_hafta_alinacak)
+                {
+                    <div class="col_full">
+                        <label>@Resources.Varsayilan.b_kurssurehafta <small class="okayildiz">*</small></label>
+                        <input type="text" id="txt_kurshafta" class="sm-form-control tleft format sadece-sayi-girilecek onkayit-js" onblur="BosKontrol(this)" name="kurs_hafta" />
+                    </div>
+                }
+                @if (Model.egitim_turu.dil_bilgisi_alinacak)
+                {
+                    <div class="col_full ">
+                        <label>@Resources.Varsayilan.b_dilseviye <small class="okayildiz">*</small></label>
+                        <select id="drp_dilseviyesi" class="form-control onkayit-js" name="dil_seviye">
+                            <option value="A0">@Resources.Varsayilan.dil_a0</option>
+                            <option value="A1">@Resources.Varsayilan.dil_a1</option>
+                            <option value="A2">@Resources.Varsayilan.dil_a2</option>
+                            <option value="B1">@Resources.Varsayilan.dil_b1</option>
+                            <option value="B2">@Resources.Varsayilan.dil_b2</option>
+                            <option value="C1">@Resources.Varsayilan.dil_c1</option>
+                            <option value="C2">@Resources.Varsayilan.dil_c2</option>
+                        </select>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <input type="hidden" value="0" name="kurs_hafta" class="onkayit-js" />
+            <input type="hidden" value="-1" name="dil_seviye" class="onkayit-js" />
+            <input type="hidden" value="" name="diger_dil_seviye" class="onkayit-js" />
+        }
+        <a href="#" class="button button-3d nomargin tab-linker" rel="3">@Resources.Varsayilan.b_geri</a>
+        <a href="#" class="button button-3d nomargin fright" onclick="OnKayitGonder(event)">@Resources.Varsayilan.b_gonder</a>
+    </div>
+</div>

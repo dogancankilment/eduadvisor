@@ -1,0 +1,151 @@
+﻿<div id="BireyselKayitOlModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-body white-section">
+            <div class="row nomargin clearfix">
+                <form id="BireyselPopupForm">
+                    <div class="col-sm-12">
+                        <div class="modalust">
+                            <div class="col_full">
+                                <img src="~/Content/images/yeni-logoyan.png" class="img-responsive" alt="EduAdvisor Logo" />
+                                <button type="button" id="BireyselKayitOlModalCloseButton" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sosyalmedya" class="col-sm-6 height345" data-height-lg="345" data-height-md="345" data-height-sm="345" data-height-xs="345" data-height-xxs="345">
+                        <div class="form-process" id="sosyal_loading"></div>
+                        <div>
+                            <h5 class="uppercase ls1" style="font-family: eduFont;">@Resources.Varsayilan.bslk_bununladevamet</h5>
+                            <div class="col_full">
+                                <a id="btnFaceLogin" class="btn btn-block btn-facebook" href="#" style="text-align: left" onclick="FacebookGirisYap(event)">
+                                    <img src="~/Content/images/facebook.png" style="margin-right:20px;float:left" alt="EduAdvisor-Facebook" />Facebook
+                                </a>
+                            </div>
+                            <div class="col_full">
+                                <a id="btnGoogleLogin" class="btn btn-block btn-google googleicon" style="text-align: left; font-family: arial; font-weight: bold; font-size: 15px;" href="#" onclick="GoogleGirisYap(event)">
+                                    <img src="~/Content/images/gmail.png" style="margin-right:20px;float:left" alt="EduAdvisor-Gmail" />Gmail
+                                </a>
+                            </div>
+                            <div class="col_full">
+                                <a id="btnLinkedinLogin" class="btn btn-block linkedinicon" style="text-align: left; font-family: arial; font-weight: bold; font-size: 15px;" onclick="LinkedinGirisYap(event)">
+                                    <img src="~/Content/images/LinkedIn.png" style="margin-right:20px;float:left" alt="EduAdvisor-Linkedin" />Linkedin
+                                </a>
+                            </div>
+                            <div class="col_full">
+                                <a id="anabtnkayit" class="btn btn-block btn-primary btn-mail" style="text-align: left">
+                                    <img src="~/Content/images/mail_box.png" style="margin-right:20px;float:left" alt="EduAdvisor-Email" />@Resources.Varsayilan.bslk_email
+                                </a>
+                            </div>
+                            <p class="nobottommargin">
+                                <small style="font-weight: bold">
+                                    <em style="font-size: 14px;">
+                                        *@Resources.Varsayilan.bslk_devamederek
+                                        <a href="#">@Resources.Varsayilan.bslk_gizlilikpolitikamizi </a>@Resources.Varsayilan.i_ve 
+                                        <a href="#">@Resources.Varsayilan.bslk_kullanimkosullarimizi </a>@Resources.Varsayilan.i_kabuletmisolursunuz.
+                                    </em>
+                                </small>
+                            </p>
+                        </div>
+                    </div>
+                    <div id="epostabilgisi" class="col-sm-6 height345 hide" data-height-lg="345" data-height-md="345" data-height-sm="345" data-height-xs="345" data-height-xxs="345" style="float: left;">
+                        <div class="form-process" id="loading1"></div>
+                        <h5 class="uppercase ls1" style="font-family: eduFont;">@Resources.Varsayilan.bslk_bununladevamet</h5>
+                        <div class="col_full" style="margin-bottom: 0px;">
+                            <p class="capitalize marginbottom5 t600">@Resources.Varsayilan.bslk_seninemailadres</p>
+                            <input type="email" id="txtBireyselKayitEposta" class="form-control" onkeyup="hatalarikapat()" onblur="BosKontrol(this)">
+                            <label class="arama-tur-secilmedi kullanici-kayitli"><i class="glyphicon glyphicon-triangle-top"></i>@Resources.Varsayilan.u_kullanicisistemdevar</label>
+                            <label class="arama-tur-secilmedi gecerlimailerror"><i class="glyphicon glyphicon-triangle-top"></i>@Resources.Varsayilan.u_gecerliemailgir</label>
+                        </div>
+                        <div class="col_full nobottommargin">
+                            <p class="capitalize marginbottom5 t600">@Resources.Varsayilan.bslk_sifre:</p>
+                            <div style="display: table">
+                                <input name="bireysel_kayit_ol_sifre" type="password" id="txtBireyselKayitIlkSifre" class="form-control pwdh" onblur="BosKontrol(this)" autocomplete="new-password" placeholder="@Resources.Varsayilan.bslk_sifre">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default revealkayit" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col_full nobottommargin margintop10">
+                            <span class="chck marginbottom0" style="font-size:8pt;"><input id="chk_haber" type="checkbox" name="bireysel_kayit_ol_chckhaber"><label for="chk_haber">@Resources.Varsayilan.bslk_haberbulteninekayitolmakistiyorum</label></span>
+                        </div>
+                        <p class="nobottommargin">
+                            <label class="arama-tur-secilmedi kayiterroru" style="position:inherit !important">@Resources.Varsayilan.u_birhataolustutekrardene</label>
+                            <small style="font-weight: bold">
+                                <em style="font-size: 14px;">
+                                    *@Resources.Varsayilan.bslk_devamederek
+                                    <a href="@Url.RouteUrl("Footer",new { gozukecek="Gizlilik-Politikasi" })">@Resources.Varsayilan.bslk_gizlilikpolitikamizi </a> @Resources.Varsayilan.i_ve
+                                    <a href="@Url.RouteUrl("Footer",new { gozukecek="Kullanim-Kosullari" })">@Resources.Varsayilan.bslk_kullanimkosullarimizi </a> @Resources.Varsayilan.i_kabuletmisolursunuz.
+                                </em>
+                            </small>
+                        </p>
+                        <div class="col_full">
+                            <input type="submit" value="@Resources.Varsayilan.b_geri" id="btngeri" onclick="SosyalMedyaGeri(event)">
+                            <input type="submit" value="@Resources.Varsayilan.baslik_kayit_ol" id="btnkayitol" onclick="ManuelkayitOl(event)">
+                        </div>
+                    </div>
+                    <div id="dogrulamakodu" class="col-sm-6 height345 hide" data-height-lg="345" data-height-md="345" data-height-sm="345" data-height-xs="345" data-height-xxs="345">
+                        <div class="form-process" id="loading2"></div>
+                        <h5 class="uppercase ls1" style="font-family: eduFont;">@Resources.Varsayilan.bslk_devamet </h5>
+                        <label class="arama-tur-secilmedi kullanici-kayitli"><i class="glyphicon glyphicon-triangle-top"></i>@Resources.Varsayilan.u_kullanicisistemdevar</label>
+                        <label class="arama-tur-secilmedi kayiterroru" style="left: 14px !important; top: 0 !important;">@Resources.Varsayilan.u_birhataolustutekrardene</label>
+                        <div class="col_full" style="margin-bottom: 0px;">
+                            <p class="capitalize marginbottom5 t600">@Resources.Varsayilan.u_epostadakilinketikla</p>
+                            <span class="mailspan erguvan">@Resources.Varsayilan.bslk_email : </span>
+                            <label id="dogrmail"></label>
+                            <label class="arama-tur-secilmedi mailikontrolet margintop5">@Resources.Varsayilan.u_epostanikontrolet.</label>
+                        </div>
+                        <div class="col_full">
+                            <input type="submit" id="btntekrarkod" class="margintop15" />
+                        </div>
+                    </div>
+                    <div id="giriseposta" class="col-sm-6 height345 solcizgi" style="float: left;" data-height-lg="345" data-height-md="345" data-height-sm="345" data-height-xs="345" data-height-xxs="345">
+                        <div class="form-process" id="loading3"></div>
+                        <h5 class="uppercase ls1" style="font-family: eduFont;">@Resources.Varsayilan.bslk_edugiris </h5>
+                        <div class="col_full nobottommargin">
+                            <p class="capitalize marginbottom5 t600">@Resources.Varsayilan.bslk_seninemailadres </p>
+                            <input type="email" id="txt_mailgiris" onkeyup="hatalarikapat()" class="form-control" onblur="BosKontrol(this)" autocomplete="email" />
+                            <label id="rqFieldGirisYapMail" class="uyari giris-uyarisi" style="display:none">@Resources.Varsayilan.u_mailbosolamaz</label>
+                        </div>
+                        <div class="col_full nobottommargin marginleft0">
+                            <p class="capitalize marginbottom5 t600">@Resources.Varsayilan.bslk_sifre :</p>
+                            <div style="display: table">
+                                <input type="password" id="txt_sifregiris" onblur="BosKontrol(this)" class="form-control pwd" autocomplete="current-password" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default reveal" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
+                                </span>
+                            </div>
+                            <label id="rqFieldGirisYapSifre" class="uyarisifre giris-uyarisi" style="display:none">@Resources.Varsayilan.b_sifrebosolmaz</label>
+                        </div>
+                        <div class="col_full nobottommargin margintop5">
+                            <a href="#" id="girisyap" onclick="BireyselGirisYap(event)" class="button_drop btn-block">@Resources.Varsayilan.baslik_girisyap</a>
+                            <a href="@Url.RouteUrl("SifremiUnuttum")" id="sifreunuttum">@Resources.Varsayilan.b_sifremiunuttum</a>
+                            <label id="lblGirisHata" class="uyari giris-uyarisi" style="font-size:11px;">@Resources.Varsayilan.u_kullaniciadisifrehatali</label>
+                            <label id="lblGirisBasarili" class="uyari giris-uyarisi" style="font-size:11px;">@Resources.Varsayilan.yonlendiriliyor</label>
+                        </div>
+                    </div>
+                    <div id="girisdogrulama" class="col-sm-6 height345 solcizgi" style="display:none" data-height-lg="345" data-height-md="345" data-height-sm="345" data-height-xs="345" data-height-xxs="345">
+                        <div class="form-process" id="loading4"></div>
+                        <h5 class="uppercase ls1" style="font-family: eduFont;">@Resources.Varsayilan.bslk_devamet </h5>
+                        <label class="arama-tur-secilmedi kullanici-kayitli"><i class="glyphicon glyphicon-triangle-top"></i>@Resources.Varsayilan.u_kullanicisistemdevar.</label>
+                        <label class="arama-tur-secilmedi kayiterroru" style="left: 14px !important; top: 0 !important;">@Resources.Varsayilan.u_birhataolustutekrardene.</label>
+                        <div class="col_full" style="margin-bottom: 20px;">
+                            <p class="capitalize marginbottom5 t600">@Resources.Varsayilan.u_epostadakilinketikla.</p>
+                            <span class="mailspan erguvan">@Resources.Varsayilan.bslk_email :</span>
+                            <Label id="kisimail"></Label>
+                            <Label style="display:none" id="mailinikontrolet" class="arama-tur-secilmedi mailinikontrolet margintop5">
+                                @Resources.Varsayilan.u_epostanikontrolet.
+                            </Label>
+                            <Label id="mailinikontroleterror" class="arama-tur-secilmedi mailinikontrolet margintop5" style="display:none;">
+                                @Resources.Varsayilan.dogrulama_kodu_sorun
+                            </Label>
+                        </div>
+                        <div class="col_full">
+                            <Button ID="btntekrarkodgonder" class="margintop15" />
+                        </div>
+                        <HiddenField ID="girissifre" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

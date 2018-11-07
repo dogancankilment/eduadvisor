@@ -1,0 +1,33 @@
+﻿<div class="tab-pane" id="tab_dogrula" style="margin-left: 36px;">
+    <div class="style-msg successmsg" id="uyeprofildogrulamabasarili" style="display:none">
+        <div class="sb-msg"><i class="icon-thumbs-up"></i><strong>@Resources.Varsayilan.uyelikaktif</strong> @Resources.Varsayilan.yonlendiriliyor...</div>        
+    </div>
+    <div class="style-msg errormsg" id="uyeprofildogrulamabasarisiz" style="display:none">
+        <a style="font-size:33px" class="pull-right" href="#" onclick="gorunmezyap(event, uyeprofildogrulamabasarisiz)">&times;</a>
+        <div class="sb-msg"><i class="icon-remove"></i><strong>@Resources.Varsayilan.uyelikaktifsorun</strong>@Resources.Varsayilan.lutfendahasonradene...</div>
+    </div>
+    <div class="style-msg successmsg" id="uyeprofildogrulamakodugonderildi" style="display:none">
+        <a style="font-size:33px" class="pull-right" href="#" onclick="gorunmezyap(event, uyeprofildogrulamakodugonderildi)">&times;</a>
+        <div class="sb-msg"><i class="icon-thumbs-up"></i><strong>@Resources.Varsayilan.dogrulama_kodu_gonderildi</strong></div>
+    </div>
+    <div class="style-msg errormsg" id="uyeprofildogrulamakodugonderilemedi" style="display:none">
+        <a style="font-size:33px" class="pull-right" href="#" onclick="gorunmezyap(event, uyeprofildogrulamakodugonderilemedi)">&times;</a>
+        <div class="sb-msg"><i class="icon-remove"></i><strong>@Resources.Varsayilan.dogrulama_kodu_sorun</strong></div>
+    </div>
+    <div class="col-lg-12" style="border: 1px solid #e5e5e5; margin-bottom: 12px">
+        <div class="form-process" id="profil_dogrulama_load"></div>
+        <div class="form-group col-lg-6 margintop10 paddingsagsol0">
+            <label></label>
+        </div>
+        <div class="form-group col-lg-8" style="padding: 0">
+            <label>@Resources.Varsayilan.dogrulama_kodu :</label>
+            <div class="col-sm-12 paddingsagsol0">
+                <input type="text" id="dogrulama_kodu" class="form-control pwdp" onblur="BosKontrol(this)">
+            </div>
+        </div>
+        <div class="form-group col-lg-8 center" style="padding: 0">
+            <input type="submit" value="@Resources.Varsayilan.bslk_tekrargonder" onclick="TekrarKodGonder(event)" class="button button-small button-circle">
+            <input type="submit" value="@Resources.Varsayilan.aktiflestir" onclick="UyeDogrulamaYap(event)" class="button button-small button-circle button-green">
+        </div>
+    </div>
+</div>

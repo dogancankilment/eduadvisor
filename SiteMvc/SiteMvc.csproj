@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{92471D21-8C57-4062-88E1-F6874B21BB74}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SiteMvc</RootNamespace>
+    <AssemblyName>SiteMvc</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>44383</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Facebook.7.0.6\lib\net45\Facebook.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Classes\AllActionRun.cs" />
+    <Compile Include="App_Classes\FacebookIslemleri.cs" />
+    <Compile Include="App_GlobalResources\Varsayilan.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Varsayilan.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Varsayilan.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Varsayilan.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KurumsalKayitController.cs" />
+    <Compile Include="Controllers\OkulSonuclariController.cs" />
+    <Compile Include="Controllers\SeoController.cs" />
+    <Compile Include="Controllers\UyeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\css\select2.css" />
+    <Content Include="Content\js\jquery-2.1.0.js" />
+    <Content Include="Content\images\kurumsal_kayit_arka_sol.png" />
+    <Content Include="Content\css\anasayfa.css" />
+    <Content Include="Content\css\animate.css" />
+    <Content Include="Content\css\bootstrap-rtl.css" />
+    <Content Include="Content\css\bootstrap-social.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\calendar.css" />
+    <Content Include="Content\css\camera-rtl.css" />
+    <Content Include="Content\css\camera.css" />
+    <Content Include="Content\css\colors-rtl.css" />
+    <Content Include="Content\css\colors.css" />
+    <Content Include="Content\css\custom.css" />
+    <Content Include="Content\css\dark-rtl.css" />
+    <Content Include="Content\css\dark.css" />
+    <Content Include="Content\css\datepicker.css" />
+    <Content Include="Content\css\elastic.css" />
+    <Content Include="Content\css\flag-icon.css" />
+    <Content Include="Content\css\flag-icon.min.css" />
+    <Content Include="Content\css\font-awesome.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\css\font-icons-rtl.css" />
+    <Content Include="Content\css\font-icons-snapchat.css" />
+    <Content Include="Content\css\font-icons.css" />
+    <Content Include="Content\css\fonts.css" />
+    <Content Include="Content\css\fotorama.css" />
+    <Content Include="Content\css\intro-fonts.css" />
+    <Content Include="Content\css\jquery.bxslider.css" />
+    <Content Include="Content\css\magnific-popup.css" />
+    <Content Include="Content\css\menu.css" />
+    <Content Include="Content\css\menu_2.css" />
+    <Content Include="Content\css\nivo-slider.css" />
+    <Content Include="Content\css\responsive-rtl.css" />
+    <Content Include="Content\css\responsive.css" />
+    <Content Include="Content\css\site.css" />
+    <Content Include="Content\css\swiper.css" />
+    <Content Include="Content\css\ust_islev.css" />
+    <Content Include="Content\css\vmap.css" />
+    <Content Include="Content\images\6352.jpg" />
+    <Content Include="Content\images\arama_kriteri.png" />
+    <Content Include="Content\images\banner.png" />
+    <Content Include="Content\images\bireysel-icon.png" />
+    <Content Include="Content\images\edudetay.png" />
+    <Content Include="Content\images\edudetay400.jpg" />
+    <Content Include="Content\images\edudetay400.png" />
+    <Content Include="Content\images\edu_banner.png" />
+    <Content Include="Content\images\edu_banner_2.png" />
+    <Content Include="Content\images\edu_banner_3.png" />
+    <Content Include="Content\images\edu_banner_4.png" />
+    <Content Include="Content\images\facebook.png" />
+    <Content Include="Content\images\fakultepin\f1.png" />
+    <Content Include="Content\images\fakultepin\f2.png" />
+    <Content Include="Content\images\fakultepin\f3.png" />
+    <Content Include="Content\images\fakultepin\f4.png" />
+    <Content Include="Content\images\favicon.png" />
+    <Content Include="Content\images\filtreleme_kulaklik.png" />
+    <Content Include="Content\images\filtreleme_yildiz.png" />
+    <Content Include="Content\images\filtreleme_yildiz_arka.png" />
+    <Content Include="Content\images\filtreleme_yildiz_bos.png" />
+    <Content Include="Content\images\filtreleme_yildiz_dolu.png" />
+    <Content Include="Content\images\footermail.png" />
+    <Content Include="Content\images\fotorama%402x.png" />
+    <Content Include="Content\images\fotorama.png" />
+    <Content Include="Content\images\gmail.png" />
+    <Content Include="Content\images\headermail.png" />
+    <Content Include="Content\images\imlec\anaokulu.png" />
+    <Content Include="Content\images\imlec\diger.png" />
+    <Content Include="Content\images\imlec\dilokulu.png" />
+    <Content Include="Content\images\imlec\f.png" />
+    <Content Include="Content\images\imlec\gunduzbakimevi.png" />
+    <Content Include="Content\images\imlec\harita-lise.png" />
+    <Content Include="Content\images\imlec\i.png" />
+    <Content Include="Content\images\imlec\ilkokul.png" />
+    <Content Include="Content\images\imlec\in.png" />
+    <Content Include="Content\images\imlec\kolej.png" />
+    <Content Include="Content\images\imlec\lise.png" />
+    <Content Include="Content\images\imlec\onay.png" />
+    <Content Include="Content\images\imlec\ortaokul.png" />
+    <Content Include="Content\images\imlec\p.png" />
+    <Content Include="Content\images\imlec\serit.png" />
+    <Content Include="Content\images\imlec\t.png" />
+    <Content Include="Content\images\imlec\universite.png" />
+    <Content Include="Content\images\imlec\y.png" />
+    <Content Include="Content\images\ingindirimli.png" />
+    <Content Include="Content\images\ingyorumbulunamadi.png" />
+    <Content Include="Content\images\jquery\balloons-1.png" />
+    <Content Include="Content\images\jquery\balloons-3.png" />
+    <Content Include="Content\images\jquery\balloons-4.png" />
+    <Content Include="Content\images\jquery\balloons-5.png" />
+    <Content Include="Content\images\kurumsal_kayit_alt_kisim.png" />
+    <Content Include="Content\images\kurumsal_kayit_arka.svg" />
+    <Content Include="Content\images\kurumsal_kayit_arka_sag.png" />
+    <Content Include="Content\images\kurumsal_kayit_kucuk_golge.png" />
+    <Content Include="Content\images\LinkedIn.png" />
+    <Content Include="Content\images\loader.gif" />
+    <Content Include="Content\images\logoyan.png" />
+    <Content Include="Content\images\mail_box.png" />
+    <Content Include="Content\images\maskot1.png" />
+    <Content Include="Content\images\maskot1ing.png" />
+    <Content Include="Content\images\mektup.png" />
+    <Content Include="Content\images\nasilyardimci.png" />
+    <Content Include="Content\images\nasilyardimcing.png" />
+    <Content Include="Content\images\okuldetay.png" />
+    <Content Include="Content\images\pins\anaokuluerguan.png" />
+    <Content Include="Content\images\pins\babyerguan.png" />
+    <Content Include="Content\images\pins\dilerguan.png" />
+    <Content Include="Content\images\pins\edupins.png" />
+    <Content Include="Content\images\imlec\uye_olmayan.png" />
+    <Content Include="Content\images\pins\ilkokulerguan.png" />
+    <Content Include="Content\images\pins\kolejerguan.png" />
+    <Content Include="Content\images\pins\konum.png" />
+    <Content Include="Content\images\pins\liseerguan.png" />
+    <Content Include="Content\images\pins\ortaokulerguan.png" />
+    <Content Include="Content\images\pins\unierguan.png" />
+    <Content Include="Content\images\preloader-dark.gif" />
+    <Content Include="Content\images\preloader.gif" />
+    <Content Include="Content\images\site_haritası.jpg" />
+    <Content Include="Content\images\yazisiz_logo.png" />
+    <Content Include="Content\images\yeni-logoyan.png" />
+    <Content Include="Content\images\yesil.png" />
+    <Content Include="Content\images\yorumbulunamadi.png" />
+    <Content Include="Content\img\asagi_ok.svg" />
+    <Content Include="Content\img\yeniedu.svg" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\bootstrap3-typeahead.js" />
+    <Content Include="Content\js\bootstrap3-typeahead.min.js" />
+    <Content Include="Content\js\canvas.slider.fade.js" />
+    <Content Include="Content\js\chart-utils.js" />
+    <Content Include="Content\js\chart.js" />
+    <Content Include="Content\js\datepicker.js" />
+    <Content Include="Content\js\deneme.js" />
+    <Content Include="Content\js\events-data.js" />
+    <Content Include="Content\js\fotorama.js" />
+    <Content Include="Content\js\functions.js" />
+    <Content Include="Content\js\indirim.js" />
+    <Content Include="Content\js\infobox.js" />
+    <Content Include="Content\js\jparallax.js" />
+    <Content Include="Content\js\jquery-2.1.4.min.js" />
+    <Content Include="Content\js\jquery-events-frame.js" />
+    <Content Include="Content\js\jquery-v1.8.2.js" />
+    <Content Include="Content\js\jquery.bxslider.min.js" />
+    <Content Include="Content\js\jquery.calendario.js" />
+    <Content Include="Content\js\jquery.camera.js" />
+    <Content Include="Content\js\jquery.cropit.js" />
+    <Content Include="Content\js\jquery.easyPaginate.js" />
+    <Content Include="Content\js\jquery.elastic.js" />
+    <Content Include="Content\js\jquery.gmap.js" />
+    <Content Include="Content\js\jquery.js" />
+    <Content Include="Content\js\jquery.maskedinput.js" />
+    <Content Include="Content\js\jquery.maskedinput.min.js" />
+    <Content Include="Content\js\jquery.min.js" />
+    <Content Include="Content\js\jquery.mousewheel.min.js" />
+    <Content Include="Content\js\jquery.nivo.js" />
+    <Content Include="Content\js\jquery.vmap.js" />
+    <Content Include="Content\js\jssor.slider-23.1.5.mini.js" />
+    <Content Include="Content\js\lodash.min.js" />
+    <Content Include="Content\js\plugins-dynamic.js" />
+    <Content Include="Content\js\plugins.js" />
+    <Content Include="Content\js\select2.min.js" />
+    <Content Include="Content\js\site.js" />
+    <Content Include="Content\js\theia-sticky-sidebar.js" />
+    <Content Include="Content\MailTemplate\AboneOldu.html" />
+    <Content Include="Content\MailTemplate\EduOnKayitYapildi.html" />
+    <Content Include="Content\MailTemplate\KurumsalOnKayitYapildi.html" />
+    <Content Include="Content\MailTemplate\MesajGonder.html" />
+    <Content Include="Content\MailTemplate\OnKayitYapildi.html" />
+    <Content Include="Content\MailTemplate\SifreHatirlat.html" />
+    <Content Include="Content\MailTemplate\SoruSor.html" />
+    <Content Include="Content\MailTemplate\TekrarKodGonder.html" />
+    <Content Include="Content\MailTemplate\UyeKayitOl.html" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="Content\style-import.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="favicon.png" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\css\colors-rtl.php" />
+    <Content Include="Content\css\colors.php" />
+    <Content Include="Content\style.less" />
+    <None Include="Properties\PublishProfiles\sitemvcpublish.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\AnasayfaPin.cshtml" />
+    <Content Include="Views\Home\AnasayfaTabHeader.cshtml" />
+    <Content Include="Views\Home\AnasayfaTabYapisi.cshtml" />
+    <Content Include="Views\Home\Enler.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\KurumsalKayit\Index.cshtml" />
+    <Content Include="Views\OkulSonuclari\GenelBilgi.cshtml" />
+    <Content Include="Views\OkulSonuclari\Index.cshtml" />
+    <Content Include="Views\OkulSonuclari\KampanyaDetayliBilgi.cshtml" />
+    <Content Include="Views\OkulSonuclari\OnKayitForm.cshtml" />
+    <Content Include="Views\OkulSonuclari\OkulDetay.cshtml" />
+    <Content Include="Views\OkulSonuclari\OkulDetayYorumForm.cshtml" />
+    <Content Include="Views\OkulSonuclari\OnKayitFormTabIcerik.cshtml" />
+    <Content Include="Views\OkulSonuclari\YorumSikayet.cshtml" />
+    <Content Include="Views\OkulSonuclari\YorumSonrasiAnket.cshtml" />
+    <Content Include="Views\Shared\BireyselKayitModal.cshtml" />
+    <Content Include="Views\Shared\Footer.cshtml" />
+    <Content Include="Views\Shared\Menu.cshtml" />
+    <Content Include="Views\Shared\Script.cshtml" />
+    <Content Include="Views\Shared\StyleSheet.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Uye\Mesajlarim.cshtml" />
+    <Content Include="Views\Uye\UyeProfilAyarlar.cshtml" />
+    <Content Include="Views\Uye\UyeProfilOnKayit.cshtml" />
+    <Content Include="Views\Uye\UyeProfil.cshtml" />
+    <Content Include="Views\Uye\UyeProfilSeviyeler.cshtml" />
+    <Content Include="Views\Uye\ProfilYorumDetayGetir.cshtml" />
+    <Content Include="Views\Uye\UyeProfilYorumlar.cshtml" />
+    <Content Include="Views\Uye\UyeProfilZiyaret.cshtml" />
+    <Content Include="Views\Diger\BizeUlasin.cshtml" />
+    <Content Include="Views\Diger\GizlilikPolitikasi.cshtml" />
+    <Content Include="Views\Diger\Hakkimizda.cshtml" />
+    <Content Include="Views\Diger\KullanimKosullari.cshtml" />
+    <Content Include="Views\Diger\MisyonVizyon.cshtml" />
+    <Content Include="Views\Diger\SiteHaritasi.cshtml" />
+    <Content Include="Views\Diger\SorulanSorular.cshtml" />
+    <Content Include="Views\Home\EnlerItem.cshtml" />
+    <Content Include="Views\OkulSonuclari\OkulSonuclarFiltre.cshtml" />
+    <Content Include="Views\Home\SehirleriGetir.cshtml" />
+    <Content Include="Views\KurumsalKayit\ProgramlariGetir.cshtml" />
+    <Content Include="Views\KurumsalKayit\KurumsalKayitOkullar.cshtml" />
+    <Content Include="Views\Home\AnasayfaYorum.cshtml" />
+    <Content Include="Views\Shared\ValueTextSelectDoldur.cshtml" />
+    <Content Include="Views\Home\SifremiUnuttum.cshtml" />
+    <Content Include="Views\Uye\UyeProfilTabMenu.cshtml" />
+    <Content Include="Views\Uye\UyeProfilKullanici.cshtml" />
+    <Content Include="Views\Uye\UyeProfilResmi.cshtml" />
+    <Content Include="Views\Uye\UyeProfilEgitimler.cshtml" />
+    <Content Include="Views\Home\AnasayfaUstAramaBar.cshtml" />
+    <Content Include="Views\Shared\JustValueTextModel.cshtml" />
+    <Content Include="Views\Uye\ProfilEgitimlerGetir.cshtml" />
+    <Content Include="Views\Uye\ProfilYorumlariGetir.cshtml" />
+    <Content Include="Views\Uye\UyeDogrula.cshtml" />
+    <Content Include="Views\Uye\UyeProfilDogrulama.cshtml" />
+    <Content Include="Views\Uye\MesajlariGetir.cshtml" />
+    <Content Include="Views\OkulSonuclari\AnketGetir.cshtml" />
+    <Content Include="Views\OkulSonuclari\Filtrele.cshtml" />
+    <Content Include="Views\OkulSonuclari\FiyatListesi.cshtml" />
+    <Content Include="Views\Uye\UyeProfilOkullarGetir.cshtml" />
+    <Content Include="Views\OkulSonuclari\UstBilgi.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="bin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Varsayilan.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Varsayilan.en.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\Varsayilan.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Varsayilan.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dll\dll.csproj">
+      <Project>{44b1a9a1-b4f8-4b67-93bc-1ff0b64f12f6}</Project>
+      <Name>dll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EduApi\EduApi.csproj">
+      <Project>{59310988-ef4e-4ac2-9f81-f6742483337d}</Project>
+      <Name>EduApi</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55625</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55625/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,19 @@
+﻿@model dll.Models.Anketler
+@{
+    List<dll.Models.Anket_Sorulari> sorular = Model.Anket_Sorulari.Where(x => x.silindi == null || x.silindi == 0).OrderBy(x => x.sira_no).ToList();
+    for (int i = 0; i < sorular.Count; i++)
+    {
+        <div class="col-xs-12 paddingsagsol0">
+            <label class="col-xs-12 paddingsagsol0 marginbottom0"> @((i + 1) + ") " + (HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? sorular[i].soru : sorular[i].soru_ingilizce)) </label>
+            <input type="number" class="rating yorumsonrasianketpuan" data-v="@sorular[i].id" max="5" data-step="1" data-size="sm" data-glyphicon="false" data-rating-class="fontawesome-icon">
+            @if ((i + 1) != sorular.Count)
+            {
+                <hr class="col-xs-12 marginbottom0 margintop0 paddingsagsol0" style="height:1px;color:#e5e5e5" />
+            }
+        </div>
+    }
+    if (sorular.Count > 0)
+    {
+        <div class="row"></div>
+    }
+}

@@ -1,0 +1,108 @@
+﻿@model EduApi.SiteModels.SiteGrupDetayModel
+@{
+    ViewBag.Title = Model.adi;
+}
+
+@section sayfa_css{
+    <link rel="stylesheet" href="~/Content/css/fotorama.css">
+    <link rel="stylesheet" href="~/Content/css/components/bs-datatable.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/css/components/bs-rating.css" type="text/css" />
+}
+
+<div class="container-fluid margintop10" id="detay-genel">
+    <div class="col-md-12 " id="genel-bilgi-baslik">
+        <div class="col-xs-3" id="genel-bilgi-okul-logo">
+            <img class="img-responsive" src="https://eduadvisor.co.uk/Content/img/okul/@Model.logo" alt="EduAdvisor @Model.adi">
+        </div>
+        <div class="col-xs-6" id="genel-bilgi-kurum-adi">
+            <h5>@Model.adi</h5>
+        </div>
+    </div>
+</div>
+<div class="container-fluid margintop10 marginleft15 marginright15">
+    <section id="content" class="tablo-genel-bilgi" style="margin-bottom: 0px;">
+        <div class="table-responsive">
+            <table id="datatable1" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>@(Model.egitim_id != 1 ? Resources.Varsayilan.kampus_sube_adi : Resources.Varsayilan.fakulte_adi)</th>
+                        <th>@Resources.Varsayilan.b_ulke</th>
+                        <th>@Resources.Varsayilan.b_sehir</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.egitim_id != 1)
+                    {
+                        for (int i = 0; i < Model.okullar.Count; i++)
+                        {
+                            <tr role="row" class="odd">
+                                <td class="sorting_1">
+                                    <a href="@Url.RouteUrl("OkulDetay", new { GrupSeo = Model.seo_url, OkulSeo = Model.okullar[i].seo_url, id = Model.okullar[i].id })" class="siyahyap">@Model.okullar[i].okul_adi</a>
+                                </td>
+                                <td>
+                                    <a href="@Url.RouteUrl("OkulDetay", new { GrupSeo = Model.seo_url, OkulSeo = Model.okullar[i].seo_url, id = Model.okullar[i].id })" class="siyahyap">  @Model.okullar[i].ulke_adi</a>
+                                </td>
+                                <td>
+                                    <a href="@Url.RouteUrl("OkulDetay", new { GrupSeo = Model.seo_url, OkulSeo = Model.okullar[i].seo_url, id = Model.okullar[i].id })" class="siyahyap">   @Model.okullar[i].sehir_adi</a>
+                                </td>
+                                <td style="width: 10%; text-align: center;">
+                                    <a class="morbutton" href="@Url.RouteUrl("OkulDetay", new { GrupSeo = Model.seo_url, OkulSeo = Model.okullar[i].seo_url, id = Model.okullar[i].id })">@Resources.Varsayilan.b_detay</a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        List<string> yazilanlar = new List<string>();
+                        for (int i = 0; i < Model.okullar.Count; i++)
+                        {
+                            if (!yazilanlar.Contains(@Model.okullar[i].fakulte_adi))
+                            {
+                                List<EduApi.SiteModels.GrupDetayOkulModel> kampusler = Model.okullar.Where(x => x.fakulte_adi == Model.okullar[i].fakulte_adi).ToList();
+                                yazilanlar.Add(Model.okullar[i].fakulte_adi);
+                                <tr role="row" @(kampusler.Count > 1 ? "data-toggle=collapse data-target=#fakulte_" + i : "") class="@(kampusler.Count > 1 ? "accordion-toggle odd fakultesatir":"odd")">
+                                    <td class="sorting_1">
+                                        <a href="@(kampusler.Count == 1 ? Url.RouteUrl("OkulDetay", new { GrupSeo = Model.seo_url, OkulSeo = Model.okullar[i].seo_url, id = Model.okullar[i].id }):"#")" class="siyahyap">@Model.okullar[i].fakulte_adi</a>
+                                    </td>
+                                    <td>
+                                        <a href="@(kampusler.Count == 1 ? Url.RouteUrl("OkulDetay", new { GrupSeo = Model.seo_url, OkulSeo = Model.okullar[i].seo_url, id = Model.okullar[i].id }):"#")" class="siyahyap">  @Model.okullar[i].ulke_adi</a>
+                                    </td>
+                                    <td>
+                                        <a href="@(kampusler.Count == 1 ? Url.RouteUrl("OkulDetay", new { GrupSeo = Model.seo_url, OkulSeo = Model.okullar[i].seo_url , id = Model.okullar[i].id}):"#")" class="siyahyap">   @Model.okullar[i].sehir_adi</a>
+                                    </td>
+                                    <td style="width: 10%; text-align: center;">
+                                        <a href="@(kampusler.Count == 1 ? Url.RouteUrl("OkulDetay", new { GrupSeo = Model.seo_url, OkulSeo = Model.okullar[i].seo_url , id = Model.okullar[i].id}):"#")" class="morbutton">@Resources.Varsayilan.b_detay</a>
+                                    </td>
+                                </tr>
+                                if (kampusler.Count > 1)
+                                {
+                                    <tr style="display:none">
+                                        <td colspan="12" class="hiddenRow borderyok">
+                                            <div class="accordian-body collapse" id="fakulte_@i">
+                                                @for (int j = 0; j < kampusler.Count; j++)
+                                                {
+                                                    <a href="@Url.RouteUrl("OkulDetay", new { GrupSeo = Model.seo_url, OkulSeo = kampusler[j].seo_url , id = kampusler[j].id})" class="btn btn-default btn-sm" title="@kampusler[j].okul_adi">
+                                                        @kampusler[j].okul_adi
+                                                    </a>
+                                                }
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
+
+
+
+@section sayfa_js{
+    <script type="text/javascript" src="~/Content/js/components/bs-datatable.js"></script>
+    <script type="text/javascript" src="~/Content/js/fotorama.js"></script>
+    <script type="text/javascript" src="~/Content/js/components/star-rating.js"></script>
+}

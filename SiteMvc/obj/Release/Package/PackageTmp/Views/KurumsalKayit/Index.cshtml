@@ -1,0 +1,284 @@
+﻿@{
+    ViewBag.Title = Resources.Varsayilan.kurumsal_kayit;
+    List<EduApi.SiteModels.ValueTextModel> Ulkeler = (List<EduApi.SiteModels.ValueTextModel>)ViewBag.Ulkeler;
+    string deger = Newtonsoft.Json.JsonConvert.SerializeObject(Ulkeler);
+}
+@section sayfa_css{
+    <link rel="stylesheet" href="~/Content/css/datepicker.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/css/components/timepicker.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/css/components/daterangepicker.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/css/components/bs-rating.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/css/components/bs-filestyle.css" type="text/css" />
+}
+
+<section id="kurumsal_kayit" class="paddingtop40 paddingbottom40">
+    <div class="col-xs-12" style="position:inherit;min-height:unset;">
+        <div id="kurumsal_kayit_arka_alan_sol_xs">@(ViewBag.yazi != null ? Html.Raw(ViewBag.yazi) : "")</div>
+    </div>
+    <div class="clearfix pull-right">
+        <div class="row marginleft0 marginright0">
+            <div class="contact-form-overlay clearfix kurumsal_kayit_baslik">
+                <div class="okul_sonuc col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4>@((ViewBag.tip == "ogrenci" ? Resources.Varsayilan.kurumsal_kayit_baslik_ogrenci : Resources.Varsayilan.kurumsal_kayit_baslik_yetkili))</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="kurumsal_kayit_arka_alan_sol_sm">@(ViewBag.yazi != null ? Html.Raw(ViewBag.yazi) : "")</div>
+        <img src="~/Content/images/kurumsal_kayit_arka_sol.png" id="kurumsal_kayit_arka_alan_sol" alt="EduAdvisor @Resources.Varsayilan.kurumsal_kayit" />
+        <div id="kurumsal_kayit_resim_ustu_yazi">
+            <p>@(ViewBag.yazi != null ? Html.Raw(ViewBag.yazi) : "")</p>
+        </div>
+        <div id="contact-form-overlay" class="kurumsal_kayit_form">
+            <div class="form-process" id="kurumsal_kayit_load"></div>
+            <div class="contact-widget" id="kurumsal-ogrenci-css">
+                <form id="kurumsal_kayit_ekle_form" class="marginbottom0">
+                    <div class="contact-form-result"></div>
+                    <small class="pull-right"><small class="erguvan zorunlu_alan_yildiz">(*)</small> Zorunlu Alanlar</small>
+                    <input type="hidden" class="krmsl-js" name="tip" value="@ViewBag.tip" />
+                    @if (ViewBag.tip == "ogrenci")
+                    {
+                        if (HttpContext.Current.Session["giris_yapan"] == null)
+                        {
+                            <div class="col-md-12 padding0">
+                                <div id="geneloturumkontrol" class="alert alert-danger">
+                                    <h5 class="oturumac center marginbottom0">@Resources.Varsayilan.u_oturumaciniz</h5>
+                                    @Resources.Varsayilan.i_kurumsalyorumicerik
+                                </div>
+                            </div>
+                        }
+                    }
+                    <div id="grupadibos" class="col-md-12 hide padding0">
+                        <div class="alert alert-danger">
+                            <a style="font-size:33px" class="pull-right" href="#" onclick="gorunmezyap(event, grupadibos)">&times;</a>
+                            <h5 class="oturumac center marginbottom0">@Resources.Varsayilan.yeni_okul_adi_bos_1</h5>
+                            @Resources.Varsayilan.yeni_okul_adi_bos_2
+                        </div>
+                    </div>
+                    <div id="kapat1">
+                        <div class="col-md-12 paddingsol0 marginbottom10">
+                            <label>@Resources.Varsayilan.b_kurumturu</label>
+                            <select id="kurumsal_kayit_egitimturu" class="form-control krmsl-js" onchange="KurumsalKayitEgitimTuruDegisti(event)" name="egitim_seo">
+                                @{
+                                    List<dll.Models.egitim_turleri> EgitimTurleri = (List<dll.Models.egitim_turleri>)ViewBag.EgitimTurleri;
+                                    for (int i = 0; i < EgitimTurleri.Count; i++)
+                                    {
+                                        <option data-program="@(EgitimTurleri[i].program_var ? 1 : 0)" data-v="@(EgitimTurleri[i].id==1 ? "1":"0")" value="@EgitimTurleri[i].seo_url">@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri[i].adi : EgitimTurleri[i].adi_ingilizce)</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-12 paddingsol0 marginbottom10">
+                            <label>@Resources.Varsayilan.egitim_kurumunun_adi <small class="erguvan zorunlu_alan_yildiz">(*)</small></label>
+                            <input name="okul_adi" type="text" id="kurumsal_kayit_okullar" class="form-control krmsl-js" />
+                        </div>
+                        <div id="kapat2">
+                            <div id="fakulte_secimi" class="col-md-12 paddingsol0 marginbottom10">
+                                <label>@Resources.Varsayilan.fakulte_adi</label>
+                                <input name="fakulte_adi" type="text" id="kurumsal_kayit_fakulteler" class="form-control krmsl-js" />
+                            </div>
+                            <div id="kampussubeadi" Class="col-md-12 paddingsol0 marginbottom10">
+                                <label>@Resources.Varsayilan.kampus_sube_adi</label>
+                                <input type="text" class="sm-form-control krmsl-js" maxlength="200" id="txt_kurumadi" name="kampussubeadi" />
+                            </div>
+                            <div class="col-xs-12 padding0">
+                                <div class="col-md-12 paddingsol0 marginbottom10">
+                                    <label>@Resources.Varsayilan.b_kurumulke <small class="erguvan zorunlu_alan_yildiz">(*)</small></label>
+                                    <input name="ulke_adi" type="text" id="kurumsal_kayit_ulkeler" class="form-control krmsl-js" />
+                                </div>
+                                <div class="col-md-12 paddingsol0 marginbottom10" id="eyalet_ust" style="display:none">
+                                    <label>@Resources.Varsayilan.b_egitimeyalet</label>
+                                    <select name="drpeyaletler" id="drpeyaletler" class="form-control" onchange="EyaletDegisti(event, 'kurumsal_kayit_sehir')">
+                                        <option value="-1">@Resources.Varsayilan.b_eyaletsec</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12 paddingsol0 marginbottom10">
+                                    <label>@Resources.Varsayilan.b_kurumsehir <small class="erguvan zorunlu_alan_yildiz">(*)</small></label>
+                                    <input name="sehir_adi" type="text" id="kurumsal_kayit_sehir" class="form-control krmsl-js" />
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            @if (ViewBag.tip == "ogrenci")
+                            {
+                                <div class="col_full marginbottom0">
+                                    <div class="content-wrap nopadding">
+                                        <div class="clearfix">
+                                            <div class="col-md-6 marginbottom0" style="padding: 0">
+                                                <label>@Resources.Varsayilan.i_okulyorumyaz :</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="kurumsal_kayit_program_ve_tur">
+                                    <div id="programadi" class="col-md-6 paddingsol0 marginbottom10">
+                                        <label>@Resources.Varsayilan.b_programadi</label>
+                                        <select id="kurumsal_kayit_programlar" class="form-control krmsl-js" name="program_id">
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                    <div id="programturu" class="col-md-6 paddingsol0 marginbottom10">
+                                        <label>@Resources.Varsayilan.b_progturu</label>
+                                        <select id="kurumsal_kayit_programtur" class="form-control krmsl-js" name="program_tur_id">
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    @if (ViewBag.tip == "yetkili")
+                    {
+                        <div class="col-md-12 paddingsol0 marginbottom10">
+                            <label>@Resources.Varsayilan.b_adi <small class="erguvan zorunlu_alan_yildiz">(*)</small></label>
+                            <input type="text" id="txtadi" class="sm-form-control krmsl-js" onblur="BosKontrol(this)" maxlength="200" name="yetkili_adi" />
+                        </div>
+                        <div class="col-md-12 paddingsol0 marginbottom10">
+                            <label>@Resources.Varsayilan.b_soyadi <small class="erguvan zorunlu_alan_yildiz">(*)</small></label>
+                            <input type="text" id="txtsoyadi" class="sm-form-control krmsl-js" onblur="BosKontrol(this)" maxlength="200" name="yetkili_soyadi" />
+                        </div>
+                        <div class="col-md-12 paddingsol0 marginbottom10">
+                            <label>@Resources.Varsayilan.bslk_email <small class="erguvan zorunlu_alan_yildiz">(*)</small></label>
+                            <input type="text" id="txtkurumsalemail" class="sm-form-control krmsl-js" onblur="BosKontrol(this)" maxlength="200" name="yetkili_mail" />
+                        </div>
+                        <div class="col-md-12 paddingsol0 marginbottom10">
+                            <label>@Resources.Varsayilan.b_telefon</label>
+                            <input type="text" id="txtkurumsaltelefon" class="sm-form-control krmsl-js telefon-girilecek" maxlength="200" name="yetkili_telefon" />
+                        </div>
+                        <div class="col_full marginbottom10">
+                            <label>@Resources.Varsayilan.b_skypeid</label>
+                            <input type="text" id="txtkurumsalskype" class="sm-form-control krmsl-js" maxlength="200" name="yetkili_skype" />
+                        </div>
+                        <div class="col_full">
+                            <label>@Resources.Varsayilan.mesajiniz :</label>
+                            <textarea id="txtkurumsalaciklama" class="sm-form-control krmsl-js" rows="6" maxlength="200" cols="30" name="yetkili_mesaj" style="resize:none"></textarea>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col_full">
+                            <div class="content-wrap nopadding">
+                                <div class="clearfix">
+                                    <div class="col-md-6 bottommargin-sm" style="padding: 0">
+                                        <label>@Resources.Varsayilan.yorum_puaniniz <small class="erguvan zorunlu_alan_yildiz">(*)</small></label>
+                                        <input name="yorum_puan" type="number" id="txtYildiz" class="rating bottommargin-sm krmsl-js" max="5" data-step="1" data-size="sm" data-glyphicon="false" data-rating-class="fontawesome-icon">
+                                        <span style="color: red; font-size: 12px; visibility: hidden;" id="rq">Puan veriniz</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <label>@Resources.Varsayilan.i_yorumbasliginiz <small class="erguvan zorunlu_alan_yildiz">(*)</small></label>
+                            <input type="text" id="txtYorumBasligi" onblur="BosKontrol(this)" class="sm-form-control bottommargin-sm krmsl-js" name="yorum_baslik" />
+                        </div>
+                        <div class="col_full">
+                            <label>@Resources.Varsayilan.b_yorum : <small class="erguvan zorunlu_alan_yildiz">(*)</small></label>
+                            <textarea id="txtYorumicerik" onblur="BosKontrol(this)" class="sm-form-control bottommargin-sm krmsl-js" cols="30" rows="4" name="yorum_icerik"></textarea>
+                        </div>
+                        <div id="okuldetaytarih" class="input-daterange travel-date-group">
+                            <div class="col-md-6 paddingsol0 marginbottom10">
+                                <label>@Resources.Varsayilan.b_egitimdonemi <small class="erguvan zorunlu_alan_yildiz">(*)</small></label>
+                                <div class="input-daterange input-group" style="padding: 0">
+                                    <input type="text" id="txtOkulBas" onblur="BosKontrol(this)" class="sm-form-control tleft krmsl-js" placeholder="MM/YYYY" name="yorum_baslangic" />
+                                    <span class="input-group-addon">-</span>
+                                    <input type="text" id="txtOkulBit" class="sm-form-control tleft krmsl-js" placeholder="MM/YYYY" name="yorum_bitis" />
+                                </div>
+                            </div>
+                            <div class="col-md-6 paddingsol0 marginbottom10">
+                                <label class="margintop20">
+                                    <span class="checkbox chck krmsl-js">
+                                        <input id="HalaDevamEdiyorChck" onchange="DevamEdiyorChange(this,'txtOkulBit')" type="checkbox" class="krmsl-js" name="yorum_bitis_chck">
+                                        <label for="HalaDevamEdiyorChck">@Resources.Varsayilan.b_haladevam</label>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col_full" style="margin-bottom: 10px; float: left;" id="kurumsal_resimleri_cropit">
+                            <label>@Resources.Varsayilan.b_yorumresmi</label><br />
+                            <div class="col-md-4 image-editor pull-left" id="kurumsal_1">
+                                <input name="file" type="file" id="kurumsalfileupload1" class="cropit-image-input hide" />
+                                <div class="cropit-preview"></div>
+                                <input type="range" class="cropit-image-zoom-input" />
+                                <button class="btn btn-xs btn-default rotate-ccw margintop10" id="kurumsal_sol1"><i class="icon-undo"></i></button>
+                                <button class="btn btn-xs btn-default rotate-cw margintop10" id="kurumsal_sag1"><i class="icon-repeat"></i></button>
+                                <button class="btn btn-xs btn-danger margintop10" id="kurumsal_sil1"><i class="icon-trash"></i></button>
+                                <div class="select-image-btn4 btncropit" style="width: 200px; margin-top: 5px">@Resources.Varsayilan.b_Resimsec</div>
+                            </div>
+                            <div class="col-md-4 image-editor pull-left" id="kurumsal_2">
+                                <input type="file" id="kurumsalfileupload2" class="cropit-image-input hide" />
+                                <div class="cropit-preview"></div>
+                                <input type="range" class="cropit-image-zoom-input" />
+                                <button class="btn btn-xs btn-default rotate-ccw margintop10" id="kurumsal_sol2"><i class="icon-undo"></i></button>
+                                <button class="btn btn-xs btn-default rotate-cw margintop10" id="kurumsal_sag2"><i class="icon-repeat"></i></button>
+                                <button class="btn btn-xs btn-danger margintop10" id="kurumsal_sil2"><i class="icon-trash"></i></button>
+                                <div class="select-image-btn5 btncropit" style="width: 200px; margin-top: 5px">@Resources.Varsayilan.b_Resimsec</div>
+                            </div>
+                            <div class="col-md-4 image-editor pull-left" id="kurumsal_3">
+                                <input type="file" id="kurumsalfileupload3" class="cropit-image-input hide" />
+                                <div class="cropit-preview"></div>
+                                <input type="range" class="cropit-image-zoom-input" />
+                                <button class="btn btn-xs btn-default rotate-ccw margintop10" id="kurumsal_sol3"><i class="icon-undo"></i></button>
+                                <button class="btn btn-xs btn-default rotate-cw margintop10" id="kurumsal_sag3"><i class="icon-repeat"></i></button>
+                                <button class="btn btn-xs btn-danger margintop10" id="kurumsal_sil3"><i class="icon-trash"></i></button>
+                                <div class="select-image-btn6 btncropit" style="width: 200px; margin-top: 5px">@Resources.Varsayilan.b_Resimsec</div>
+                            </div>
+                            <input type="hidden" id="kurumsal_data1" name="yorum_resim_1" class="krmsl-js" />
+                            <input type="hidden" id="kurumsal_data2" name="yorum_resim_2" class="krmsl-js" />
+                            <input type="hidden" id="kurumsal_data3" name="yorum_resim_3" class="krmsl-js" />
+                            <input type="hidden" id="v" />
+                            <div style="margin-bottom: 20px;display:none" id="yorumresimbasarisiz">
+                                <div class="alert alert-danger nobottommargin">
+                                    <a style="font-size:33px" class="pull-right" href="#" onclick="gorunmezyap(event, yorumresimbasarisiz)">&times;</a>
+                                    <i class="icon-remove-sign"></i><strong>@Resources.Varsayilan.u_yorumresimsorun ..</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col_full marginbottom5">
+                            <span class="chck">
+                                <input id="tahhut" type="checkbox" name="tahhut" value="tahhut" />
+                                <label for="tahhut">@Resources.Varsayilan.u_tahhut. <small class="erguvan zorunlu_alan_yildiz">(*)</small></label>
+                            </span>
+                        </div>
+                    }
+                    <div class="col_full" style="margin-bottom: 10px;">
+                        @if ((ViewBag.tip == "ogrenci" && HttpContext.Current.Session["giris_yapan"] != null) || ViewBag.tip == "yetkili")
+                        {
+                            <input type="button" id="kurumsal_kayit_gonder" onclick="@((ViewBag.tip == "yetkili" ? "KurumsalKayitYetkiliGonder" : "KurumsalKayitOgrenciGonder") + "(event"))" class="btn-block morbutton" value="@Resources.Varsayilan.b_gonder" />
+                        }
+                    </div>
+                    <div id="Kurumsalhatalipanel" class="alert alert-danger col-md-12 marginbottom0" style="display:none;">
+                        <h5 class="okulkayitbasarili center marginbottom0">@Resources.Varsayilan.u_okulkayitgndrlmdi</h5>
+                        @Resources.Varsayilan.u_okulkayitsorunolustu
+                    </div>
+                    <div id="panel4" class="alert alert-danger col-md-12 marginbottom0" style="display:none;">
+                        <a style="font-size:33px" class="pull-right" href="#" onclick="gorunmezyap(event, panel4)">&times;</a>
+                        <h5 class="oturumac center marginbottom0">@Resources.Varsayilan.u_taahhut! </h5>
+                        @Resources.Varsayilan.u_taahhutisaretle
+                    </div>
+                    <div class="row"></div>
+                </form>
+                <div id="Kurumsalbasarilipanel" class="alert alert-success marginbottom0" style="display:none;">
+                    <h5 class="okulkayitbasarili center marginbottom0">@Resources.Varsayilan.u_okulkayitgonderildi</h5>
+                    @Resources.Varsayilan.u_okulkayitgnderildionay
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row marginleft0 marginright0"></div>
+</section>
+@section sayfa_js{
+    <script type="text/javascript" src="~/Content/js/datepicker.js"></script>
+    <script type="text/javascript" src="~/Content/js/components/timepicker.js"></script>
+    <script type="text/javascript" src="~/Content/js/components/daterangepicker.js"></script>
+    <script type="text/javascript" src="~/Content/locales/bootstrap-datepicker.tr.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/components/star-rating.js"></script>
+    <script type="text/javascript" src="~/Content/js/theia-sticky-sidebar.js"></script>
+    <script type="text/javascript" src="~/Content/js/components/bs-filestyle.js"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.cropit.js"></script>
+    <script src="~/Content/js/jquery.maskedinput.min.js"></script>
+    <script type="text/javascript">
+        var js_ulke_json = @Html.Raw(deger);
+    </script>
+
+}

@@ -1,0 +1,81 @@
+﻿<div class="row col-xs-12 pull-left">
+    <h4 class="marginbottom0 margintop0">@Resources.Varsayilan.anasayfa_aramatabs_yazi1</h4>
+    <h6 class="marginbottom5 margintop0">@Resources.Varsayilan.anasayfa_aramatabs_yazi2</h6>
+</div>
+<div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="dilokulu" style="display: block;" data-v="@(((List<dll.Models.egitim_turleri>)ViewBag.EgitimTurleri).Where(x=> x.id==2).FirstOrDefault().seo_url)">
+    <div class="col-xs-12 padding0 ansayfatabaramabaslikparent">
+        <div class="yanaramaaciklama">@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? ((List<dll.Models.egitim_turleri>)ViewBag.EgitimTurleri).Where(x => x.id == 2).FirstOrDefault().adi : ((List<dll.Models.egitim_turleri>)ViewBag.EgitimTurleri).Where(x => x.id == 2).FirstOrDefault().adi_ingilizce)</div>
+    </div>
+</div>
+<div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="universite" data-v="@(((List<dll.Models.egitim_turleri>)ViewBag.EgitimTurleri).Where(x=> x.id==1).FirstOrDefault().seo_url)">
+    <div class="col-xs-12 padding0 ansayfatabaramabaslikparent">
+        <div class="yanaramaaciklama">@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? ((List<dll.Models.egitim_turleri>)ViewBag.EgitimTurleri).Where(x => x.id == 1).FirstOrDefault().adi : ((List<dll.Models.egitim_turleri>)ViewBag.EgitimTurleri).Where(x => x.id == 1).FirstOrDefault().adi_ingilizce)</div>
+    </div>
+</div>
+<div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="kolej" data-v="@(((List<dll.Models.egitim_turleri>)ViewBag.EgitimTurleri).Where(x=> x.id==3).FirstOrDefault().seo_url)">
+    <div class="col-xs-12 padding0 ansayfatabaramabaslikparent">
+        <div class="yanaramaaciklama">@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? ((List<dll.Models.egitim_turleri>)ViewBag.EgitimTurleri).Where(x => x.id == 3).FirstOrDefault().adi : ((List<dll.Models.egitim_turleri>)ViewBag.EgitimTurleri).Where(x => x.id == 3).FirstOrDefault().adi_ingilizce)</div>
+    </div>
+</div>
+<div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="lise" data-v="@(((List<dll.Models.egitim_turleri>)ViewBag.EgitimTurleri).Where(x=> x.id==4).FirstOrDefault().seo_url)">
+    <div class="col-xs-12 padding0 ansayfatabaramabaslikparent">
+        <div class="yanaramaaciklama">@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? ((List<dll.Models.egitim_turleri>)ViewBag.EgitimTurleri).Where(x => x.id == 4).FirstOrDefault().adi : ((List<dll.Models.egitim_turleri>)ViewBag.EgitimTurleri).Where(x => x.id == 4).FirstOrDefault().adi_ingilizce)</div>
+    </div>
+</div>
+<div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="diger" data-v="-1">
+    <div class="col-xs-12 padding0 marginbottom10">
+        <div class="yanaramaaciklama digeransayfatabaramabaslikparent">@Resources.Varsayilan.baslik_diger</div>
+        <div class="col-xs-12 padding0">
+            <select name="drpEgitimTuruDigerler" id="anasayfa_arama_diger_egitimler" class="form-control">
+                @{
+                    List<dll.Models.egitim_turleri> EgitimTurleri = (List<dll.Models.egitim_turleri>)ViewBag.EgitimTurleri;
+                    EgitimTurleri = EgitimTurleri.Where(x => x.id > 4).ToList();
+                    for (int i = 0; i < EgitimTurleri.Count; i++)
+                    {
+                        <option value="@EgitimTurleri[i].seo_url">@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri[i].adi : EgitimTurleri[i].adi_ingilizce)</option>
+                    }
+                }
+            </select>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <label id="aramatabbaslik_mobil"></label>
+    <div class="col-xs-12 marginbottom10">
+        <div class="input-group" style="min-height: 40px; width: 100%;">
+            <input name="txt_aranacakKelime" type="text" id="anasayfa_arama_kelime" class="form-control" placeholder="@Resources.Varsayilan.i_kelimegiriniz" style="height:40px;">
+        </div>
+    </div>
+    <div class="col-xs-12 marginbottom10">
+        <div class="input-group" style="min-height: 40px; width: 100%;">
+            <select name="drpUlkeler" id="anasayfa_arama_ulke" class="form-control" onchange="UlkeDegisti(event, 'anasayfa_arama_sehir')">
+                @{
+                    List<EduApi.SiteModels.ValueTextModel> Ulkeler = (List<EduApi.SiteModels.ValueTextModel>)ViewBag.Ulkeler;
+                    for (int i = 0; i < Ulkeler.Count; i++)
+                    {
+                        <option value="@Ulkeler[i].value">@Ulkeler[i].text</option>
+                    }
+                }
+            </select>
+        </div>
+    </div>
+    <div class="col-xs-12 marginbottom10" id="eyalet_ust" style="display:none">
+        <div class="input-group" style="min-height: 40px; width: 100%;">
+            <select name="drpeyaletler" id="drpeyaletler" class="form-control" onchange="EyaletDegisti(event, 'anasayfa_arama_sehir')">
+                <option value="-1">@Resources.Varsayilan.b_eyaletsec</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-xs-12">
+        <div class="input-group" style="min-height: 40px; width: 100%;">
+            <select name="drpSehirler" id="anasayfa_arama_sehir" class="form-control" data-placeholder="@Resources.Varsayilan.b_ulkeseciniz">
+                <option value="-1">@Resources.Varsayilan.b_sehirseciniz</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div class="row margintop10" style="margin:0">
+    <a id="btnAra" class="btn pull-right" href="#" style="color:White;background-color:#A02F89;" onclick="AnasayfaTabAra(event)">
+        <i class="icon-search" style="margin-right: 5px;"></i>@Resources.Varsayilan.b_simdiara
+    </a>
+</div>

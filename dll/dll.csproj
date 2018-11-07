@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{44B1A9A1-B4F8-4B67-93BC-1FF0B64F12F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>dll</RootNamespace>
+    <AssemblyName>dll</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Classes\DllContext.cs" />
+    <Compile Include="Models\aboneler.cs" />
+    <Compile Include="Models\Anketler.cs" />
+    <Compile Include="Models\anket_cevaplari.cs" />
+    <Compile Include="Models\anket_cevaplayan.cs" />
+    <Compile Include="Models\Anket_Sorulari.cs" />
+    <Compile Include="Models\eduadvisorContext.cs" />
+    <Compile Include="Models\egitim_durumlari.cs" />
+    <Compile Include="Models\egitim_duzeyleri.cs" />
+    <Compile Include="Models\egitim_ozellikleri.cs" />
+    <Compile Include="Models\egitim_turleri.cs" />
+    <Compile Include="Models\eyalet.cs" />
+    <Compile Include="Models\fakulte_havuzu.cs" />
+    <Compile Include="Models\fiyat.cs" />
+    <Compile Include="Models\fiyat_deger.cs" />
+    <Compile Include="Models\fiyat_deger_haftalik.cs" />
+    <Compile Include="Models\fiyat_ogr_tur.cs" />
+    <Compile Include="Models\fiyat_tur.cs" />
+    <Compile Include="Models\genel_ayarlar.cs" />
+    <Compile Include="Models\giris_kayitlari.cs" />
+    <Compile Include="Models\il.cs" />
+    <Compile Include="Models\ilce.cs" />
+    <Compile Include="Models\indirim_uye.cs" />
+    <Compile Include="Models\indirim_uye_bilgilendirme.cs" />
+    <Compile Include="Models\kurs_hafta.cs" />
+    <Compile Include="Models\kurumsal_giris_kayitlari.cs" />
+    <Compile Include="Models\kurumsal_kayit.cs" />
+    <Compile Include="Models\kurumsal_kayit_resim.cs" />
+    <Compile Include="Models\kurumsal_yoneticiler.cs" />
+    <Compile Include="Models\kurumsal_yonetici_sube.cs" />
+    <Compile Include="Models\Mapping\abonelerMap.cs" />
+    <Compile Include="Models\Mapping\AnketlerMap.cs" />
+    <Compile Include="Models\Mapping\anket_cevaplariMap.cs" />
+    <Compile Include="Models\Mapping\anket_cevaplayanMap.cs" />
+    <Compile Include="Models\Mapping\Anket_SorulariMap.cs" />
+    <Compile Include="Models\Mapping\egitim_durumlariMap.cs" />
+    <Compile Include="Models\Mapping\egitim_duzeyleriMap.cs" />
+    <Compile Include="Models\Mapping\egitim_ozellikleriMap.cs" />
+    <Compile Include="Models\Mapping\egitim_turleriMap.cs" />
+    <Compile Include="Models\Mapping\eyaletMap.cs" />
+    <Compile Include="Models\Mapping\fakulte_havuzuMap.cs" />
+    <Compile Include="Models\Mapping\fiyatMap.cs" />
+    <Compile Include="Models\Mapping\fiyat_degerMap.cs" />
+    <Compile Include="Models\Mapping\fiyat_deger_haftalikMap.cs" />
+    <Compile Include="Models\Mapping\fiyat_ogr_turMap.cs" />
+    <Compile Include="Models\Mapping\fiyat_turMap.cs" />
+    <Compile Include="Models\Mapping\genel_ayarlarMap.cs" />
+    <Compile Include="Models\Mapping\giris_kayitlariMap.cs" />
+    <Compile Include="Models\Mapping\ilceMap.cs" />
+    <Compile Include="Models\Mapping\ilMap.cs" />
+    <Compile Include="Models\Mapping\indirim_uyeMap.cs" />
+    <Compile Include="Models\Mapping\indirim_uye_bilgilendirmeMap.cs" />
+    <Compile Include="Models\Mapping\kurs_haftaMap.cs" />
+    <Compile Include="Models\Mapping\kurumsal_giris_kayitlariMap.cs" />
+    <Compile Include="Models\Mapping\kurumsal_kayitMap.cs" />
+    <Compile Include="Models\Mapping\kurumsal_kayit_resimMap.cs" />
+    <Compile Include="Models\Mapping\kurumsal_yoneticilerMap.cs" />
+    <Compile Include="Models\Mapping\kurumsal_yonetici_subeMap.cs" />
+    <Compile Include="Models\Mapping\mesajlarMap.cs" />
+    <Compile Include="Models\Mapping\mesaj_alici_listesiMap.cs" />
+    <Compile Include="Models\Mapping\mesaj_ayarlariMap.cs" />
+    <Compile Include="Models\Mapping\okullarMap.cs" />
+    <Compile Include="Models\Mapping\okul_fakulteleriMap.cs" />
+    <Compile Include="Models\Mapping\okul_fiyat_ogr_turMap.cs" />
+    <Compile Include="Models\Mapping\okul_fotograflarMap.cs" />
+    <Compile Include="Models\Mapping\okul_gruplariMap.cs" />
+    <Compile Include="Models\Mapping\okul_grup_iliskiMap.cs" />
+    <Compile Include="Models\Mapping\okul_gunlukMap.cs" />
+    <Compile Include="Models\Mapping\okul_indirimleriMap.cs" />
+    <Compile Include="Models\Mapping\okul_lokasyonMap.cs" />
+    <Compile Include="Models\Mapping\okul_ozellikleriMap.cs" />
+    <Compile Include="Models\Mapping\okul_programlariMap.cs" />
+    <Compile Include="Models\Mapping\okul_sayacMap.cs" />
+    <Compile Include="Models\Mapping\okul_sistemMap.cs" />
+    <Compile Include="Models\Mapping\okul_ziyaretMap.cs" />
+    <Compile Include="Models\Mapping\onkayit_egitim_turleriMap.cs" />
+    <Compile Include="Models\Mapping\on_basvuru_alici_listesiMap.cs" />
+    <Compile Include="Models\Mapping\on_kayit_basvuruMap.cs" />
+    <Compile Include="Models\Mapping\ozelliklerMap.cs" />
+    <Compile Include="Models\Mapping\popupMap.cs" />
+    <Compile Include="Models\Mapping\program_havuzuMap.cs" />
+    <Compile Include="Models\Mapping\sayfalarMap.cs" />
+    <Compile Include="Models\Mapping\seviye_bilgilendirmeMap.cs" />
+    <Compile Include="Models\Mapping\seviye_odulleriMap.cs" />
+    <Compile Include="Models\Mapping\site_haritasiMap.cs" />
+    <Compile Include="Models\Mapping\sorularMap.cs" />
+    <Compile Include="Models\Mapping\soru_alici_listesiMap.cs" />
+    <Compile Include="Models\Mapping\sosyal_medyaMap.cs" />
+    <Compile Include="Models\Mapping\sysdiagramMap.cs" />
+    <Compile Include="Models\Mapping\toplu_mesajMap.cs" />
+    <Compile Include="Models\Mapping\toplu_mesaj_kitleMap.cs" />
+    <Compile Include="Models\Mapping\ulkeMap.cs" />
+    <Compile Include="Models\Mapping\uyelerMap.cs" />
+    <Compile Include="Models\Mapping\uye_dogrulamaMap.cs" />
+    <Compile Include="Models\Mapping\uye_ilgiMap.cs" />
+    <Compile Include="Models\Mapping\uye_mesajlariMap.cs" />
+    <Compile Include="Models\Mapping\uye_mesajlari_kurumsalMap.cs" />
+    <Compile Include="Models\Mapping\uye_okullariMap.cs" />
+    <Compile Include="Models\Mapping\uye_seviyeleriMap.cs" />
+    <Compile Include="Models\Mapping\yetkilerMap.cs" />
+    <Compile Include="Models\Mapping\yoneticilerMap.cs" />
+    <Compile Include="Models\Mapping\yorumMap.cs" />
+    <Compile Include="Models\Mapping\yorum_begenilerMap.cs" />
+    <Compile Include="Models\Mapping\yorum_begeni_okulMap.cs" />
+    <Compile Include="Models\Mapping\yorum_resimleriMap.cs" />
+    <Compile Include="Models\Mapping\yorum_sikayetleriMap.cs" />
+    <Compile Include="Models\Mapping\yorum_sikayet_nedenleriMap.cs" />
+    <Compile Include="Models\Mapping\yorum_yanitlariMap.cs" />
+    <Compile Include="Models\Mapping\ziyaretciMap.cs" />
+    <Compile Include="Models\mesajlar.cs" />
+    <Compile Include="Models\mesaj_alici_listesi.cs" />
+    <Compile Include="Models\mesaj_ayarlari.cs" />
+    <Compile Include="Models\okullar.cs" />
+    <Compile Include="Models\okul_fakulteleri.cs" />
+    <Compile Include="Models\okul_fiyat_ogr_tur.cs" />
+    <Compile Include="Models\okul_fotograflar.cs" />
+    <Compile Include="Models\okul_gruplari.cs" />
+    <Compile Include="Models\okul_grup_iliski.cs" />
+    <Compile Include="Models\okul_gunluk.cs" />
+    <Compile Include="Models\okul_indirimleri.cs" />
+    <Compile Include="Models\okul_lokasyon.cs" />
+    <Compile Include="Models\okul_ozellikleri.cs" />
+    <Compile Include="Models\okul_programlari.cs" />
+    <Compile Include="Models\okul_sayac.cs" />
+    <Compile Include="Models\okul_sistem.cs" />
+    <Compile Include="Models\okul_ziyaret.cs" />
+    <Compile Include="Models\onkayit_egitim_turleri.cs" />
+    <Compile Include="Models\on_basvuru_alici_listesi.cs" />
+    <Compile Include="Models\on_kayit_basvuru.cs" />
+    <Compile Include="Models\ozellikler.cs" />
+    <Compile Include="Models\popup.cs" />
+    <Compile Include="Models\program_havuzu.cs" />
+    <Compile Include="Models\sayfalar.cs" />
+    <Compile Include="Models\seviye_bilgilendirme.cs" />
+    <Compile Include="Models\seviye_odulleri.cs" />
+    <Compile Include="Models\site_haritasi.cs" />
+    <Compile Include="Models\sorular.cs" />
+    <Compile Include="Models\soru_alici_listesi.cs" />
+    <Compile Include="Models\sosyal_medya.cs" />
+    <Compile Include="Models\sysdiagram.cs" />
+    <Compile Include="Models\toplu_mesaj.cs" />
+    <Compile Include="Models\toplu_mesaj_kitle.cs" />
+    <Compile Include="Models\ulke.cs" />
+    <Compile Include="Models\uyeler.cs" />
+    <Compile Include="Models\uye_dogrulama.cs" />
+    <Compile Include="Models\uye_ilgi.cs" />
+    <Compile Include="Models\uye_mesajlari.cs" />
+    <Compile Include="Models\uye_mesajlari_kurumsal.cs" />
+    <Compile Include="Models\uye_okullari.cs" />
+    <Compile Include="Models\uye_seviyeleri.cs" />
+    <Compile Include="Models\yetkiler.cs" />
+    <Compile Include="Models\yoneticiler.cs" />
+    <Compile Include="Models\yorum.cs" />
+    <Compile Include="Models\yorum_begeniler.cs" />
+    <Compile Include="Models\yorum_begeni_okul.cs" />
+    <Compile Include="Models\yorum_resimleri.cs" />
+    <Compile Include="Models\yorum_sikayetleri.cs" />
+    <Compile Include="Models\yorum_sikayet_nedenleri.cs" />
+    <Compile Include="Models\yorum_yanitlari.cs" />
+    <Compile Include="Models\ziyaretci.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

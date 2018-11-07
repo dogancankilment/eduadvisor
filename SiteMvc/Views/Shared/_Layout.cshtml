@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - EduAdvisor</title>
+    <link rel="shortcut icon" href="~/favicon.png" type="image/x-icon">
+    @Html.Partial("StyleSheet")
+    @RenderSection("sayfa_css", false)
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121714924-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-121714924-3');
+    </script>
+
+    @*<script>
+      
+
+        var diller = navigator.language || navigator.userLanguage;
+        var fn = function () {DilDegistir(event,'en-US')}
+        if (diller == "en-US") {
+     
+            //window.onload = function () {
+            //    setInterval(
+            //        fn
+
+            //        , 1000)
+            //}          
+        }
+    </script>*@
+</head>
+<body class="stretched no-transition">
+    <input type="hidden" id="secilidil" value="@HttpContext.Current.Session["Dil"].ToString()" />
+    <div id="wrapper" class="clearfix" style="background-color: transparent;">
+        @Html.Partial("Menu")
+        @Html.Hidden("srchLat")
+        @Html.Hidden("srchLng")
+        <div class="container-fluid aramacont" id="aramabar" style="background-color: #78c6bb; margin-left: 0; margin-right: 0; padding: 7px;">
+            <div class="container">
+                <div class="input-group col-sm-6" style="padding-right: 0; float: left; min-height: 36px;">
+                    <label class="arama-tur-secilmedi ustaramaerror"><i class="glyphicon glyphicon-triangle-top"></i>@Resources.Varsayilan.baslik_egitimturuseciniz</label>
+                    <span class="input-group-btn" style="border-radius: 3px !important">
+                    </span>
+                </div>
+                <div class="input-group col-sm-6" style="padding-left: 0; float: left; margin-left: 0px; min-height: 36px;">
+                    <span class="input-group-addon" id="sizing-addon2" style="background-color: white; font-weight: bolder; color: #a02f89;">@Resources.Varsayilan.baslik_yer</span>
+                    <span class="input-group-btn">
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div id="sayfa_icerikler">
+            @RenderBody()
+        </div>
+        
+        @Html.Partial("Footer")
+        @if (HttpContext.Current.Session["giris_yapan"] == null)
+        {
+            Html.RenderPartial("BireyselKayitModal");
+        }
+        @if (HttpContext.Current.Session["popup"] != null && HttpContext.Current.Session["popup"].ToString() == "1")
+        {
+            <div id="opsiyonpopupac" class="modal-on-load hide" data-target="#EduOpsiyonPopup"></div>
+            <div Class="modal1 mfp-hide" id="EduOpsiyonPopup">
+                <div class="block divcenter" style="background-color: #FFF; max-width: 700px">
+                    <a href="@(((dll.Models.popup)ViewBag.Popup).link)">
+                        <img style="margin: 0 auto;" class="img-responsive" src="@("/Content/img/popup/"+ (((dll.Models.popup)ViewBag.Popup).resim))" alt="EduAdvisor Popup" />
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+    @if ((HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString().Equals("OkulSonuclari") && !HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString().Equals("Index")) || (HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString().Equals("Home") && HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString().Equals("Footer")))
+    {
+        <div class="container-fluid text-center" id="fix_arama_bar">
+            <div id="ilk_div" class="container accordian-body collapse">
+                <div class="col-sm-12 " style="padding: 0 !important;">
+                    <h3 class="text-center erguvan margintop0 marginbottom10">@Resources.Varsayilan.anasayfa_ustaramabari_yazi</h3>
+                    <div class="input-group col-sm-6 paddingsag0 pull-left height55">
+                        <label class="arama-tur-secilmedi anasayfa_aramaerror" style="display:none;top:60px;"><i class="glyphicon glyphicon-triangle-top"></i>@Resources.Varsayilan.baslik_egitimturuseciniz</label>
+                        <span class="input-group-btn" style="border-radius: 3px !important">
+                            <select id="anasayfa_ust_aramaegitim" class="form-control selectpicker height55" data-width="fit" style="z-index: 9999999 !important;">
+                                <option selected="selected" value="-1">@Resources.Varsayilan.b_seciniz</option>
+                                @{
+                                    List<dll.Models.egitim_turleri> EgitimTurleri = (List<dll.Models.egitim_turleri>)ViewBag.EgitimTurleri;
+                                    for (int i = 0; i < EgitimTurleri.Count; i++)
+                                    {
+                                        <option value="@EgitimTurleri[i].seo_url">@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri[i].adi : EgitimTurleri[i].adi_ingilizce)</option>
+                                    }
+                                }
+                            </select>
+                        </span>
+                        <input name="txt_aramaokuladi" type="text" id="anasayfaust_arama_aramaokuladi" class="typeahead form-control height55 noborder noborderradius" placeholder="@Resources.Varsayilan.baslik_okuladigir">
+                    </div>
+                    <div class="input-group col-sm-6 paddingsol0 pull-left marginleft0 height55 bordersag25radius" style="background-color: white; z-index: 2; border-left: 1px solid #f1efef;padding:0;">
+                        <span class="input-group-addon noborder arkasi_beyaz noborderradius" style="font-weight: bolder; color: #a02f89;">@Resources.Varsayilan.baslik_yer</span>
+                        <input type="hidden" value="" id="anasayfa_ust_arama_ulkesehir" data-placeholder="@Resources.Varsayilan.b_yergirin" />
+                        <span class="input-group-btn aramabutonuustspan">
+                            <a hreflang="#" id="btn_okulara" class="btn btn-primary btnOkulAra height55" href="#" onclick="UstAramaBarOkulAra(event)">
+                                <span style="font-weight: bolder; margin-left: 10px; margin-top: 10px;">@Resources.Varsayilan.okul_bul</span>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <a href="#" data-toggle="collapse" data-target="#ilk_div" class="accordion-toggle tiklamaengelle"><img src="~/Content/img/asagi_ok.svg" height="20" /></a>
+        </div>
+    }
+    @Html.Partial("Script")
+    @RenderSection("sayfa_js", false)
+    
+    <script type="text/javascript" src="~/Content/js/site.js"></script>
+    <div id="gotoTop" class="icon-angle-up"></div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+﻿@model dll.Models.okullar
+@{
+    var listFiyatOgrTur = Model.okul_fiyat_ogr_tur.Select(x => x.fiyat_ogr_tur).ToList();
+}
+<div id="tabs-fiyat" class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="fiyatlistesigit" role="tabpanel" aria-hidden="true" style="display: none;">
+    <div class="table-responsive">
+        <div class="tabs side-tabs responsive-tabs clearfix" id="tab-4">
+            <ul class="tab-nav clearfix">
+                @for (int i = 0; i < listFiyatOgrTur.Count; i++)
+            {
+                    <li><a href="#tabs-@listFiyatOgrTur[i].id">@listFiyatOgrTur[i].adi</a></li>
+                }
+            </ul>
+            <div class="tab-container">
+                @for (int i = 0; i < listFiyatOgrTur.Count; i++)
+            {
+                if (Model.egitim_turleri.kurs_hafta_alinacak)
+                {
+                    var icerikler = listFiyatOgrTur[i].fiyat_deger_haftalik.ToList();
+                        <div class="tab-content clearfix" id="tabs-@listFiyatOgrTur[i].id">
+                            <table class="okul_detay_fiyat table table-hover" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>@Resources.Varsayilan.b_programadi</th>
+                                        <th>1 @Resources.Varsayilan.hafta</th>
+                                        <th>2 @Resources.Varsayilan.hafta</th>
+                                        <th>3 @Resources.Varsayilan.hafta</th>
+                                        <th>4 @Resources.Varsayilan.hafta</th>
+                                        <th>6 @Resources.Varsayilan.hafta</th>
+                                        <th>8 @Resources.Varsayilan.hafta</th>
+                                        <th>10 @Resources.Varsayilan.hafta</th>
+                                        <th>12 @Resources.Varsayilan.hafta</th>
+                                        <th>24 @Resources.Varsayilan.hafta</th>
+                                        <th>36 @Resources.Varsayilan.hafta</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @for (int j = 0; j < icerikler.Count; j++)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <span>@icerikler[j].fiyat.okul_programlari.program_havuzu.adi</span><br />
+                                                <small class="erguvan">@icerikler[j].fiyat.fiyat_tur.adi</small>
+                                            </td>
+                                            <td><label class="label label-default">@icerikler[j].C1_hafta</label></td>
+                                            <td><label class="label label-default">@icerikler[j].C2_hafta</label></td>
+                                            <td><label class="label label-default">@icerikler[j].C3_hafta</label></td>
+                                            <td><label class="label label-default">@icerikler[j].C4_hafta</label></td>
+                                            <td><label class="label label-default">@icerikler[j].C6_hafta</label></td>
+                                            <td><label class="label label-default">@icerikler[j].C8_hafta</label></td>
+                                            <td><label class="label label-default">@icerikler[j].C10_hafta</label></td>
+                                            <td><label class="label label-default">@icerikler[j].C12_hafta</label></td>
+                                            <td><label class="label label-default">@icerikler[j].C24_hafta</label></td>
+                                            <td><label class="label label-default">@icerikler[j].C36_hafta</label></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        var icerikler = listFiyatOgrTur[i].fiyat_deger.ToList();
+                        <div class="tab-content clearfix" id="tabs-@listFiyatOgrTur[i].id">
+                            <table class="okul_detay_fiyat table table-hover" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>@Resources.Varsayilan.b_programadi</th>
+                                        <th>@Resources.Varsayilan.fiyati</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @for (int j = 0; j < icerikler.Count; j++)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <span>@icerikler[j].fiyat.okul_programlari.program_havuzu.adi</span><br />
+                                                <small class="erguvan">@icerikler[j].fiyat.fiyat_tur.adi</small>
+                                            </td>
+                                            <td><label class="label label-default">@icerikler[j].deger</label></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
+@*<div class="tab-content clearfix" id="tabs-@listFiyatOgrTur[i].id">
+        <table class="okul_detay_fiyat table table-hover" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Program Adı</th>
+                    <th>İndirim Oranı</th>
+                    <th>Okul Fiyatı</th>
+                    <th>EduAdvisor Fiyatı</th>
+                    <th>Kazancınız</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int j = 0; j < icerikler.Count; j++)
+                {
+                    <tr>
+                        <td>@icerikler[j].fiyat.okul_programlari.program_havuzu.adi</td>
+                        <td>10%</td>
+                        <td><label class="label label-danger"><strike>@icerikler[j].C1_hafta</strike></label></td>
+                        <td><label class="label label-success">1350 TL</label></td>
+                        <td><label class="label label-success">150 TL</label></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>*@

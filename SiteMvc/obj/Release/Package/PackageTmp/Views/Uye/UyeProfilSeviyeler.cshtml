@@ -1,0 +1,69 @@
+﻿@model dll.Models.uyeler
+
+<div class="tab-pane" id="tab_seviye" style="margin-left: 36px;">
+    <div id="oc-images" class="owl-carousel image-carousel carousel-widget" data-margin="20" data-nav="true" data-pagi="false" data-items-xxs="1" data-items-xs="1" data-items-sm="2" data-items-md="2" data-items-lg="2">
+        @{
+            EduApi.SiteModels.UyeSeviyeModel uye_seviye = (EduApi.SiteModels.UyeSeviyeModel)ViewBag.Seviyeler;
+            for (int i = 0; i < uye_seviye.seviyeler.Count; i++)
+            {
+                <div class="oc-item">
+                    <div class="pricing bottommargin clearfix">
+                        <div class="pricing-box" style="height: 365px; overflow: auto;">
+                            <div class="pricing-title">
+                                <h3>@(Session["Dil"].ToString().Equals("tr-TR") ? uye_seviye.seviyeler[i].adi : uye_seviye.seviyeler[i].adi_ingilizce)</h3>
+                            </div>
+                            <div class="pricing-price">
+                                <small data-v="@uye_seviye.seviyeler[i].puani"></small><span class="price-tenure"><b style="color:#9f2f89">@Model.puani</b>/@uye_seviye.seviyeler[i].puani</span>
+                            </div>
+                            @if (uye_seviye.seviyeler[i].puani <= Model.puani)
+                            {
+                                <div id="puanaulasildi">
+                                    <img src="~/Content/img/okey.png" class="okeykilitli" alt="EduAdvisor @Resources.Varsayilan.b_seviyesis" />
+                                </div>
+                            }
+                            else
+                            {
+                                <div id="kilitli">
+                                    <img src="Content/img/kilit.png" class="okey" alt="EduAdvisor @Resources.Varsayilan.b_seviyesis" />
+                                </div>
+                            }
+                            <div class="pricing-features">
+                                <ul>
+                                    @{
+                                        var oduller = uye_seviye.seviyeler[i].seviye_odulleri.ToList();
+                                        for (int j = 0; j < oduller.Count; j++)
+                                        {
+                                            <li>
+                                                <strong class="erguvan">@(Session["Dil"].ToString().Equals("tr-TR") ? oduller[j].baslik : oduller[j].baslik_ingilizce)</strong>
+                                                <a href="#" data-toggle="tooltip" data-placement="bottom" title='@(Session["Dil"].ToString().Equals("tr-TR") ?  oduller[j].aciklama : oduller[j].aciklama_ingilizce)'>
+                                                    <i class="glyphicon glyphicon-question-sign"></i>
+                                                </a>
+                                            </li>
+                                        }
+                                    }
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                        }
+        }
+
+
+    </div>
+    @for (int i = 0; i < uye_seviye.bilgilendirmeler.Count; i++)
+    {
+        <div class="pricing-box pricing-extended bottommargin clearfix" style="margin-bottom: 20px !important;">
+            <div class="pricing-desc" style="width: 100%">
+                <div class="pricing-title">
+                    <h3 style="text-transform: none; color: #1ABC9C;">@(Session["Dil"].ToString().Equals("tr-TR") ? uye_seviye.bilgilendirmeler[i].baslik : uye_seviye.bilgilendirmeler[i].baslik_ingilizce)</h3>
+                </div>
+                <div class="pricing-features">
+                    <p style="font-size: 15px; padding: 6px 0; margin-bottom: 5px;">@(Html.Raw((Session["Dil"].ToString().Equals("tr-TR") ? uye_seviye.bilgilendirmeler[i].icerik : uye_seviye.bilgilendirmeler[i].icerik_ingilizce).Replace("\\n", "<br/>").Replace("\\r", "")))</p>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>

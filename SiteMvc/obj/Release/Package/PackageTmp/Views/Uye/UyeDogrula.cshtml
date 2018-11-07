@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = Resources.Varsayilan.uye_dogrulama;
+}
+
+<div class="container" style="height:300px">
+    @if (ViewBag.dogrulama_sonucu != "0")
+    {
+        <div class="style-msg successmsg" id="uyedogrulamabasarili" style="margin-top:100px;">
+            <div class="sb-msg"><i class="icon-thumbs-up"></i><strong>@Resources.Varsayilan.uyelikaktif</strong> @Resources.Varsayilan.yonlendiriliyor....</div>
+        </div>
+    }
+    else
+    {
+        <div class="style-msg errormsg" style="margin-top:100px;">
+            <div class="sb-msg"><i class="icon-remove"></i><strong>@Resources.Varsayilan.uyelikaktifsorun</strong>@Resources.Varsayilan.lutfendahasonradene...</div>
+        </div>
+    }
+</div>
+

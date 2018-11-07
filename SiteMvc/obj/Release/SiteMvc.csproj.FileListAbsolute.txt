@@ -1,0 +1,354 @@
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\roslyn\csc.exe
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\roslyn\vbc.exe
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\roslyn\VBCSCompiler.exe
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\SiteMvc.dll.config
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\SiteMvc.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\SiteMvc.pdb
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\Antlr3.Runtime.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\EduApi.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\EntityFramework.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\EntityFramework.SqlServer.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\Newtonsoft.Json.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\System.Web.Helpers.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\System.Web.Mvc.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\System.Web.Optimization.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\System.Web.Razor.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\System.Web.WebPages.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\WebGrease.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\System.Web.Http.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\dll.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\PCLCrypto.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\System.Web.Http.WebHost.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\System.Net.Http.Formatting.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\PInvoke.BCrypt.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\PInvoke.NCrypt.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\Validation.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\PInvoke.Windows.Core.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\PInvoke.Kernel32.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\EduApi.pdb
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\EntityFramework.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\EntityFramework.SqlServer.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\System.Web.Razor.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\System.Web.Helpers.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\System.Web.Mvc.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\System.Web.Optimization.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\System.Web.WebPages.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\Antlr3.Runtime.pdb
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\Newtonsoft.Json.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\System.Web.Http.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\dll.pdb
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\PCLCrypto.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\System.Web.Http.WebHost.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\System.Net.Http.Formatting.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\PInvoke.BCrypt.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\PInvoke.NCrypt.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\Validation.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\PInvoke.Windows.Core.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\bin\PInvoke.Kernel32.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\obj\Release\SiteMvc.csprojResolveAssemblyReference.cache
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\obj\Release\SiteMvc.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\SiteMvc\obj\Release\SiteMvc.pdb
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\roslyn\csc.exe
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\roslyn\vbc.exe
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\roslyn\VBCSCompiler.exe
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\SiteMvc.dll.config
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\SiteMvc.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\SiteMvc.pdb
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\Antlr3.Runtime.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\dll.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\EduApi.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\EntityFramework.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\EntityFramework.SqlServer.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\Facebook.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\Newtonsoft.Json.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\System.Web.Helpers.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\System.Web.Mvc.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\System.Web.Optimization.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\System.Web.Razor.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\System.Web.WebPages.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\WebGrease.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\System.Web.Http.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\PCLCrypto.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\System.Web.Http.WebHost.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\System.Net.Http.Formatting.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\PInvoke.BCrypt.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\PInvoke.NCrypt.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\Validation.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\PInvoke.Windows.Core.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\PInvoke.Kernel32.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\dll.pdb
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\EduApi.pdb
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\EntityFramework.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\EntityFramework.SqlServer.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\Facebook.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\System.Web.Razor.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\System.Web.Helpers.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\System.Web.Mvc.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\System.Web.Optimization.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\System.Web.WebPages.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\Antlr3.Runtime.pdb
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\Newtonsoft.Json.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\System.Web.Http.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\PCLCrypto.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\System.Web.Http.WebHost.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\System.Net.Http.Formatting.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\PInvoke.BCrypt.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\PInvoke.NCrypt.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\Validation.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\PInvoke.Windows.Core.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\PInvoke.Kernel32.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\obj\Release\SiteMvc.csprojResolveAssemblyReference.cache
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\obj\Release\SiteMvc.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\obj\Release\SiteMvc.pdb
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\PagedList.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\PagedList.Mvc.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\PagedList.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\SiteMvc\bin\PagedList.Mvc.xml
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\roslyn\csc.exe
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\roslyn\System.Collections.Immutable.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\roslyn\System.Reflection.Metadata.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\roslyn\vbc.exe
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\roslyn\VBCSCompiler.exe
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\roslyn\VBCSCompiler.exe.config
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\SiteMvc.dll.config
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\SiteMvc.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\SiteMvc.pdb
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\Antlr3.Runtime.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\dll.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\EduApi.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\EntityFramework.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\EntityFramework.SqlServer.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\Facebook.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\Microsoft.Web.Infrastructure.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\Newtonsoft.Json.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\PagedList.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\PagedList.Mvc.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\System.Web.Helpers.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\System.Web.Mvc.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\System.Web.Optimization.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\System.Web.Razor.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\System.Web.WebPages.Deployment.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\System.Web.WebPages.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\System.Web.WebPages.Razor.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\WebGrease.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\System.Web.Http.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\PCLCrypto.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\System.Web.Http.WebHost.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\System.Net.Http.Formatting.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\PInvoke.BCrypt.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\PInvoke.NCrypt.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\Validation.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\PInvoke.Windows.Core.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\PInvoke.Kernel32.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\dll.pdb
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\EduApi.pdb
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\EntityFramework.xml
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\EntityFramework.SqlServer.xml
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\Facebook.xml
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\PagedList.xml
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\PagedList.Mvc.xml
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\System.Web.Razor.xml
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\System.Web.Helpers.xml
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\System.Web.Mvc.xml
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\System.Web.Optimization.xml
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\System.Web.WebPages.xml
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\System.Web.WebPages.Deployment.xml
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\System.Web.WebPages.Razor.xml
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\Antlr3.Runtime.pdb
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\Newtonsoft.Json.xml
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\System.Web.Http.xml
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\PCLCrypto.xml
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\System.Web.Http.WebHost.xml
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\System.Net.Http.Formatting.xml
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\PInvoke.BCrypt.xml
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\PInvoke.NCrypt.xml
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\Validation.xml
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\PInvoke.Windows.Core.xml
+E:\projeler\EduAdvisor\EduApi\SiteMvc\bin\PInvoke.Kernel32.xml
+E:\projeler\EduAdvisor\EduApi\SiteMvc\obj\Release\SiteMvc.csprojResolveAssemblyReference.cache
+E:\projeler\EduAdvisor\EduApi\SiteMvc\obj\Release\SiteMvc.dll
+E:\projeler\EduAdvisor\EduApi\SiteMvc\obj\Release\SiteMvc.pdb
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\roslyn\csc.exe
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\roslyn\vbc.exe
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\roslyn\VBCSCompiler.exe
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\SiteMvc.dll.config
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\SiteMvc.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\SiteMvc.pdb
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\Antlr3.Runtime.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\dll.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\EduApi.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\EntityFramework.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\EntityFramework.SqlServer.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\Facebook.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\Newtonsoft.Json.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\PagedList.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\PagedList.Mvc.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\System.Web.Helpers.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\System.Web.Mvc.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\System.Web.Optimization.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\System.Web.Razor.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\System.Web.WebPages.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\WebGrease.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\System.Web.Http.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\PCLCrypto.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\System.Web.Http.WebHost.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\System.Net.Http.Formatting.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\PInvoke.BCrypt.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\PInvoke.NCrypt.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\Validation.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\PInvoke.Windows.Core.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\PInvoke.Kernel32.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\dll.pdb
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\EduApi.pdb
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\EntityFramework.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\EntityFramework.SqlServer.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\Facebook.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\PagedList.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\PagedList.Mvc.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\System.Web.Razor.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\System.Web.Helpers.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\System.Web.Mvc.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\System.Web.Optimization.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\System.Web.WebPages.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\Antlr3.Runtime.pdb
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\Newtonsoft.Json.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\System.Web.Http.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\PCLCrypto.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\System.Web.Http.WebHost.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\System.Net.Http.Formatting.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\PInvoke.BCrypt.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\PInvoke.NCrypt.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\Validation.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\PInvoke.Windows.Core.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\bin\PInvoke.Kernel32.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\obj\Release\SiteMvc.csprojResolveAssemblyReference.cache
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\obj\Release\SiteMvc.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\SiteMvc\obj\Release\SiteMvc.pdb
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\roslyn\csc.exe
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\roslyn\vbc.exe
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\roslyn\VBCSCompiler.exe
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\SiteMvc.dll.config
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\SiteMvc.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\SiteMvc.pdb
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\Antlr3.Runtime.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\dll.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\EduApi.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\EntityFramework.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\EntityFramework.SqlServer.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\Facebook.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\Newtonsoft.Json.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\PagedList.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\PagedList.Mvc.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\System.Web.Helpers.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\System.Web.Mvc.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\System.Web.Optimization.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\System.Web.Razor.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\System.Web.WebPages.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\WebGrease.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\System.Web.Http.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\PCLCrypto.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\System.Web.Http.WebHost.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\System.Net.Http.Formatting.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\PInvoke.BCrypt.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\PInvoke.NCrypt.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\Validation.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\PInvoke.Windows.Core.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\PInvoke.Kernel32.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\dll.pdb
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\EduApi.pdb
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\EntityFramework.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\EntityFramework.SqlServer.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\Facebook.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\PagedList.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\PagedList.Mvc.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\System.Web.Razor.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\System.Web.Helpers.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\System.Web.Mvc.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\System.Web.Optimization.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\System.Web.WebPages.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\Antlr3.Runtime.pdb
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\Newtonsoft.Json.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\System.Web.Http.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\PCLCrypto.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\System.Web.Http.WebHost.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\System.Net.Http.Formatting.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\PInvoke.BCrypt.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\PInvoke.NCrypt.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\Validation.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\PInvoke.Windows.Core.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\bin\PInvoke.Kernel32.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\obj\Release\SiteMvc.csprojResolveAssemblyReference.cache
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\obj\Release\SiteMvc.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\SiteMvc\obj\Release\SiteMvc.pdb

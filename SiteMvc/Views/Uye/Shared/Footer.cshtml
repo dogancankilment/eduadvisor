@@ -1,0 +1,84 @@
+﻿<footer id="siyahyap" class="" style="border-top: 5px #a02f89 solid;">
+    <div class="mlr15" style="">
+        <div class="col-sm-4">
+            <div class="col-md-6 padding0">
+                <h3 style="color: #a02f89;text-transform:uppercase;" title="EduAdvisor @Resources.Varsayilan.bslk_hakkimizda">@Resources.Varsayilan.bslk_hakkimizda</h3>
+                <ul class="">
+                    <li>
+                        <i class="icon-angle-right"></i>
+                        <a href="@Url.RouteUrl("Footer",new {gozukecek="Misyonumuz"})" title="EduAdvisor @Resources.Varsayilan.misyonumuz">@Resources.Varsayilan.misyonumuz</a>
+                    </li>
+                    <li>
+                        <i class="icon-angle-right"></i>
+                        <a href="@Url.RouteUrl("Footer",new { gozukecek="Kullanim-Kosullari" })" title="EduAdvisor @Resources.Varsayilan.kullanim_kosullari">@Resources.Varsayilan.kullanim_kosullari</a>
+                    </li>
+                    <li>
+                        <i class="icon-angle-right"></i>
+                        <a href="@Url.RouteUrl("Footer",new { gozukecek="Gizlilik-Politikasi" })" title="EduAdvisor @Resources.Varsayilan.gizlilik_politikasi">@Resources.Varsayilan.gizlilik_politikasi</a>
+                    </li>
+                    <li>
+                        <i class="icon-angle-right"></i>
+                        <a href="@Url.RouteUrl("Footer",new { gozukecek="Bize-Ulasin" })" title="EduAdvisor @Resources.Varsayilan.bslk_bizeulasin">@Resources.Varsayilan.bslk_bizeulasin</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6 padding0">
+                <h3 style="color: #a02f89;">@Resources.Varsayilan.kesfedin</h3>
+                <ul>
+                    <li>
+                        <i class="icon-angle-right"></i>
+                        <a href="@Url.RouteUrl("KurumsalKayit", new { tip = "yetkili" })" title="@Resources.Varsayilan.okulunuzu_kaydedin">@Resources.Varsayilan.okulunuzu_kaydedin</a>
+                    </li>
+                    <li>
+                        <i class="icon-angle-right"></i>
+                        <a href="@Url.RouteUrl("Footer",new { gozukecek="Sorulan-Sorular" })" title="@Resources.Varsayilan.bslk_sikcasoru">@Resources.Varsayilan.bslk_sikcasoru</a>
+                    </li>
+                    <li>
+                        <i class="icon-angle-right"></i>
+                        <a href="@Url.RouteUrl("Footer",new { gozukecek="Site-Haritasi" })" title="@Resources.Varsayilan.bslk_siteharitasi">@Resources.Varsayilan.bslk_siteharitasi</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-process" id="abone_ol_load"></div>
+            <h3 style="color: #a02f89;">@Resources.Varsayilan.bslk_bultenekayitolun</h3>
+            <div id="message-newsletter_2"></div>
+            <div class="form-group">
+                <div class="fake-input pull-left">
+                    <input type="text" ID="txtabone_ol" Class="form-control" />
+                </div>
+                <input type="button" onclick="AboneOl(event)" class="morbutton marginleft5" value="@Resources.Varsayilan.b_aboneol" />
+                <label class="arama-tur-secilmedi abone-ol" style="position:inherit"><i class="glyphicon glyphicon-triangle-top"></i>@Resources.Varsayilan.uyari_epostagir</label>
+                <label class="arama-tur-secilmedi abone-ol-basarili" style="position:inherit">@Resources.Varsayilan.uyari_abonetesekkur</label>
+                <label class="arama-tur-secilmedi abone-ol-basarisiz" style="position:inherit">@Resources.Varsayilan.uyari_aboneuzgunuz</label>
+                <label class="arama-tur-secilmedi abone-ol-kayitli" style="position:inherit">@Resources.Varsayilan.uyari_abonevar</label>
+            </div>
+            <div id="copyrights" class="padding0 col-sm-12 pull-left" style="background-color: transparent; margin-top: 5px;">
+                <div class="marginbottom10 padding0">
+                    Copyrights © 2017 Powered by <a href="http://dogruyer.com.tr" target="_blank">Doğruyer </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 pull-left" id="nasilyardim">
+            <a href="@Resources.Varsayilan.footer_yardim_a_href" style="height:90px;">
+                <img src="~/@Resources.Varsayilan.posta_footer" alt="EduAdvisor @Resources.Varsayilan.bslk_bizeulasin" />
+            </a>
+            <div class="col-xs-12 padding0">
+                <div class="paddingtop10">
+                    @{
+                        List<dll.Models.sosyal_medya> sosyal = (List<dll.Models.sosyal_medya>)ViewBag.SosyalMedyalar;
+                        for (int i = 0; i < sosyal.Count; i++)
+                        {
+                            <a href="@sosyal[i].link" style="margin-left: 5px; margin-right: 5px;" data-toggle="tooltip" data-placement="top" title="@sosyal[i].adi">
+                                <img src="@sosyal[i].image_url" alt="EduAdvisor-@sosyal[i].adi" />
+                            </a>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+

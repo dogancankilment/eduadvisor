@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = Resources.Varsayilan.kullanim_kosullari;
+}
+
+<section id="page-title">
+    <div class="container clearfix"><span id="baslik" style="color:#a02f89">@Resources.Varsayilan.kullanim_kosullari</span></div>
+</section>
+<section id="map-overlay">
+    <div class="container clearfix">
+        <div class="container clearfix">
+            <blockquote class="topmargin bottommargin">
+                <p>@Html.Raw(ViewBag.SayfaIcerik.Replace("\\n", "<br/>"))</p>
+            </blockquote>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,40 @@
+﻿@model List<EduApi.SiteModels.AnasayfaYorumModel>
+<div class="container-fluid col-md-12 margintop20 marginbottom15 padding0">
+    <div class="col-sm-12">
+        <div class="mlr15">
+            <div id="anasayfa_guncel_yorumlar">
+                <div class="row">
+                    <div class="tabbaslik paddingsol15">
+                        <h3 class="marginbottom0 margintop0" style="border-bottom:2px purple solid;">@Resources.Varsayilan.guncel_yorumlar</h3>
+                    </div>
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 anasayfa-yorumlar" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; border-bottom: 2px purple solid;">
+                            <div class="review_strip_single" style="padding-bottom: 0px;">
+                                <img src="~/Content/img/kul_profil/@Model[i].image_url" class="marginright5" height="100" width="100" style="border-radius: 50px" alt="EduAdvisor @Model[i].adi">
+                                <small>- @Model[i].yorum_tarih.ToString("dd MMMMM yyyy") - &nbsp;&nbsp;&nbsp;</small>
+                                <p>
+                                    <strong class="anasayfa-yorumlar-uye">
+                                        @Model[i].adi<span>  </span>@Model[i].seviyesi
+                                    </strong>
+                                </p><p><a href="@Url.RouteUrl("OkulDetay", new { GrupSeo = Model[i].grup_seo, OkulSeo = Model[i].okul_seo, id = Model[i].okul_id })">@Model[i].okul_adi</a></p>
+                                <strong>
+                                    @(Model[i].yorum_baslik + " (")
+                                    <span class="rating-container rating-sm fontawesome-icon" data-content="★★★★★">
+                                        <span class="rating-stars" data-content="★★★★★" style="width:@(Model[i].yorum_puani*20)"></span>
+                                    </span>
+                                    )
+                                </strong>
+                                <p></p>
+                                <p class="margintopeksi5">
+                                    @Model[i].yorum_icerik
+                                </p>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</div>

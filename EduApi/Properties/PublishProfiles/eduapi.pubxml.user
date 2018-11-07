@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\publish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/dll.dll">
+      <publishTime>06/18/2018 18:43:02</publishTime>
+    </File>
+    <File Include="bin/EduApi.dll">
+      <publishTime>07/20/2018 17:31:44</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>10/23/2017 13:15:18</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>10/23/2017 13:15:20</publishTime>
+    </File>
+    <File Include="bin/MySql.Data.dll">
+      <publishTime>06/17/2016 18:28:04</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>06/18/2017 13:57:10</publishTime>
+    </File>
+    <File Include="bin/PCLCrypto.dll">
+      <publishTime>04/02/2016 22:30:48</publishTime>
+    </File>
+    <File Include="bin/PInvoke.BCrypt.dll">
+      <publishTime>07/27/2017 14:18:36</publishTime>
+    </File>
+    <File Include="bin/PInvoke.Kernel32.dll">
+      <publishTime>07/27/2017 14:18:42</publishTime>
+    </File>
+    <File Include="bin/PInvoke.NCrypt.dll">
+      <publishTime>07/27/2017 14:19:18</publishTime>
+    </File>
+    <File Include="bin/PInvoke.Windows.Core.dll">
+      <publishTime>07/27/2017 14:18:36</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>01/28/2015 05:02:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>01/28/2015 05:02:54</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>01/28/2015 05:03:46</publishTime>
+    </File>
+    <File Include="bin/Validation.dll">
+      <publishTime>03/14/2017 21:41:02</publishTime>
+    </File>
+    <File Include="Content/MailTemplate/AboneOldu.html">
+      <publishTime>12/18/2017 15:34:35</publishTime>
+    </File>
+    <File Include="Content/MailTemplate/EduOnKayitYapildi.html">
+      <publishTime>12/18/2017 15:34:35</publishTime>
+    </File>
+    <File Include="Content/MailTemplate/KurumsalOnKayitYapildi.html">
+      <publishTime>12/18/2017 15:34:35</publishTime>
+    </File>
+    <File Include="Content/MailTemplate/MesajGonder.html">
+      <publishTime>12/18/2017 15:34:35</publishTime>
+    </File>
+    <File Include="Content/MailTemplate/OnKayitYapildi.html">
+      <publishTime>12/18/2017 15:34:35</publishTime>
+    </File>
+    <File Include="Content/MailTemplate/SifreHatirlat.html">
+      <publishTime>12/18/2017 15:34:35</publishTime>
+    </File>
+    <File Include="Content/MailTemplate/SoruSor.html">
+      <publishTime>12/18/2017 15:34:35</publishTime>
+    </File>
+    <File Include="Content/MailTemplate/TekrarKodGonder.html">
+      <publishTime>12/18/2017 15:34:35</publishTime>
+    </File>
+    <File Include="Content/MailTemplate/UyeKayitOl.html">
+      <publishTime>12/18/2017 15:34:35</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>12/08/2017 14:01:49</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>12/08/2017 14:01:49</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>12/08/2017 14:01:49</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>12/08/2017 14:01:49</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>09/15/2017 13:02:58</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>02/02/2018 14:01:58</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>12/08/2017 14:01:49</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>12/08/2017 14:01:49</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>12/08/2017 14:01:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>12/08/2017 14:01:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>12/08/2017 14:01:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>12/08/2017 14:01:51</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>12/08/2017 14:01:51</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>12/08/2017 14:01:51</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>12/08/2017 14:01:51</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>07/20/2018 10:48:10</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

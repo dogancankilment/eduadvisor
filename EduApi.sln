@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduApi", "EduApi\EduApi.csproj", "{59310988-EF4E-4AC2-9F81-F6742483337D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dll", "dll\dll.csproj", "{44B1A9A1-B4F8-4B67-93BC-1FF0B64F12F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiteMvc", "SiteMvc\SiteMvc.csproj", "{92471D21-8C57-4062-88E1-F6874B21BB74}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59310988-EF4E-4AC2-9F81-F6742483337D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59310988-EF4E-4AC2-9F81-F6742483337D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59310988-EF4E-4AC2-9F81-F6742483337D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59310988-EF4E-4AC2-9F81-F6742483337D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44B1A9A1-B4F8-4B67-93BC-1FF0B64F12F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44B1A9A1-B4F8-4B67-93BC-1FF0B64F12F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44B1A9A1-B4F8-4B67-93BC-1FF0B64F12F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44B1A9A1-B4F8-4B67-93BC-1FF0B64F12F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92471D21-8C57-4062-88E1-F6874B21BB74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92471D21-8C57-4062-88E1-F6874B21BB74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92471D21-8C57-4062-88E1-F6874B21BB74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92471D21-8C57-4062-88E1-F6874B21BB74}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

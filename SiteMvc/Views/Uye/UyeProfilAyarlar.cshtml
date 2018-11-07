@@ -1,0 +1,127 @@
+﻿
+<div class="tab-pane" id="tab_ayarlar" style="margin-left: 36px;">
+    <div id="sifrebasarili" style="display: none;">
+        <div class="alert alert-success">
+            <a style="font-size:33px" class="pull-right" href="#" onclick="gorunmezyap(event, sifrebasarili)">&times;</a>
+            <i class="icon-gift"></i><strong>@Resources.Varsayilan.u_sifrebasarili</strong>
+        </div>
+    </div>
+    <div id="gecerlisifrekontrol" style="display:none;">
+        <div class="alert alert-danger nobottommargin">
+            <a style="font-size:33px" class="pull-right" href="#" onclick="gorunmezyap(event, gecerlisifrekontrol)">&times;</a>
+            <i class="icon-gift"></i><strong>@Resources.Varsayilan.u_sifrekontrolet</strong>
+        </div>
+    </div>
+    <div id="sifrebasarisiz" style="display: none;">
+        <div class="alert alert-danger nobottommargin">
+            <a style="font-size:33px" class="pull-right" href="#" onclick="gorunmezyap(event, sifrebasarisiz)">&times;</a>
+            <i class="icon-remove-sign"></i><strong>@Resources.Varsayilan.u_guncbasarisiz</strong>
+        </div>
+    </div>
+    <div class="col-lg-12" style="border: 1px solid #e5e5e5; margin-bottom: 12px">
+        <div class="form-process" id="profil_ayarlar_load"></div>
+        <div class="form-group col-lg-6 margintop10 paddingsagsol0">
+            <label>@Resources.Varsayilan.b_sifreguncellebaslik</label>
+        </div>
+        <div class="form-group col-lg-8" style="padding: 0">
+            <label>@Resources.Varsayilan.b_gecerlisifre</label>
+            <div class="col-sm-12 paddingsagsol0" style="display: table">
+                <input type="password" id="txt_gecerlisifre" class="form-control pwdt" onblur="BosKontrol(this)" autocomplete="new-password">
+                <span class="input-group-btn">
+                    <button class="btn btn-default gecerli_sifre_real" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
+                </span>
+            </div>
+        </div>
+        <div class="form-group col-lg-8" style="padding: 0">
+            <label>@Resources.Varsayilan.bslk_sifre</label>
+            <div class="col-sm-12 paddingsagsol0" style="display: table">
+                <input type="password" id="uye_sifre" class="form-control pwdp" onblur="BosKontrol(this)" autocomplete="new-password">
+                <span class="input-group-btn">
+                    <button class="btn btn-default yeni_sifre_real" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
+                </span>
+            </div>
+        </div>
+        <div class="form-group col-lg-8 marginbottom0" style="padding: 0">
+            <label>@Resources.Varsayilan.b_sifretekrar</label>
+            <div class="col-sm-12 paddingsagsol0 " style="display: table">
+                <input type="password" id="uye_sifre_tekrar" class="form-control pwdk" onblur="BosKontrol(this)" autocomplete="new-password">
+                <span class="input-group-btn">
+                    <button class="btn btn-default yeni_sifre_tekrar_real" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
+                </span>
+                <span id="sifretekrarhata" placeholder="@Resources.Varsayilan.u_sifreuyusmuyor" style="color:Red;font-size:Medium;font-weight:bold;display: none;"></span>
+            </div>
+        </div>
+        <div class="form-group col-lg-8 center" style="padding: 0">
+            <input type="submit" value="@Resources.Varsayilan.b_sifrekaydet" onclick="UyeSifreGuncelle(event)" class="button button-small button-circle button-green">
+        </div>
+    </div>
+    <input type="submit" value="@Resources.Varsayilan.b_hesapdondur" class="button button-small button-circle button-red" data-target="#hesapdondurModal" data-toggle="modal">
+
+    <div class="modal fade" id="hesapdondurModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-body">
+                <div class="modal-content">
+                    <div class="form-process" id="hesap_dondur_load"></div>
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                        <h4 class="modal-title" id="myModalLabel">@Resources.Varsayilan.b_hesapdondur</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div id="uye_dondur_sifre_kontrol" style="display:none">
+                            <div class="alert alert-danger nobottommargin">
+                                <a style="font-size:33px" class="pull-right" href="#" onclick="gorunmezyap(event, uye_dondur_sifre_kontrol)">&times;</a>
+                                <i class="icon-gift"></i><strong>@Resources.Varsayilan.b_gecsifrekntrol</strong>
+                            </div>
+                        </div>
+                        <div id="uye_dondur_basarisiz" style="display:none">
+                            <div class="alert alert-danger nobottommargin">
+                                <a style="font-size:33px" class="pull-right" href="#" onclick="gorunmezyap(event, uye_dondur_basarisiz)">&times;</a>
+                                <i class="icon-gift"></i><strong>@Resources.Varsayilan.u_hesapdondurma</strong>
+                            </div>
+                        </div>
+                        <div id="uye_donduruldu" style="display:none">
+                            <div class="alert alert-success">
+                                <i class="icon-gift"></i><strong>@Resources.Varsayilan.u_hesapdondu</strong>
+                            </div>
+                        </div>
+                        <label>@Resources.Varsayilan.u_ayrluzgunuz</label>
+                        <label class="marginbottom0">@Resources.Varsayilan.u_ayrilmanedeni</label>
+                        <table id="rdbDondur" class="rdb" data-toggle="tooltip" style="margin-bottom: 0" data-original-title="" title="">
+                            <tbody>
+                                <tr>
+                                    <td><input id="rdbDondur_0" type="radio" onchange="UyeHesapDondurDiger()" name="uye_hesap_dondur_neden" value="@Resources.Varsayilan.u_ayrilman1" checked="checked"><label for="rdbDondur_0">@Resources.Varsayilan.u_ayrilman1</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input id="rdbDondur_1" type="radio" onchange="UyeHesapDondurDiger()" name="uye_hesap_dondur_neden" value="@Resources.Varsayilan.u_ayrilman2"><label for="rdbDondur_1">@Resources.Varsayilan.u_ayrilman2</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input id="rdbDondur_2" type="radio" onchange="UyeHesapDondurDiger()" name="uye_hesap_dondur_neden" value="@Resources.Varsayilan.u_ayrilman3"><label for="rdbDondur_2">@Resources.Varsayilan.u_ayrilman3</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input id="rdbDondur_3" type="radio" onchange="UyeHesapDondurDiger()" name="uye_hesap_dondur_neden" value="@Resources.Varsayilan.u_ayrilman4"><label for="rdbDondur_3">@Resources.Varsayilan.u_ayrilman4</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input id="rdbDondur_4" type="radio" onchange="UyeHesapDondurDiger()" name="uye_hesap_dondur_neden" value="@Resources.Varsayilan.u_ayrilman5"><label for="rdbDondur_4">@Resources.Varsayilan.u_ayrilman5</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input id="rdb_uye_dondur_diger" type="radio" onchange="UyeHesapDondurDiger()" name="uye_hesap_dondur_neden" value="-1"><label for="rdb_uye_dondur_diger">@Resources.Varsayilan.baslik_diger</label></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div id="hesap_dondur_diger" style="display:none">
+                            <label>@Resources.Varsayilan.u_bizimlepaylasbilgi</label>
+                            <textarea id="hesap_dondur_aciklama" class="form-control" rows="2" cols="20"></textarea>
+                            <span id="rqHesapDondurAciklama" style="display:none">@Resources.Varsayilan.aciklama_alani_bos_birakilamaz</span>
+                        </div>
+                        <label class="row col-xs-12">@Resources.Varsayilan.b_gecerlisifre</label>
+                        <input type="password" class="form-control" id="txt_dondurSfr" autocomplete="new-password" />
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" value="@Resources.Varsayilan.kapat" class="btn btn-default" data-dismiss="modal">
+                        <input type="submit" value="@Resources.Varsayilan.b_hesapdondur" onclick="UyeHesapDondur()" id="Govde_Dondur" class="btn btn-primary">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+﻿@model EduApi.SiteModels.AnasayfaIcerikModel
+@{
+    ViewBag.Title = Resources.Varsayilan.baslik_anasayfa;
+}
+
+@{Html.RenderPartial("AnasayfaUstAramaBar", Model);}
+
+<div class="mlr15 margintop20" id="AramaTabs">
+    <div class="col-md-6 aramagrikutu">
+        <div class="col-md-12 tabs tabs-bordered clearfix ui-tabs aramatabsyoket ui-widget ui-widget-content ui-corner-all paddingsagsol0" id="tab-2">
+            <ul class="tab-nav clearfix ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+                @for (int i = 0; i < Model.tabs.Count; i++)
+                {
+                    Html.RenderPartial("AnasayfaTabHeader", Model.tabs[i]);
+                }
+            </ul>
+            <div class="tab-container paddingtop40" id="anasayfayanarama">
+                @Html.Partial("AnasayfaTabYapisi")
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-12 col-xs-12" style="height: auto; border-radius: 15px" id="mapsyerayarla">
+        <h4 class="marginbottom0 erguvan text-center">@Resources.Varsayilan.anasayfa_harita_baslik</h4>
+        <div id="google-map-custom" class="gmap" style="border-radius: 15px"></div>
+    </div>
+</div>
+
+@Html.Partial("AnasayfaPin")
+
+
+
+@{
+    Html.RenderPartial("Enler", Model.enler);
+    if (ViewBag.ReturnUrl != null)
+    {
+        <input type="hidden" id="ReturnUrl" value="@ViewBag.ReturnUrl" />
+    }
+}
+
+
+    @if (Model.yorumlar.Count > 0)
+    {
+        Html.RenderPartial("AnasayfaYorum", Model.yorumlar);
+
+    }
+<div class="container-fluid"></div>
+
+
+
+
+
+
+@section sayfa_css{
+    <link rel="stylesheet" href="~/Content/css/components/bs-rating.css" type="text/css" />
+}
+@section sayfa_js{
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOn_vQHWDPeYYEQCQDMmuBYLOEzS6BsfA&libraries=places"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.vmap.js"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.gmap.js"></script>
+    <script type="text/javascript" src="~/Content/js/components/star-rating.js"></script>
+}

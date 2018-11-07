@@ -1,0 +1,152 @@
+﻿@model dll.Models.uyeler
+<div class="tab-pane" id="tab_egitim" style="margin-left: 36px;">
+    <div class="col-xs-12">
+        <form id="uye_profil_egitim_form">
+            <div class="form-process" id="profil_egitim_load"></div>
+            <div class="form-group col-lg-12">
+                <label>@Resources.Varsayilan.b_egitimalinankurum</label>
+                <select name="egitim_id" onchange="ProfilEgitimTuruDegisti(event)" id="uye_profil_egitim" class="form-control profil-egitim-js" onblur="BosKontrol(this)">
+                    <option></option>
+                    @{
+                        List<dll.Models.egitim_turleri> EgitimTurleri = (List<dll.Models.egitim_turleri>)ViewBag.EgitimTurleri;
+                        for (int i = 0; i < EgitimTurleri.Count; i++)
+                        {
+                            <option data-program="@(EgitimTurleri[i].program_var ? 1 : 0)" value="@EgitimTurleri[i].seo_url">
+                                @(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri[i].adi : EgitimTurleri[i].adi_ingilizce)
+                            </option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="form-group col-lg-6">
+                <label>@Resources.Varsayilan.b_egitimkurumsec</label>
+                <select name="okul_id" id="uye_profil_egitim_okullar" class="form-control profil-egitim-js" onchange="ProfilKampusleriGetir()" onblur="BosKontrol(this)">
+                    <option></option>
+                    <option selected="selected" value="-1">...</option>
+                </select>
+            </div>
+            <div class="form-group col-lg-6">
+                <label>@Resources.Varsayilan.b_kampus</label>
+                <select name="kampus_id" onchange="ProfilProgramlarGetir()" id="uye_profil_egitim_kampusler" class="form-control profil-egitim-js" onblur="BosKontrol(this)">
+                    <option></option>
+                    <option selected="selected">...</option>
+                </select>
+            </div>
+            <div class="form-group col-lg-6" id="uye_profil_egitim_program_parent">
+                <label>@Resources.Varsayilan.b_programadi</label>
+                <select id="uye_profil_egitim_programlar" class="form-control profil-egitim-js" onblur="BosKontrol(this)" name="program_id">
+                    <option></option>
+                    <option selected="selected" value="-1">...</option>
+                </select>
+            </div>
+            <div class="form-group col-lg-6" id="uye_profil_egitim_program_tur_parent">
+                <label>@Resources.Varsayilan.b_progturu</label>
+                <select id="uye_profil_egitim_programtur" class="form-control profil-egitim-js" onblur="BosKontrol(this)" name="program_tur_id">
+                    <option></option>
+                    <option selected="selected" value="-1">...</option>
+                </select>
+            </div>
+            <div class="form-group col-lg-6">
+                <div id="okultarih" class="input-daterange travel-date-group">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <label>@Resources.Varsayilan.b_egitimdonemi</label>
+                            <div class="input-daterange input-group" style="padding: 0">
+                                <input type="text" id="baslangic_tarih" class="sm-form-control tleft profil-egitim-js" onblur="BosKontrol(this)" placeholder="YYYY" name="baslangic" />
+                                <span class="input-group-addon">-</span>
+                                <input type="text" id="bitis_tarih" class="sm-form-control tleft profil-egitim-js" onblur="BosKontrol(this)" placeholder="YYYY" name="bitis" />
+                                <label class="arama-tur-secilmedi egitim-alinan-donem">
+                                    <i class="glyphicon glyphicon-triangle-top"></i>@Resources.Varsayilan.u_egitimdonemgir
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-lg-6">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <label style="margin-bottom: 45px !important"></label>
+                        <span class="chck"><input id="chk_haladevam" type="checkbox" class="profil-egitim-js" name="hala_devam"><label for="chk_haladevam">@Resources.Varsayilan.b_haladevam</label></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-xs-12 center">
+                <a href="#" class="button button-small button-circle button-green" onclick="UyeProfilEgitimEkle(event)">@Resources.Varsayilan.b_ekle</a>
+                <a href="@Url.RouteUrl("KurumsalKayit",new { tip="ogrenci"})" class="button button-small button-circle button-green">@Resources.Varsayilan.sistemdeokulyok</a>
+            </div>
+            <div class="col-xs-12">
+                <div id="profilegitimbasarili" style="display:none">
+                    <div class="alert alert-success">
+                        <a style="font-size:33px" class="pull-right" href="#" onclick="gorunmezyap(event, profilegitimbasarili)">&times;</a>
+                        <i class="icon-gift"></i><strong>@Resources.Varsayilan.u_guncellestirmabasarili</strong>
+                    </div>
+                </div>
+                <div id="profilegitimbasarisiz" style="display:none">
+                    <div class="alert alert-danger nobottommargin">
+                        <a style="font-size:33px" class="pull-right" href="#" onclick="gorunmezyap(event, profilegitimbasarisiz)">&times;</a>
+                        <i class="icon-gift"></i><strong>@Resources.Varsayilan.u_guncbasarisiz</strong>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="form-group col-lg-12">
+            <div class="form-process" id="profil_egitim"></div>
+            <div id="kayitli_egitimler">
+                @if (Model.uye_okullari.Count == 0)
+            {
+                    <div class="alert alert-danger nobottommargin">
+                        <i class="icon-gift"></i><strong>@Resources.Varsayilan.u_okulkaydiyok..</strong>
+                    </div>
+                }
+                @if (Model.uye_okullari.Count > 0)
+            {
+                    <table class="grd_egitim" cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+                        <thead>
+                            <tr>
+                                <th class="templatepadding" scope="col">@Resources.Varsayilan.b_egitimturu</th>
+                                <th class="templatepadding" scope="col">@Resources.Varsayilan.b_okuladi</th>
+                                <th class="templatepadding" scope="col">@Resources.Varsayilan.b_programadi</th>
+                                <th class="templatepadding" scope="col">@Resources.Varsayilan.b_egitimdonemi</th>
+                                <th class="templatepadding" scope="col">&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                var okullar = Model.uye_okullari.ToList();
+                                for (int i = 0; i < okullar.Count; i++)
+                                {
+                                    <tr>
+                                        <td class="itempadding">
+                                            <label class="egitim_tur">@okullar[i].okullar.egitim_turleri.adi</label>
+                                        </td>
+                                        <td class="itempadding text-center">
+                                            <label>@okullar[i].okullar.okul_grup_iliski.FirstOrDefault().okul_gruplari.adi</label>
+                                            <br />
+                                            <small>@okullar[i].okullar.adi</small>
+                                        </td>
+                                        <td class="itempadding">
+                                            <label>@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? (okullar[i].program_havuzu.adi + "-" + okullar[i].onkayit_egitim_turleri.adi) : (okullar[i].program_havuzu.adi_ingilizce + "-" + okullar[i].onkayit_egitim_turleri.adi_ingilizce))</label>
+                                        </td>
+                                        <td class="itempadding">
+                                            <label class="font12">
+                                                @(okullar[i].baslangic + " - " + (okullar[i].bitis == "-1" ? Resources.Varsayilan.b_haladevam : okullar[i].bitis))
+                                            </label>
+                                        </td>
+                                        <td class="itempadding">
+
+                                            <a href="@Url.RouteUrl("OkulDetay", new { GrupSeo = okullar[i].okullar.okul_grup_iliski.FirstOrDefault().okul_gruplari.seo_url, OkulSeo = okullar[i].okullar.seo_url })" target="_blank"
+                                               class="button button-small button-circle button-green">@Resources.Varsayilan.b_yorumyap</a>
+                                            <a onclick="ProfilEgitimSil(event, @okullar[i].id)" data-s="@Resources.Varsayilan.uye_profil_okul_sil_onay" class="button button-small button-circle button-red">@Resources.Varsayilan.b_sil</a>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+
+                        </tbody>
+                    </table>
+                                }
+            </div>
+        </div>
+    </div>
+</div>

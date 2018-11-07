@@ -1,0 +1,192 @@
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\EduApi.dll.config
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\EduApi.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\EduApi.pdb
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\dll.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\EntityFramework.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\EntityFramework.SqlServer.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\Newtonsoft.Json.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\PCLCrypto.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\PInvoke.BCrypt.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\PInvoke.Kernel32.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\PInvoke.NCrypt.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\PInvoke.Windows.Core.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\System.Net.Http.Formatting.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\System.Web.Http.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\System.Web.Http.WebHost.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\Validation.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\dll.pdb
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\EntityFramework.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\EntityFramework.SqlServer.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\Newtonsoft.Json.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\PCLCrypto.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\PInvoke.BCrypt.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\PInvoke.Kernel32.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\PInvoke.NCrypt.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\PInvoke.Windows.Core.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\System.Net.Http.Formatting.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\System.Web.Http.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\System.Web.Http.WebHost.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\bin\Validation.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\obj\Release\EduApi.csprojResolveAssemblyReference.cache
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\obj\Release\EduApi.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\Api\EduApi\EduApi\obj\Release\EduApi.pdb
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\EduApi.dll.config
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\EduApi.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\EduApi.pdb
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\dll.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\EntityFramework.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\EntityFramework.SqlServer.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\Newtonsoft.Json.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\PCLCrypto.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\PInvoke.BCrypt.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\PInvoke.Kernel32.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\PInvoke.NCrypt.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\PInvoke.Windows.Core.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\System.Net.Http.Formatting.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\System.Web.Http.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\System.Web.Http.WebHost.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\Validation.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\dll.pdb
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\EntityFramework.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\EntityFramework.SqlServer.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\Newtonsoft.Json.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\PCLCrypto.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\PInvoke.BCrypt.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\PInvoke.Kernel32.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\PInvoke.NCrypt.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\PInvoke.Windows.Core.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\System.Net.Http.Formatting.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\System.Web.Http.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\System.Web.Http.WebHost.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\bin\Validation.xml
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\obj\Release\EduApi.csprojResolveAssemblyReference.cache
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\obj\Release\EduApi.dll
+C:\Users\Dogruyer_2\Desktop\EduApi\EduApi\obj\Release\EduApi.pdb
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\EduApi.dll.config
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\EduApi.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\EduApi.pdb
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\dll.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\EntityFramework.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\EntityFramework.SqlServer.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\Newtonsoft.Json.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\PCLCrypto.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\PInvoke.BCrypt.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\PInvoke.Kernel32.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\PInvoke.NCrypt.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\PInvoke.Windows.Core.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\System.Net.Http.Formatting.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\System.Web.Http.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\System.Web.Http.WebHost.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\Validation.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\dll.pdb
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\EntityFramework.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\EntityFramework.SqlServer.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\Newtonsoft.Json.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\PCLCrypto.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\PInvoke.BCrypt.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\PInvoke.Kernel32.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\PInvoke.NCrypt.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\PInvoke.Windows.Core.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\System.Net.Http.Formatting.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\System.Web.Http.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\System.Web.Http.WebHost.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\bin\Validation.xml
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\obj\Release\EduApi.csprojResolveAssemblyReference.cache
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\obj\Release\EduApi.dll
+C:\Users\Dogruyer_2\Desktop\EduAdvisor\EduApi\EduApi\obj\Release\EduApi.pdb
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\EduApi.dll.config
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\EduApi.dll
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\EduApi.pdb
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\dll.dll
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\EntityFramework.dll
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\EntityFramework.SqlServer.dll
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\Newtonsoft.Json.dll
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\PCLCrypto.dll
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\PInvoke.BCrypt.dll
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\PInvoke.Kernel32.dll
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\PInvoke.NCrypt.dll
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\PInvoke.Windows.Core.dll
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\System.Net.Http.Formatting.dll
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\System.Web.Http.dll
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\System.Web.Http.WebHost.dll
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\Validation.dll
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\dll.pdb
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\EntityFramework.xml
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\EntityFramework.SqlServer.xml
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\Newtonsoft.Json.xml
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\PCLCrypto.xml
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\PInvoke.BCrypt.xml
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\PInvoke.Kernel32.xml
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\PInvoke.NCrypt.xml
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\PInvoke.Windows.Core.xml
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\System.Net.Http.Formatting.xml
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\System.Web.Http.xml
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\System.Web.Http.WebHost.xml
+E:\projeler\EduAdvisor\EduApi\EduApi\bin\Validation.xml
+E:\projeler\EduAdvisor\EduApi\EduApi\obj\Release\EduApi.csprojResolveAssemblyReference.cache
+E:\projeler\EduAdvisor\EduApi\EduApi\obj\Release\EduApi.dll
+E:\projeler\EduAdvisor\EduApi\EduApi\obj\Release\EduApi.pdb
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\EduApi.dll.config
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\EduApi.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\EduApi.pdb
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\dll.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\EntityFramework.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\EntityFramework.SqlServer.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\Newtonsoft.Json.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\PCLCrypto.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\PInvoke.BCrypt.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\PInvoke.Kernel32.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\PInvoke.NCrypt.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\PInvoke.Windows.Core.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\System.Net.Http.Formatting.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\System.Web.Http.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\System.Web.Http.WebHost.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\Validation.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\dll.pdb
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\EntityFramework.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\EntityFramework.SqlServer.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\Newtonsoft.Json.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\PCLCrypto.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\PInvoke.BCrypt.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\PInvoke.Kernel32.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\PInvoke.NCrypt.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\PInvoke.Windows.Core.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\System.Net.Http.Formatting.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\System.Web.Http.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\System.Web.Http.WebHost.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\bin\Validation.xml
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\obj\Release\EduApi.csprojResolveAssemblyReference.cache
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\obj\Release\EduApi.dll
+C:\Users\Dogruyer_4\Desktop\Yeni klasör\EDU\EduApi\EduApi\obj\Release\EduApi.pdb
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\EduApi.dll.config
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\EduApi.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\EduApi.pdb
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\dll.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\EntityFramework.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\EntityFramework.SqlServer.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\Newtonsoft.Json.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\PCLCrypto.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\PInvoke.BCrypt.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\PInvoke.Kernel32.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\PInvoke.NCrypt.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\PInvoke.Windows.Core.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\System.Net.Http.Formatting.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\System.Web.Http.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\System.Web.Http.WebHost.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\Validation.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\dll.pdb
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\EntityFramework.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\EntityFramework.SqlServer.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\Newtonsoft.Json.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\PCLCrypto.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\PInvoke.BCrypt.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\PInvoke.Kernel32.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\PInvoke.NCrypt.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\PInvoke.Windows.Core.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\System.Net.Http.Formatting.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\System.Web.Http.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\System.Web.Http.WebHost.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\bin\Validation.xml
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\obj\Release\EduApi.csprojResolveAssemblyReference.cache
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\obj\Release\EduApi.dll
+C:\Users\Dogruyer_4\Desktop\EduApi\EduApi\obj\Release\EduApi.pdb

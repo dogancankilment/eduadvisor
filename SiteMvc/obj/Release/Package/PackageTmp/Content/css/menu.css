@@ -1,0 +1,227 @@
+﻿
+@media (min-width:993px) {
+    #primary-menu-trigger, .menu_mobil_logo {
+        display: none;
+    }
+}
+
+@media (max-width: 752px) {
+    .menu_mobil_logo {
+        margin-left: 135px;
+    }
+}
+
+@media (max-width: 715px) {
+    #header-wrap .container {
+        width: 560px !important;
+    }
+}
+
+@media (max-width: 635px) {
+    .menu_mobil_logo {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 620px) {
+    #header-wrap .container {
+        width: 450px !important;
+    }
+}
+
+@media (max-width: 520px) {
+    #header-wrap .container {
+        width: 400px !important;
+    }
+}
+
+@media (max-width: 450px) {
+    #header-wrap .container {
+        width: 310px !important;
+    }
+}
+
+@media (max-width: 384px) {
+    #tabanasayfamargin .imlecserit {
+        margin-top: -15px !important;
+    }
+}
+
+@media (max-width: 366px) {
+    #tabanasayfamargin {
+        margin-top: -76px !important;
+    }
+
+    .gorselanasayfali {
+        width: 77px !important;
+    }
+}
+
+@media (max-width: 365px) {
+    #tab1yoket, #tab2yoket {
+        display: block !important;
+    }
+}
+
+@media (max-width: 560px) {
+    #tabanasayfamargin .imlecserit {
+        margin-top: -16px !important;
+    }
+}
+
+@media(max-width:1180px) {
+    .siralamayazi {
+        position: relative;
+        right: 55px;
+    }
+}
+
+@media(max-width:992px) {
+    #okul_sonuclari .okul_sonuc .yildiz_yorum_iliski {
+        position: absolute;
+        right: 69px;
+    }
+
+    .okul_yorum_sayisi {
+        position: absolute;
+        margin-right: 61px;
+    }
+
+    .solayaslama {
+        position: absolute;
+        margin-top: -48px;
+        float: right;
+        right: 1px;
+    }
+}
+
+@media(max-width:938px) {
+
+    .solayaslama {
+        position: absolute;
+        margin-top: -24px;
+        float: right;
+        right: 1px;
+    }
+}
+
+@media(max-width:901px) {
+    .solayaslama {
+        position: absolute;
+        margin-top: -45px;
+        float: right;
+        right: 1px;
+    }
+}
+
+@media(max-width:614px) {
+    .okul_yorum_sayisi {
+        margin-right: 0 !important;
+    }
+
+    .okul_puani_yildiz {
+        font-size: 26px !important;
+        height: 39px !important;
+    }
+
+    #okul_sonuclari .okul_sonuc .yildiz_yorum_iliski {
+        border-width: 14px 0 0 25px !important;
+    }
+}
+
+@media(max-width:487px) {
+    #okul_sonuclari .okul_sonuc .okul_sonuc_logo img {
+        height: 67px;
+    }
+
+    .okul_yorum_sayisi {
+        right: 33px;
+    }
+
+    #okul_sonuclari .okul_sonuc .yildiz_yorum_iliski {
+        right: 39px;
+        border-width: 13px 0 0 17px !important;
+    }
+
+    #okul_sonuclari .okul_sonuc .okul_puani_yildiz div {
+        height: 39px;
+    }
+
+    .okul_puani_yildiz {
+        font-size: 21px !important;
+    }
+
+    #okul_sonuclari .okul_sonuc .okul_puani_yildiz {
+        height: 25px !important;
+    }
+}
+
+@media(max-width:403px) {
+    .solayaslama {
+        width: 100% !important;
+        position: relative;
+        margin-top: 0;
+        float: right;
+        right: 1px;
+    }
+
+    .solayasli {
+        width: 100% !important;
+    }
+
+    .okul_yorum_sayisi {
+        top: 25px;
+    }
+
+    #okul_sonuclari .okul_sonuc .yildiz_yorum_iliski {
+        border-color: transparent transparent transparent;
+    }
+
+    .okul_yorum_sayisi {
+        right: 27px;
+    }
+
+    .siralamayazi {
+        position: relative;
+        right: 71px;
+    }
+}
+
+@media(max-width:340px) {
+    .morbutton {
+        padding: 7px 9px !important;
+    }
+
+    .siralamayazi {
+        position: relative;
+        right: 55px;
+    }
+}
+
+@media(max-width:993px) {
+    .top_gri_alan hr {
+        background-color: transparent !important;
+        border-top: transparent;
+        height: 0px !important;
+    }
+
+    #primary-menu.style-2 {
+        background: #6ec7bb;
+    }
+}
+
+h4 {
+    font-size: 16px !important;
+}
+
+@media(max-width:768px) {
+    #sabit-aramabar .btnOkulAra {
+        width: 100% !important;
+    }
+}
+
+@media(max-width:768px) {
+    #okulsonuc {
+        float: left !important;
+    }
+}

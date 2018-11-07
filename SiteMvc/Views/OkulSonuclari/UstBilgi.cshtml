@@ -1,0 +1,31 @@
+﻿@model EduApi.SiteModels.OkulDetayModel
+<div class="pull-left">
+    <img class="img-responsive okul-detay-okullogo" src="https://eduadvisor.co.uk/Content/img/okul/@Model.okul.logo" alt="@Model.okul.adi" />
+</div>
+<div class="pull-left">
+    <h2 class="erguvan okul_adi_buyuk">
+        @Model.grupadi
+    </h2>
+    <h4 class="erguvan okul_adi_kucuk">
+        @(Model.okul.egitim_id > 1 ? Model.okul.adi : ((HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? Model.okul.okul_fakulteleri.FirstOrDefault().fakulte_havuzu.adi : Model.okul.okul_fakulteleri.FirstOrDefault().fakulte_havuzu.adi_ingilizce) + " (" + Model.okul.adi + ")"))
+    </h4>
+    <div class="rating" style="color: #78c6bb; font-size: 18px !important;">
+
+        @if (Model.okul.web_site != null && Model.okul.web_site.Length > 4)
+            {
+            <div class="pull-left marginleft10">
+                <i class="icon-globe"></i>
+                <a href="@Model.okul.web_site" target="_blank">@Resources.Varsayilan.b_okulwebsitesi</a>
+            </div>
+        }
+        <div class="pull-left rating-container okulortpuan rating-lg fontawesome-icon marginbottom10 marginleft10" data-content="★★★★★">
+            <div class="rating-stars" data-content="★★★★" style="width:@((Model.okul.yorums.Where(c => c.onay == 1 && c.uye_sildi == false).ToList().Count > 1 ? (Model.okul.yorums.Where(c => c.onay == 1 && c.uye_sildi == false).Select(c => c.puani).Sum() / (float)Model.okul.yorums.Where(c => c.onay == 1 && c.uye_sildi == false).ToList().Count)
+: (Model.okul.yorums.Where(c => c.onay == 1 && c.uye_sildi == false).ToList().Count == 1 ? Model.okul.yorums.Where(c => c.onay == 1 && c.uye_sildi == false).FirstOrDefault().puani : 0)) * 20)%"></div>
+        </div>
+        <div style="margin-top:3px;" class="pull-left">
+            <span class="erguvan pull-left">
+                @(Model.okul.yorums.Where(c => c.onay == 1 && c.uye_sildi == false).ToList().Count > 1 ? (Model.okul.yorums.Where(c => c.onay == 1 && c.uye_sildi == false).Select(c => c.puani).Sum() / (float)Model.okul.yorums.Where(c => c.onay == 1 && c.uye_sildi == false).ToList().Count) : (Model.okul.yorums.Where(c => c.onay == 1 && c.uye_sildi == false).ToList().Count == 1 ? Model.okul.yorums.Where(c => c.onay == 1 && c.uye_sildi == false).FirstOrDefault().puani : 0))
+            </span><small style="color: #a02f89; font-weight: bold; padding-left: 2px;">/5 (@(Model.okul.yorums.Where(c => c.onay == 1 && c.uye_sildi == false).ToList().Count + " " + Resources.Varsayilan.yorum))</small>
+        </div>
+    </div>
+</div>

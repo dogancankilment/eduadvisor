@@ -1,0 +1,1008 @@
+﻿
+.sosyalmedya_kayit {
+    height: 25px !important;
+    float: right !important;
+    top: 4px !important;
+    right: 0;
+    left: 0px;
+    width: 39px;
+    margin-left: 15px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.sosyalmedya a {
+    font-size: 25px;
+}
+
+.social_login_btns a {
+    font-size: 15px !important;
+}
+
+.fa.fa-thumbs-o-up:before {
+    box-sizing: border-box;
+}
+
+.sosyalmedya_kayit .social_login_btns {
+    box-shadow: 0 3px 3px rgba(0,0,0,0.16);
+    -moz-box-shadow: 0 3px 3px rgba(0,0,0,0.16);
+    -webkit-box-shadow: 0 18px 61px rgba(0,0,0,0.56);
+    background: rgba(255,255,255,0.99) none repeat scroll 0 0;
+    border-radius: 3px;
+    padding: 8px 10px;
+    position: absolute;
+    height: 84px !important;
+    width: 201px !important;
+    right: -23px;
+    top: 28px;
+    width: 295px;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+}
+
+    .sosyalmedya_kayit .social_login_btns ul li {
+        display: flex;
+        float: none;
+        margin-right: 5px;
+    }
+
+.sosyalmedya_kayit a + .social_login_btns {
+    display: none !important;
+}
+
+.sosyalmedya_kayit:hover a + .social_login_btns {
+    display: block !important;
+}
+
+.sosyalmedya_kayit:before {
+    content: "";
+    display: block !important;
+    height: 21px;
+    position: absolute;
+    right: 18px;
+    top: -19px;
+    width: 36px;
+}
+
+@media (max-width:992px) {
+    .top_gri_alan {
+        border: 2px solid rgba(255,255,255,0);
+        z-index: 102;
+        width: 100% !important;
+        padding-left: 0;
+        /*box-shadow: inset 0px -34px 46px -41px rgba(255,255,255,0);*/
+        padding-right: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 0px;
+        background-color:white !important;
+        top: 0 !important;
+        position: absolute;
+    }
+
+    #primary-menu.style-2 {
+        background: rgba(255,255,255,0) !important;
+    }
+}
+
+#primary-menu-trigger .icon-reorder {
+    color: #6ec7bb !important;
+}
+
+@media (max-width: 992px) {
+
+    #primary-menu ul li a.ustmenu {
+        text-align: left !important;
+    }
+
+    #primary-menu ul li a.ustmenu {
+        padding: 14px 15px !important;
+        width: 47%;
+        margin-left: 39% !important;
+    }
+}
+
+@media (max-width:520px) {
+    #primary-menu ul li a.ustmenu {
+        padding: 14px 15px !important;
+        width: 47%;
+        margin-left: 33% !important;
+    }
+}
+
+@media (max-width:409px) {
+    #primary-menu ul li a.ustmenu {
+        margin-left: 26% !important;
+    }
+}
+
+@media (max-width: 752px) {
+    .menu_mobil_logo {
+        margin-left: 0 !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    #sabit-aramabar {
+        left: 0px !important;
+    }
+}
+
+@media (max-width: 516px) {
+    #sabit-aramabar {
+        left: auto !important;
+    }
+}
+
+.secimaraci li a {
+    padding: 0 !important;
+}
+
+.ekle > li, .nav-pills > li {
+    margin: 10px !important;
+}
+
+@media (max-width: 560px) {
+    .gorselanasayfali {
+        width: 157px !important;
+        margin-bottom: -21px;
+    }
+}
+
+@media (max-width: 485px) {
+    .gorselanasayfali {
+        width: 145px !important;
+        margin-bottom: -21px;
+    }
+}
+
+@media (max-width: 461px) {
+    .gorselanasayfali {
+        width: 139px !important;
+        margin-bottom: -15px;
+    }
+}
+
+@media (max-width: 449px) {
+    .gorselanasayfali {
+        width: 131px !important;
+        margin-bottom: -13px;
+    }
+}
+
+@media (max-width: 433px) {
+    .gorselanasayfali {
+        width: 124px !important;
+        margin-bottom: -10px;
+    }
+}
+
+@media (max-width: 419px) {
+    .gorselanasayfali {
+        width: 113px !important;
+        margin-bottom: -7px;
+    }
+}
+
+@media (max-width: 397px) {
+    .gorselanasayfali {
+        width: 107px !important;
+        margin-bottom: -5px;
+    }
+}
+
+@media (max-width: 384px) {
+    .gorselanasayfali {
+        width: 100px !important;
+        margin-bottom: -5px;
+    }
+}
+
+@media (max-width: 371px) {
+    .gorselanasayfali {
+        width: 92px !important;
+        margin-bottom: -5px;
+    }
+}
+
+@media (max-width: 355px) {
+    .gorselanasayfali {
+        width: 85px !important;
+        margin-bottom: -5px;
+    }
+}
+
+#primary-menu ul li a.ustmenu {
+    text-align: center;
+    text-transform: none !important;
+    font-size: 20px !important;
+}
+
+.tabyaziyoket {
+    visibility: visible;
+    text-transform: none !important;
+}
+
+.fsize13 {
+    font-size: 13px !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: eduFont !important;
+}
+
+#kayit_ol, #girisyap, #btngeri, #sifreunuttum, #sifregonder, #btngiristamamla, #btnkodtamamla, #kurumsalgiris_yap, #btnkayitol, #btnkayittamamla, #btntekrarkod, .btncropit, #kurumsalKayitYonlendirme, #siyahyap li a, #altdil p, .morbutton {
+    font-size: 13px !important;
+}
+
+.uppercase {
+    text-transform: capitalize !important;
+}
+
+@media (max-width: 1514px) {
+    #primary-menu ul li > a span {
+        font-size: 12px !important;
+    }
+}
+
+#primary-menu ul li > a {
+    font-size: 13px !important;
+}
+
+.anasayfaliste li a {
+    font-size: 13px !important;
+    font-family: edu !important;
+}
+
+#primary-menu ul li:hover a.ustmenu, #primary-menu ul li.current a {
+    font-size: 15px !important;
+}
+
+.font15 {
+    font-size: 15px !important;
+}
+
+#Anasayfailkyorumicerik {
+    font-size: 13px !important;
+}
+
+@media(max-width:1361px) {
+    .anasayfaliste li a {
+        font-size: 12px !important;
+    }
+
+    .tabsyazi {
+        font-size: 12px !important;
+    }
+}
+
+@media ( max-width:993px) {
+
+
+    #header #header-wrap .clearfix.margintop5 {
+        margin-bottom: -29px !important;
+    }
+}
+
+@media(max-width:329px) {
+    #header #header-wrap .clearfix.margintop5 {
+        margin-bottom: -111px !important;
+    }
+}
+
+@media(max-width:760px) {
+    #tabanasayfamargin .yukseklikver {
+        margin-top: 35px !important;
+    }
+}
+
+@media(max-width:436px) {
+    #tabanasayfamargin .yukseklikver {
+        margin-top: 15px !important;
+    }
+}
+
+.yorumgenislikayarla {
+}
+
+@media(max-width:547px) {
+    .yorumgenislikayarla {
+        width: 400px !important;
+    }
+
+    #Anasayfailkyorum {
+        margin-left: 15px !important;
+    }
+}
+
+@media(max-width:508px) {
+    .yorumgenislikayarla {
+        width: 350px !important;
+    }
+
+    #Anasayfailkyorum {
+        margin-left: 15px !important;
+    }
+
+        #Anasayfailkyorum #Anasayfailkyorumadsoyad, #Anasayfailkyorum #Anasayfailkyorumtarih, #Anasayfailkyorum .Anasayfailkyorum_ayrac {
+            font-size: 15px !important;
+        }
+
+    #Anasayfailkyorum_yildiz.rating-sm {
+        font-size: 20px;
+    }
+}
+
+#Govde_misyon_vizyon_icerik, #Govde_kull_kosullari, #Govde_gizlilik, #Govde_hakkimizda_icerik {
+    font-size: 14px !important;
+    font-family: edu !important;
+}
+
+@media(max-width:329px) {
+
+    .yorumgenislikayarla {
+        width: 312px !important;
+    }
+}
+
+@media (max-width: 508px) {
+    .yorumgenislikayarla {
+        width: 340px !important;
+    }
+}
+
+#Anasayfailkyorum_yildiz.rating-sm {
+    font-size: 15px;
+}
+
+#Govde_Anasayfailkyorumyuzde {
+    color: #78c6bb !important;
+}
+
+#Govde_Anasayfailkyorumadsoyad, #Govde_Anasayfayorumbaslik, #Govde_Anasayfayorumicerik {
+    color: black !important;
+}
+
+@media (max-width: 1251px) {
+    #sabit-aramabar {
+        left: 0 !important;
+    }
+}
+
+#yorumcont {
+    margin-top: 50px;
+    padding: 0 !important;
+    margin-bottom: 10px;
+}
+
+#yorumcol {
+    border-bottom: 1px solid #ddd;
+    background: rgba(255, 255, 255, 0.73);
+    border-radius: 38px;
+    padding: 24px;
+    margin-top: 2px;
+}
+
+@media (max-width:768px) {
+
+
+    #Anasayfailkyorum_resim {
+        height: 72px !important;
+        width: 72px !important;
+    }
+
+    #yorumcol {
+        border-radius: 0px !important;
+    }
+}
+
+.yenitasarimenler {
+    background-color: white;
+    border-radius: 0px;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.mgright60 {
+    margin-right: 60px !important;
+}
+
+.enler1 {
+    position: absolute;
+    z-index: 5;
+    top: 14px;
+    left: 15px;
+}
+
+.enlersag1 {
+    position: absolute;
+    top: 25px;
+    right: 8px;
+}
+
+@media(max-width:994px) {
+    .kenarayasla {
+        margin: 0 !important;
+    }
+}
+
+.enler2 {
+    position: absolute;
+    z-index: 5;
+    top: -15px;
+    left: 15px;
+}
+
+.enlersag2 {
+    position: absolute;
+    top: 7px;
+    right: 8px;
+}
+
+#enler .rating-lg {
+    font-size: 20px !important;
+    top: 0 !important;
+}
+
+@media(max-width:600px) {
+    .enlersag2, .enlersag1 {
+        display: none !important;
+    }
+}
+
+@media (max-width:992px) {
+    .yaziyerayarla {
+        left: 17px !important;
+        top: 28px;
+    }
+
+    .yanayasla {
+        margin-left: 0px !important;
+    }
+
+    .yanayaslama {
+        margin-left: -60px !important;
+    }
+}
+
+.labelbireysel {
+    z-index: 9999999;
+    position: absolute;
+    bottom: 0px;
+    background: rgba(255, 255, 255, 0.69);
+    width: 100%;
+    border: 1px solid #78c6bb;
+    padding-left: 15px;
+}
+
+#okuladiind .section {
+    padding: 25px 0;
+}
+
+@media (max-width: 1260px) {
+    .container {
+        width: 800px;
+    }
+}
+
+@media (max-width: 1060px) {
+    .container {
+        width: 691px;
+    }
+}
+
+@media (max-width: 870px) {
+    .container {
+        width: 691px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 480px) {
+    .container, #header.full-header .container, .container-fullwidth {
+        width: 410px !important;
+    }
+}
+
+@media (max-width: 479px) {
+    .container, #header.full-header .container, .container-fullwidth {
+        width: 250px !important;
+    }
+}
+
+#detay-genel {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 25px;
+}
+
+#genel-bilgi-baslik {
+    border: 1px solid #ddd;
+    background: #eee;
+    border-radius: 15px;
+    padding: 5px;
+    float: left;
+    width: 100%;
+}
+
+#genel-bilgi-okul-logo {
+    text-align: center;
+}
+
+    #genel-bilgi-okul-logo img {
+        border: 6px solid #6dc8bb;
+        border-radius: 15px;
+        height: 110px !important;
+        width: 110px !important;
+        box-shadow: 0px 10px 44px -12px rgba(0,0,0,0.75);
+    }
+
+#genel-bilgi-kurum-adi h5 {
+    text-align: center !important;
+    font-size: 22px !important;
+    margin-top: 6%;
+    color: black;
+}
+
+#genel-bilgi-yildizvepuan p {
+    float: right;
+    right: 0;
+}
+
+.genelbilgiokulaciklama {
+    font-size: 14px;
+    font-family: edu !important;
+    color: black;
+}
+
+#genel-bilgi-okultanitim-ust {
+    border-radius: 30px;
+    padding: 0 !important;
+    background: #eee;
+    float: left;
+    width: 100%;
+}
+
+#genel-bilgi-okultanitim {
+    padding: 20px;
+    background: #eee;
+    border-radius: 15px;
+}
+
+#genel-bilgi-okullogo {
+    text-align: center;
+    padding: 20px;
+}
+
+.genelbilgiokulfoto {
+    text-align: center;
+    border-radius: 15px;
+    border: 15px solid #6dc8bb;
+}
+
+#genel-bilgi-okultanitim h5 {
+    border-bottom: 3px solid #6dc8bb;
+}
+
+.fotorama__img {
+    top: 0 !important;
+    width: auto !important;
+    height: 100% !important;
+}
+
+.fotorama__loaded fotorama__loaded--img {
+    border-radius: 15px !important;
+}
+
+.tablo-genel-bilgi {
+    margin-bottom: 0px !important;
+    padding: 20px !important;
+    background: #eee !important;
+    border-radius: 15px !important;
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid rgba(160, 47, 137, 0.37) !important;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    background-color: #6dc8bb !important;
+}
+
+tr {
+    color: black;
+}
+
+.table-bordered {
+    border-left: 1px solid rgba(160, 47, 137, 0.37);
+    border-right: 1px solid rgba(160, 47, 137, 0.37);
+    border-bottom: 1px solid rgba(160, 47, 137, 0.37);
+}
+
+table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:after {
+    color: #a02f89 !important;
+    font-family: 'font-icons';
+}
+
+#detay-genel #genel-bilgi-baslik .okul_puani_yildiz div {
+    height: 45px;
+    padding-top: 7px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#detay-genel #genel-bilgi-baslik .okul_puani_yildiz {
+    height: 45px;
+    float: right;
+    top: 4px;
+    border-radius: 7px;
+    background-color: #a02f89;
+    padding-top: 7px;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-right: 50px;
+    box-shadow: 0px 10px 44px -12px rgba(0,0,0,0.75);
+}
+
+#genel-bilgi-baslik .yildiz_yorum_iliski {
+    width: 0;
+    height: 0;
+    float: right;
+    margin-top: 46px;
+    margin-left: 7px;
+    margin-right: -90px;
+    border-style: solid;
+    border-width: 20px 0 0 25px;
+    border-color: #a02f89 transparent transparent transparent;
+}
+
+#detay-genel .okul_puani_yazi {
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    color: #a02f89;
+    font-size: 16px;
+    font-family: eduFont !important;
+}
+
+@media(max-width:992px) {
+    #detay-genel #genel-bilgi-baslik .okul_puani_yildiz {
+        margin-right: 0px !important;
+    }
+}
+
+@media(max-width:748px) {
+    #puanlama.rating-lg {
+        font-size: 2em !important;
+    }
+
+    #genel-bilgi-baslik .yildiz_yorum_iliski {
+        margin-top: 40px !important;
+    }
+}
+
+@media(max-width:663px) {
+    #genel-bilgi-okul-logo img {
+        height: auto !important;
+    }
+
+    #genel-bilgi-baslik .yildiz_yorum_iliski {
+        margin-top: 0px !important;
+        position: relative;
+        right: 31px;
+        top: -5px;
+    }
+}
+
+@media(max-width:530px) {
+    #puanlama.rating-lg {
+        font-size: 16px !important;
+    }
+}
+
+#okul_sonuclari .okul_sonuc {
+    background-color: #efefef !important;
+    height: 80px !important;
+    padding: 7px !important;
+    border-radius: 15px !important;
+    margin-bottom: 15px !important;
+    box-shadow: 0px 10px 44px -22px rgba(0,0,0,0.75) !important;
+}
+
+.okul_sonuclariulkesehir {
+    margin-left: 13px;
+    position: relative;
+    top: 20px;
+    font-size: 13px;
+    font-family: eduFontLight !important;
+}
+
+.okul_sonuc_adi_font {
+    position: relative;
+    top: 20px;
+    font-size: 13px;
+    font-family: eduFontLight !important;
+}
+
+span.twitter-typeahead {
+    display: block !important;
+}
+
+.tt-menu {
+    top: 50px !important;
+    width: 100%;
+    margin: 4px 0;
+    padding: 8px 0;
+    background-color: #FFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 10px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 1px 10px rgba(0,0,0,.1);
+    box-shadow: 0 1px 10px rgba(0,0,0,.1);
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.tt-suggestion {
+    padding: 3px 20px;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+    .tt-suggestion:hover {
+        cursor: pointer;
+        color: #FFF;
+        background-color: #0097cf;
+    }
+
+    .tt-suggestion.tt-cursor {
+        color: #fff;
+        background-color: #0097cf;
+    }
+
+.tt-highlight {
+    color: #a02f89;
+}
+
+.tt-hint {
+    font-family: eduFontLight !important;
+}
+
+.typeahead.dropdown-menu {
+    max-height: 150px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+#Govde_okul_adi {
+    padding-top: 15px;
+}
+
+#okul_sonuclari .okul_sonuc .okul_sonuc_logo img {
+    border-radius: 15px;
+    border: 3px solid #78c6bb;
+}
+
+#filters_col #chck_starsecimi .rating-container:before, .anasayfa-yorumlar .rating-container:before {
+    color: rgb(128, 128, 128);
+}
+
+#filters_col #chck_starsecimi .rating-container .rating-stars, .anasayfa-yorumlar .rating-container .rating-stars {
+    height: 29px;
+    color: #6dc8bb !important;
+}
+
+#enler .rating-container, #tab_ziyaret .rating-container, #okul_detay_ust .rating-container, #second .rating-container {
+    color: rgb(128, 128, 128) !important;
+}
+
+    #enler .rating-container .rating-stars, #tab_ziyaret .rating-container .rating-stars, #okul_detay_ust .rating-container .rating-stars, #second .rating-container .rating-stars {
+        color: #6dc8bb !important;
+    }
+
+.ribbon_3.popular span::after {
+    border-left: 3px solid transparent;
+    border-right: 3px solid #9a3a95;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid rgba(153, 57, 148, 0.97);
+}
+
+.ribbon_3.popular span::before {
+    border-left: 3px solid #9a3a95;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #9a3a95;
+}
+
+.ribbon_3.popular span {
+    background: linear-gradient(#9a3a95 0%, #9a3a95 100%);
+}
+
+@media (max-width: 1361px) {
+    .tabsyazi {
+        font-size: 11px !important;
+    }
+}
+
+.yanadondur.ui-tabs-active a label {
+    font-family: eduFontLight !important;
+}
+
+#anasayfayanarama .form-control, #okul_sonuc_filtreleme .form-control {
+    font-size: 12px !important;
+    font-family: eduFontLight !important;
+    color: black !important;
+}
+
+#Govde_btnAra {
+    color: White;
+    background-color: #a02f89;
+}
+
+.pins {
+    color: black !important;
+    font-family: eduFontLight !important;
+    font-weight: 600;
+}
+
+#okul_sonuclari .rating-lg {
+    font-size: 20px !important;
+}
+
+#okul_sonuclari .okul_sonuc .okul_puani_yildiz div {
+    height: 25px;
+    padding-top: 0;
+    padding-left: 3px;
+    padding-right: 4px;
+}
+
+#okul_sonuclari .okul_sonuc .okul_puani_yildiz {
+    height: 28px;
+    border-radius: 7px;
+    padding-top: 0;
+    padding-left: 3px;
+    padding-right: 2px;
+    color: white;
+}
+
+#okul_sonuclari .okul_sonuc .yildiz_yorum_iliski {
+    width: 0;
+    height: 0;
+    float: right;
+    margin-right: 35px;
+    border-style: solid;
+    border-width: 10px 0 0 16px;
+    border-color: transparent transparent transparent;
+}
+
+@media (max-width: 638px) {
+    .solayaslama {
+        position: relative;
+        float: right;
+        right: 1px;
+    }
+
+    .okul_sonuc_adi {
+        position: relative;
+        top: -15px;
+    }
+
+    #okul_sonuclari .okul_sonuc {
+        height: 110px !important;
+    }
+}
+
+@media (max-width: 404px) {
+    .solayaslama {
+        width: 100% !important;
+        position: relative;
+        margin-top: 14px;
+        float: right;
+        right: 1px;
+    }
+
+    .okul_sonuc_adi {
+        position: relative;
+        top: -15px;
+    }
+
+    #okul_sonuclari .okul_sonuc {
+        height: 140px !important;
+    }
+}
+
+#okul_detay_ust #Govde_okul_adi {
+    padding-top: 15px;
+    font-size: 19px;
+    font-family: eduFontLight !important;
+    font-weight: 600;
+}
+
+.rating a {
+    font-size: 15px;
+    font-family: eduFontLight !important;
+}
+
+#tab_ziyaret .rating-lg, #okul_detay_ust .rating-lg {
+    font-size: 22px !important;
+}
+
+#tabs-40 .rating-sm {
+    font-size: 23px;
+}
+
+.kutubutton {
+    font-size: 12px;
+    font-family: eduFontLight !important;
+}
+
+ul.tab-nav:not(.tab-nav-lg) li {
+    float: left;
+    border: 1px solid #DDD;
+    border-bottom: 0;
+    border-left: 0;
+    height: 32px !important;
+    text-align: center;
+}
+
+    ul.tab-nav:not(.tab-nav-lg) li a {
+        display: block;
+        padding: 0 15px;
+        color: #444;
+        height: 31px !important;
+        line-height: 40px;
+        background-color: #F2F2F2;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+#okul_detay_ust ul.tab-nav li a i {
+    margin-right: 2px;
+    position: absolute !important;
+    float: left !important;
+    left: 17px !important;
+    top: -6px !important;
+}
+
+#okul_detay_ust .yanadondur a:before {
+    content: "";
+    top: -1px;
+    height: 32px !important;
+    position: absolute;
+    right: -22px;
+    transform: skew(35deg);
+    width: 38px;
+    border-top-right-radius: 6px;
+}
+
+.yanadondur a:before {
+    background: #f2f2f2 none repeat scroll 0 0;
+    border-top: 1px solid #c3bdbd !important;
+    border-right: 1px solid #c3bdbd !important;
+    content: "";
+    top: -1px;
+    height: 32px !important;
+    position: absolute;
+    right: -25px;
+    transform: skew(35deg);
+    width: 38px;
+    border-top-right-radius: 6px;
+}
+
+#okul_detay_ust .yanadondur.ui-tabs-active a:before {
+    content: "";
+    top: -3px;
+    height: 33px !important;
+    position: absolute;
+    right: -22px;
+    transform: skew(35deg);
+    width: 38px;
+    border-top-right-radius: 6px;
+}

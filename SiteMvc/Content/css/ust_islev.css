@@ -1,0 +1,154 @@
+﻿.ustislevler {
+    position: absolute;
+    right: 30px;
+    top: 13px;
+}
+
+    .ustislevler .ustislev_item:last-child {
+        margin-right: 0;
+    }
+
+    .ustislevler .ustislev_item {
+        margin-right: 10px;
+    }
+
+        .ustislevler .ustislev_item a.secilidil {
+            float: left;
+        }
+
+            .ustislevler .ustislev_item a.secilidil span {
+                background-size: 25px;
+                height: 23px;
+                width: 23px;
+                display: block;
+            }
+
+        .ustislevler .ustislev_item .kucuk_dropdown_menu {
+            border: 2px solid #ddd !important;
+            -webkit-box-shadow: 0 18px 61px rgba(0,0,0,0.56);
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+            min-width: 0;
+            padding: 10px;
+            font-size: 12px;
+            font-weight: normal;
+            text-shadow: none;
+            text-transform: none !important;
+            border-top: 2px solid #a02f89;
+            width: 160px;
+            background-color: white;
+            border-radius: 15px;
+            z-index: 100;
+            left: -60px;
+        }
+
+        .ustislevler .ustislev_item .social_login_btns {
+            box-shadow: 0 3px 3px rgba(0,0,0,0.16);
+            -moz-box-shadow: 0 3px 3px rgba(0,0,0,0.16);
+            -webkit-box-shadow: 0 18px 61px rgba(0,0,0,0.56);
+            background: rgba(255,255,255,0.99) none repeat scroll 0 0;
+            border-radius: 3px;
+            padding: 8px 10px;
+            position: absolute;
+            height: 54px !important;
+            right: -23px;
+            top: 28px;
+            width: 295px;
+            border: 2px solid #ddd;
+            border-radius: 15px;
+            z-index: 100 !important;
+        }
+
+        .ustislevler .ustislev_item.sosyalmedya .social_login_btns {
+            display: none;
+        }
+
+            .ustislevler .ustislev_item.sosyalmedya .social_login_btns ul li {
+                display: inline-block;
+                float: left;
+                list-style: outside none none;
+                margin-right: 5px;
+            }
+
+        .ustislevler .ustislev_item.sosyalmedya:hover .social_login_btns {
+            display: block !important;
+        }
+
+        .ustislevler .ustislev_item .social_login_btns:before {
+            content: "";
+            display: block !important;
+            height: 21px;
+            position: absolute;
+            right: 18px;
+            top: -19px;
+            width: 36px;
+        }
+
+        .ustislevler .ustislev_item ul {
+            list-style: none !important;
+        }
+
+        .ustislevler .ustislev_item .ustislev_item_icon {
+            font-size: 19px;
+            color: #6ec7ba;
+            top: 1px;
+            position: relative;
+        }
+
+        .ustislevler .ustislev_item .buyuk_dropdown_menu {
+            border: none;
+            border-radius: 15px !important;
+            float: right;
+            left: auto;
+            min-width: 0;
+            padding: 15px;
+            right: 0;
+            width: 260px;
+            top: 100%;
+            font-size: 12px;
+            font-weight: normal;
+            text-shadow: none;
+            text-transform: none !important;
+            border-top: 2px solid #a02f89;
+        }
+
+        .ustislevler .ustislev_item .ustislev_item_notification {
+            display: block;
+            position: absolute;
+            top: -8px;
+            left: auto;
+            right: -8px;
+            font-size: 10px;
+            color: #FFF;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+            width: 16px;
+            height: 16px;
+            line-height: 16px;
+            text-align: center;
+            background-color: #a02f89;
+            border-radius: 50%;
+        }
+
+@media (max-width: 992px) {
+    .ustislevler .ustislev_item#primary-menu-trigger {
+        margin-left: 115px !important;
+        margin-top: -26px !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        top: 50% !important;
+        font-size: 25px !important;
+        left: auto;
+        right: -35px;
+    }
+
+    .ustislevler {
+        top: 15px;
+    }
+}
+
+@media (max-width: 440px) {
+    .ustislevler {
+        top: 55px;
+    }
+}

@@ -1,0 +1,24 @@
+﻿
+<div class="tab-pane" id="tab_profilresmi" style="margin-left: 36px;">
+    <div class="image-editor col-md-4">
+        <div class="form-process" id="profil_resmi_load"></div>
+        <input type="file" id="yeni_profil_resmi" class="cropit-image-input" accept="image/*">
+        <div class="cropit-preview"></div>
+        <input type="range" class="cropit-image-zoom-input" />
+        <a onclick="return false;" class="btn btn-xs btn-default rotate-ccw margintop10" href='#'><i class="icon-undo"></i> @Resources.Varsayilan.b_dondur</a>
+        <a onclick="return false;" class="btn btn-xs btn-default rotate-cw margintop10" href='#'>@Resources.Varsayilan.b_dondur <i class="icon-repeat"></i></a>
+        <a onclick="uploadac(event);" class="select-image-btn3 btncropit" style="width: 200px; margin-top: 5px">@Resources.Varsayilan.b_Resimsec </a>
+        <br>
+        <div style="margin-bottom: 20px;display:none" id="profilresmiguncellehata">
+            <div class="alert alert-danger nobottommargin">
+                <a style="font-size:33px" class="pull-right" href="#" onclick="gorunmezyap(event, profilresmiguncellehata)">&times;</a>
+                <i class="icon-remove-sign"></i><strong>@Resources.Varsayilan.u_profilhata </strong>
+            </div>
+        </div>
+        <input type="submit" value="@Resources.Varsayilan.b_guncelle" onclick="UyeProfilResimGuncelle(event)" class="button button-small button-circle button-green">
+    </div>
+    <div class="error-msg style-msg infomsg pull-left margintop30 col-md-8" id="profil_resim_sec_uyari" style="display:none">
+        <div class="sb-msg"><i class="icon-info-sign"></i><strong>@Resources.Varsayilan.profil_resmi_sec </strong></div>
+    </div>
+    <HiddenField id="logo_data" ClientIDMode="Static" />
+</div>

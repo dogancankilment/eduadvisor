@@ -1,0 +1,56 @@
+﻿@model EduApi.SiteModels.AnasayfaEnlerModel
+<div class="container-fluid mlr30" id="enler" style="margin-top: 15px; margin-bottom: 10px; background-color: #eee; border-radius: 15px">
+    <div class="col-md-12 listeleme-border" style="margin-top: 0px; margin-right: 15px;">
+        <div class="row" style="margin-bottom: 45px;">
+            <div id="en_yakinokul" class="hide">
+                <div class="yenitasarimenler" style="float: left; width: 100%">
+
+                    <div class="gorselekle2 main_title col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 50px;">
+                        <img src="~/Content/img/enler/num3.png" class="enler2" alt="EduAdvisor @Resources.Varsayilan.b_sizeenyakinoku" />
+                        <p class="pfont mgleft60">
+                        <p class="pull-left left67 yaziyerayarla positioninherit font15">@Resources.Varsayilan.b_sizeenyakinoku</p></p>
+                    </div>
+                    <div class="ortala mgleft60 kenarayasla" style="margin-bottom: 15px;" id="enyakinokul_List">
+                    </div>
+                </div>
+            </div>
+            @if (Model.goruntulenenler.Count > 0)
+            {
+                Html.RenderPartial("EnlerItem", Model.goruntulenenler, new ViewDataDictionary() {
+                    new KeyValuePair<string, object>("baslik", Resources.Varsayilan.b_encokgoruntulenenokullar),
+                    new KeyValuePair<string, object>("icon","num1.png") });
+            }
+            @if (Model.yorum_alanlar.Count > 0)
+            {
+                Html.RenderPartial("EnlerItem", Model.yorum_alanlar, new ViewDataDictionary() { new KeyValuePair<string, object>("baslik", Resources.Varsayilan.b_encokyorumalanok),
+                    new KeyValuePair<string, object>("icon","num2.png") });
+            }
+            @if (Model.EnBegenilenUniversiteler.Count > 0)
+            {
+                Html.RenderPartial("EnlerItem", Model.EnBegenilenUniversiteler, new ViewDataDictionary() { new KeyValuePair<string, object>("baslik", Resources.Varsayilan.b_enbegenilenuni),
+                    new KeyValuePair<string, object>("icon","num4.png") });
+            }
+            @if (Model.EnBegenilenDilOkullari.Count > 0)
+            {
+                Html.RenderPartial("EnlerItem", Model.EnBegenilenDilOkullari, new ViewDataDictionary() {
+                    new KeyValuePair<string, object>("baslik", Resources.Varsayilan.b_enbegenidilok),
+                    new KeyValuePair<string, object>("icon","num5.png")
+                });
+            }
+            @if (Model.EnBegenilenKolejler.Count > 0)
+            {
+                Html.RenderPartial("EnlerItem", Model.EnBegenilenKolejler, new ViewDataDictionary() {
+                    new KeyValuePair<string, object>("baslik", Resources.Varsayilan.b_enbegenikolej),
+                    new KeyValuePair<string, object>("icon","num6.png")
+                });
+            }
+            @if (Model.EnBegenilenLiseler.Count > 0)
+            {
+                Html.RenderPartial("EnlerItem", Model.EnBegenilenLiseler, new ViewDataDictionary() {
+                    new KeyValuePair<string, object>("baslik", Resources.Varsayilan.b_enbegenilise),
+                    new KeyValuePair<string, object>("icon","num7.png")
+                });
+            }
+        </div>
+    </div>
+</div>

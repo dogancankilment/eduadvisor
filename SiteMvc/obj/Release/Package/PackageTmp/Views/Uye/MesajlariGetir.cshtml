@@ -1,0 +1,23 @@
+﻿@model List<dll.Models.uye_mesajlari>
+
+@{
+    List<string> gunler = new List<string>();
+    for (int i = 0; i < Model.Count; i++)
+    {
+        if (!gunler.Contains(Model[i].tarih.ToString("dd.MM.yyyy")))
+        {
+            <div ID="gun" Class="mesajtarih">
+                <span id="gun_tarihi">@Model[i].tarih.ToString("dd.MM.yyyy")</span>
+            </div>
+            gunler.Add(Model[i].tarih.ToString("dd.MM.yyyy"));
+        }
+        <div class="row">
+            <div class="@(Model[i].uye_id==0 ? "mesajgelen pull-left":"mesajgonderen pull-right")">
+                @Model[i].icerik
+                <div class="mesajsaati pull-right">
+                    <label>@Model[i].tarih.ToString("HH:mm")</label>
+                </div>
+            </div>
+        </div>
+    }
+}

@@ -1,0 +1,134 @@
+﻿#tr.flag-icon-tr.topsecilidilmobil:active {
+    background-image: url(../flags/4x3/tr.svg) !important;
+}
+
+#tr.flag-icon-gb.topsecilidilmobil:active {
+    background-image: url(../flags/4x3/gb.svg);
+}
+
+.social_login_btns li a img {
+    height: 25px !important;
+}
+
+.social_login_btns {
+    padding: 10px 5px !important;
+    height: 49px !important;
+    width: 254px !important;
+}
+
+#primary-menu ul.anasayfa {
+    width: 100%;
+    padding-top: 15px;
+    border-radius: 21px;
+}
+
+@media (max-width: 992px) {
+
+    .mobilmenu {
+        position: absolute !important;
+    }
+
+    #primary-menu ul.anasayfa {
+        display: none;
+        position: inherit;
+        background-color: white !important;
+        width: 370px;
+        margin-top: 57px !important;
+        z-index: 9;
+        float: right !important;
+    }
+
+    #primary-menu ul li a.ustmenu {
+        padding: 14px 15px !important;
+    }
+
+    #primary-menu ul li {
+        width: 100% !important;
+        border-right: none !important;
+    }
+
+    #primary-menu #yanliste li {
+        text-align: center !important;
+    }
+
+
+    .sosyalmedya {
+        z-index: 999999999 !important;
+    }
+
+    .menu_logo {
+        display: none;
+    }
+
+    .menu_mobil_logo {
+        display: block;
+        float: left;
+    }
+
+    #header {
+        border-bottom: none !important;
+        height: 60px !important;
+    }
+
+        #header .sosyalmedya {
+            top: 33px !important;
+            left: 158px !important;
+        }
+
+        #header.girisyapildiuyeprofilyonetim .sosyalmedya {
+            top: 35px !important;
+        }
+}
+
+@media ( max-width:630px) {
+    #header.girisyapildiuyeprofilyonetim a.menu_mobil_logo img {
+        height: 40px !important;
+    }
+}
+
+@media (max-width:610px) {
+    #header .sosyalmedya {
+        top: 9px !important;
+    }
+
+    #header.girisyapildiuyeprofilyonetim .sosyalmedya {
+        top: 9px !important;
+    }
+}
+
+@media ( max-width:564px) {
+    #header.girisyapildiuyeprofilyonetim a.menu_mobil_logo img {
+        height: 35px !important;
+    }
+}
+
+@media ( max-width:539px) {
+    #header.girisyapildiuyeprofilyonetim a.menu_mobil_logo img:not(.yazisizlogo) {
+        display: none !important;
+    }
+
+    #header.girisyapildiuyeprofilyonetim a.menu_mobil_logo img.yazisizlogo {
+        display: block !important;
+    }
+}
+
+@media (max-width: 510px) {
+
+    #header.girisyapildiuyeprofilyonetim a.menu_mobil_logo img.yazisizlogo {
+        height: 45px !important;
+    }
+}
+
+@media (max-width: 440px) {
+    #header {
+        height: 90px !important;
+    }
+}
+
+@media (max-width:402px) {
+    #header.girisyapildiuyeprofilyonetim .sosyalmedya {
+        position: absolute;
+        right: 37px !important;
+        left: auto !important;
+    }
+}

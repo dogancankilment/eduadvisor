@@ -1,0 +1,39 @@
+﻿<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="HaritaPinModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body white-section">
+                <button type="button" class="pin_modal_kapat" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="row nomargin clearfix">
+                    <div class="haritapinaciklamalari text-center">
+                        <h5 class="erguvan marginbottom0 pinbaslik">@Resources.Varsayilan.b_haritabaslik</h5>
+                        @{
+                            List<dll.Models.egitim_turleri> EgitimTurleri = (List<dll.Models.egitim_turleri>)ViewBag.EgitimTurleri;
+                            for (int i = 0; i < EgitimTurleri.Count; i++)
+                            {
+                                <div class="haritapinbolum">
+                                    @if (EgitimTurleri[i].id <= 8)
+                                    {
+                                        <a id="@EgitimTurleri[i].seo_url" href="@Url.RouteUrl("OkulSonuclari", new { kat = EgitimTurleri[i].seo_url })" title="@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri[i].adi : EgitimTurleri[i].adi_ingilizce)">
+                                            <img src="@EgitimTurleri[i].pin_adi" class="pinboyutlandir" alt="EduAdvisor-@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri[i].adi : EgitimTurleri[i].adi_ingilizce)">
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <img src="/Content/images/pins/edupins.png" class="pinboyutlandir" alt="EduAdvisor-@Resources.Varsayilan.diger_okullar">
+                                    }
+                                    <p class="marginbottom0 pins">@(EgitimTurleri[i].id > 8 ? Resources.Varsayilan.diger_okullar : (HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri[i].adi : EgitimTurleri[i].adi_ingilizce))</p>
+                                </div>
+                                if (EgitimTurleri[i].id > 8)
+                                {
+                                    break;
+                                }
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

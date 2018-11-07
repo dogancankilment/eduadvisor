@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = Resources.Varsayilan.bslk_sikcasoru;
+}
+
+<section id="content">
+    <div class="content-wrap paddingtop40">
+        <div class="container clearfix">
+            <div class="col_three_fifth nobottommargin">
+                <div class="fancy-title title-bottom-border">
+                    <h3>@Resources.Varsayilan.bslk_sikcasoru</h3>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, natus voluptatibus adipisci porro magni dolore eos eius ducimus corporis quos perspiciatis quis iste, vitae autem libero ullam omnis cupiditate quam.</p>
+
+                <div class="accordion accordion-bg clearfix">
+                    @{
+                        List<EduApi.SiteModels.ValueTextModel> sorular = (List<EduApi.SiteModels.ValueTextModel>)ViewBag.Sorular;
+                        for (int i = 0; i < sorular.Count; i++)
+                        {
+                            <div class="acctitle">
+                                <i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i>
+                                @sorular[i].value
+                            </div>
+                            <div class="acc_content clearfix">@sorular[i].text</div>
+                        }
+                    }
+                </div>
+            </div>
+            <form id="sikca_sorular_form">
+                <div class="col_two_fifth nobottommargin col_last">
+                    <div class="form-process" id="sikca_sorular_load"></div>
+                    <div id="job-apply" class="heading-block highlight-me marginbottom15">
+                        <h2 style="text-transform: capitalize !important">@Resources.Varsayilan.b_bizimleiletisimegec</h2>
+                        <span style="font-size: 16px;">@Resources.Varsayilan.i_bizimleiletisim.</span>
+                    </div>
+                    <div id="sikcasorularbasarili" style="display:none">
+                        <div class="alert alert-success col-md-12">
+                            <strong>@Resources.Varsayilan.u_mesajgonderildi</strong>
+                        </div>
+                    </div>
+                    <div id="sikcasorularhata" style="display:none">
+                        <div class="alert alert-danger col-md-12">
+                            <strong>@Resources.Varsayilan.u_birsorunakarsilasildi</strong>
+                        </div>
+                    </div>
+                    <div class="contact-widget" id="kullanici-sorulari">
+                        <div class="contact-form-result"></div>
+                        <div class="form-process"></div>
+                        <div class="col_full">
+                            <label>@Resources.Varsayilan.bslk_email</label>
+                            <input type="text" id="sikca_sorular_email" class="sm-form-control soru-js" name="sikca_sorular_email" onblur="BosKontrol(this)" />
+                        </div>
+                        <div class="col_full">
+                            <label>@Resources.Varsayilan.b_sorunuz</label>
+                            <textarea id="sikca_sorular_soru" rows="5" class="sm-form-control" name="sikca_sorular_soru soru-js" style="resize:none" onblur="BosKontrol(this)"></textarea>
+                        </div>
+                        <div class="col_full">
+                            <input type="button" Class="button button-3d button-large btn-block nomargin" onclick="SoruGonder(event)" value="@Resources.Varsayilan.b_gonder" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = Resources.Varsayilan.b_siteharitasi;
+}
+
+
+<section id="page-title" class="paddingtop20">
+    <div class="container clearfix"><span style="color: #a02f89">@Resources.Varsayilan.b_siteharitasi</span></div>
+</section>
+<div>
+</div>
+<section id="map-overlay" class="paddingtop0">
+    <div class="col-xs-12">
+        <img src="~/Content/images/site_haritası.jpg" class="img-responsive" alt="@Resources.Varsayilan.b_siteharitasi" />
+        <div class="divider divider-center">
+            <i class="icon-chevron-down"></i>
+        </div>
+    </div>
+    <div class="container clearfix">
+        @{
+            List<EduApi.SiteModels.ValueTextModel> SiteHaritasi = (List<EduApi.SiteModels.ValueTextModel>)ViewBag.SiteHaritasi;
+            for (int i = 0; i < SiteHaritasi.Count; i++)
+            {
+                <div class="col-sm-3 marginbottom15">
+                    <a href="@SiteHaritasi[i].value">
+                        <i class="glyphicon glyphicon-chevron-right marginright10"></i>
+                        @SiteHaritasi[i].text
+                    </a>
+                </div>
+            }
+        }
+    </div>
+</section>

@@ -1,0 +1,1233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="baslik_anasayfa" xml:space="preserve">
+    <value>Anasayfa</value>
+  </data>
+  <data name="baslik_bildirimbulunamadi" xml:space="preserve">
+    <value>Bildirim bulunamadı...</value>
+  </data>
+  <data name="baslik_cikis" xml:space="preserve">
+    <value>Çıkış</value>
+  </data>
+  <data name="baslik_diger" xml:space="preserve">
+    <value>Diğer</value>
+  </data>
+  <data name="baslik_dil_okullari" xml:space="preserve">
+    <value>Dil Okulu</value>
+  </data>
+  <data name="baslik_edubild" xml:space="preserve">
+    <value>Eduadvisor Bildirimleri</value>
+  </data>
+  <data name="baslik_egitimturuseciniz" xml:space="preserve">
+    <value>Eğitim Türünü Seçiniz</value>
+  </data>
+  <data name="baslik_gelenkutusubos" xml:space="preserve">
+    <value>Gelen Kutusu Boş ...</value>
+  </data>
+  <data name="baslik_girisyap" xml:space="preserve">
+    <value>Giriş yap</value>
+  </data>
+  <data name="baslik_kampanyabildirimi" xml:space="preserve">
+    <value>Kampanya Bildirimleri</value>
+  </data>
+  <data name="baslik_kayit_ol" xml:space="preserve">
+    <value>Kayıt Ol</value>
+  </data>
+  <data name="baslik_kolej" xml:space="preserve">
+    <value>Kolej</value>
+  </data>
+  <data name="baslik_lise" xml:space="preserve">
+    <value>Lise</value>
+  </data>
+  <data name="baslik_mesajlar" xml:space="preserve">
+    <value>Mesajlar</value>
+  </data>
+  <data name="baslik_okuladigir" xml:space="preserve">
+    <value>Okul adı giriniz ...</value>
+  </data>
+  <data name="baslik_profil" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="baslik_tummesajlarigor" xml:space="preserve">
+    <value>Tüm mesajları gör</value>
+  </data>
+  <data name="baslik_universite" xml:space="preserve">
+    <value>Üniversite</value>
+  </data>
+  <data name="baslik_yer" xml:space="preserve">
+    <value>Yer :</value>
+  </data>
+  <data name="bslk_bizeulasin" xml:space="preserve">
+    <value>Bize Ulaşın</value>
+  </data>
+  <data name="bslk_bultenekayitolun" xml:space="preserve">
+    <value>Bültene Kayıt Olun</value>
+  </data>
+  <data name="bslk_bununladevamet" xml:space="preserve">
+    <value>Bununla Devam Et</value>
+  </data>
+  <data name="bslk_devamederek" xml:space="preserve">
+    <value>Devam ederek,</value>
+  </data>
+  <data name="bslk_devamet" xml:space="preserve">
+    <value>DEVAM ET</value>
+  </data>
+  <data name="bslk_edugiris" xml:space="preserve">
+    <value>Eduadvisor Üye Giriş</value>
+  </data>
+  <data name="bslk_email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="bslk_gizlilikpolitikamizi" xml:space="preserve">
+    <value>Gizlilik Politikamızı</value>
+  </data>
+  <data name="bslk_haberbulteninekayitolmakistiyorum" xml:space="preserve">
+    <value>Eduedvisor haber bültenine kayıt olmak istiyorum.</value>
+  </data>
+  <data name="bslk_hakkimizda" xml:space="preserve">
+    <value>Hakkımızda</value>
+  </data>
+  <data name="bslk_kullanimkosullarimizi" xml:space="preserve">
+    <value>Kullanım Koşullarımızı</value>
+  </data>
+  <data name="bslk_seninemailadres" xml:space="preserve">
+    <value>E-mail adresiniz:</value>
+  </data>
+  <data name="bslk_sifre" xml:space="preserve">
+    <value>Şifre</value>
+  </data>
+  <data name="bslk_sikcasoru" xml:space="preserve">
+    <value>Sıkça Sorulan Sorular</value>
+  </data>
+  <data name="bslk_siteharitasi" xml:space="preserve">
+    <value>Site Haritası</value>
+  </data>
+  <data name="bslk_tekrargonder" xml:space="preserve">
+    <value>Tekrar Gönder</value>
+  </data>
+  <data name="b_aboneol" xml:space="preserve">
+    <value>Abone Ol</value>
+  </data>
+  <data name="b_geri" xml:space="preserve">
+    <value>Geri</value>
+  </data>
+  <data name="b_sifremiunuttum" xml:space="preserve">
+    <value>Şifremi Unuttum</value>
+  </data>
+  <data name="i_kabuletmisolursunuz" xml:space="preserve">
+    <value>kabul etmiş oluyorsunuz</value>
+  </data>
+  <data name="i_ve" xml:space="preserve">
+    <value>ve</value>
+  </data>
+  <data name="uyari_abonetesekkur" xml:space="preserve">
+    <value>Abonelik işleminiz gerçekleşmiştir EduAdvisor ailesi olarak teşekkür ederiz</value>
+  </data>
+  <data name="uyari_aboneuzgunuz" xml:space="preserve">
+    <value>Üzgünüz.Sistem sıkıntısından dolayı abone olunamamıştır.</value>
+  </data>
+  <data name="uyari_abonevar" xml:space="preserve">
+    <value>Abonelik işlemi için girilen E-posta adresi sistemde kayıtlıdır.</value>
+  </data>
+  <data name="uyari_epostagir" xml:space="preserve">
+    <value>Lütfen E-posta Bilginizi Giriniz</value>
+  </data>
+  <data name="u_birhataolustutekrardene" xml:space="preserve">
+    <value>Bir hata oluştu tekrar deneyiniz</value>
+  </data>
+  <data name="u_epostadakilinketikla" xml:space="preserve">
+    <value>Eposta adresinize gönderilen linke tıklayarak kayıt işleminizi tamamlamış olacaksınız</value>
+  </data>
+  <data name="u_epostanikontrolet" xml:space="preserve">
+    <value>Lütfen mail adresinizi kontrol ediniz</value>
+  </data>
+  <data name="u_gecerliemailgir" xml:space="preserve">
+    <value>Geçerli Bir Mail Adresi Giriniz</value>
+  </data>
+  <data name="u_kullaniciadisifrehatali" xml:space="preserve">
+    <value>Kullanıcı adı veya şifre hatalı</value>
+  </data>
+  <data name="u_kullanicisistemdevar" xml:space="preserve">
+    <value>Bu Kullanıcı Sistemde Kayıtlı</value>
+  </data>
+  <data name="u_mailbosolamaz" xml:space="preserve">
+    <value>Mail Alanı Boş Geçilemez !</value>
+  </data>
+  <data name="b_adinizsoyadiniz" xml:space="preserve">
+    <value>Adınız - Soyadınız</value>
+  </data>
+  <data name="b_aranacakkelime" xml:space="preserve">
+    <value>Aranacak Kelime</value>
+  </data>
+  <data name="b_bizimleiletisimegec" xml:space="preserve">
+    <value>Bizimle İletişime Geçin</value>
+  </data>
+  <data name="b_detay" xml:space="preserve">
+    <value>Detay</value>
+  </data>
+  <data name="b_egitimturu" xml:space="preserve">
+    <value>Eğitim Türü</value>
+  </data>
+  <data name="b_enbegenidilok" xml:space="preserve">
+    <value>En Beğenilen Dil Okulları</value>
+  </data>
+  <data name="b_enbegenikolej" xml:space="preserve">
+    <value>En Beğenilen Kolejler</value>
+  </data>
+  <data name="b_enbegenilenuni" xml:space="preserve">
+    <value>En Beğenilen Üniversiteler</value>
+  </data>
+  <data name="b_enbegenilise" xml:space="preserve">
+    <value>En Beğenilen Liseler</value>
+  </data>
+  <data name="b_encokgoruntulenenokullar" xml:space="preserve">
+    <value>En Çok Görüntülenen Okullar</value>
+  </data>
+  <data name="b_encokyorumalanok" xml:space="preserve">
+    <value>En Çok Yorum Alan Okullar</value>
+  </data>
+  <data name="b_fax" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="b_gonder" xml:space="preserve">
+    <value>Gönder</value>
+  </data>
+  <data name="b_haritabaslik" xml:space="preserve">
+    <value>Harita Üzerinde Eduadvisor Yer İmi Açıklamaları</value>
+  </data>
+  <data name="b_konu" xml:space="preserve">
+    <value>Konu</value>
+  </data>
+  <data name="b_mesaj" xml:space="preserve">
+    <value>Mesaj</value>
+  </data>
+  <data name="b_sehirseciniz" xml:space="preserve">
+    <value>Şehir Seçiniz</value>
+  </data>
+  <data name="b_sifrehatirlatma" xml:space="preserve">
+    <value>Şifre Hatırlatma</value>
+  </data>
+  <data name="b_sifreyenile" xml:space="preserve">
+    <value>Şifre Yenile</value>
+  </data>
+  <data name="b_simdiara" xml:space="preserve">
+    <value>Şimdi Ara</value>
+  </data>
+  <data name="b_siteharitasi" xml:space="preserve">
+    <value>SİTE HARİTASI</value>
+  </data>
+  <data name="b_sizeenyakinoku" xml:space="preserve">
+    <value>Size En Yakın Okullar</value>
+  </data>
+  <data name="b_sorunuz" xml:space="preserve">
+    <value>Sorunuz</value>
+  </data>
+  <data name="b_telefon" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="b_ulkeseciniz" xml:space="preserve">
+    <value>Ülke Seçiniz</value>
+  </data>
+  <data name="i_bizimleiletisim" xml:space="preserve">
+    <value>Size daha iyi yardımcı olabilmek için bizimle iletişime geçin</value>
+  </data>
+  <data name="i_girilenepostamailgonderildi" xml:space="preserve">
+    <value>Girilen Email adresi sistemde kayıtlıysa bilgilendirme maili gönderilmiştir.</value>
+  </data>
+  <data name="i_kelimegiriniz" xml:space="preserve">
+    <value>kelime giriniz..</value>
+  </data>
+  <data name="i_mailkontrolet" xml:space="preserve">
+    <value>Mail adresinizi kontrol ediniz.</value>
+  </data>
+  <data name="u_birsorunakarsilasildi" xml:space="preserve">
+    <value>Bir Sorun İle Karşılaşıldı.</value>
+  </data>
+  <data name="u_mesajgonderildi" xml:space="preserve">
+    <value>Mesaj Gönderildi</value>
+  </data>
+  <data name="bi_mesajyaz" xml:space="preserve">
+    <value>Bir mesaj yaz</value>
+  </data>
+  <data name="b_adim" xml:space="preserve">
+    <value>Adım</value>
+  </data>
+  <data name="b_adi" xml:space="preserve">
+    <value>Adı</value>
+  </data>
+  <data name="b_adres" xml:space="preserve">
+    <value>Adres</value>
+  </data>
+  <data name="b_ayarlar" xml:space="preserve">
+    <value>Ayarlar</value>
+  </data>
+  <data name="b_basltarih" xml:space="preserve">
+    <value>Başlayacağınız Tarih :</value>
+  </data>
+  <data name="b_basprogturu" xml:space="preserve">
+    <value>Başvurduğunuz Program Türü</value>
+  </data>
+  <data name="b_basvbilg" xml:space="preserve">
+    <value>Başvuru Bilgileri</value>
+  </data>
+  <data name="b_basvkodu" xml:space="preserve">
+    <value>Başvuru Kodunuz</value>
+  </data>
+  <data name="b_basvokul" xml:space="preserve">
+    <value>Başvurduğunuz Okul</value>
+  </data>
+  <data name="b_basvprogadi" xml:space="preserve">
+    <value>Başvurduğunuz Program Adı</value>
+  </data>
+  <data name="b_basvtarih" xml:space="preserve">
+    <value>Başvurduğunuz Tarih :</value>
+  </data>
+  <data name="b_bildirimsl" xml:space="preserve">
+    <value>Bildirimi Sil</value>
+  </data>
+  <data name="b_ceptel" xml:space="preserve">
+    <value>Cep Telefonu</value>
+  </data>
+  <data name="b_cinsiyet" xml:space="preserve">
+    <value>Cinsiyet</value>
+  </data>
+  <data name="b_dilbilg" xml:space="preserve">
+    <value>Dil Bilgileri</value>
+  </data>
+  <data name="b_dilsvy" xml:space="preserve">
+    <value>Dil Seviyesi</value>
+  </data>
+  <data name="b_dogulkesehir" xml:space="preserve">
+    <value>Doğduğunuz Ülke - Şehir</value>
+  </data>
+  <data name="b_dogumtarihi" xml:space="preserve">
+    <value>Doğum Tarihiniz</value>
+  </data>
+  <data name="b_dondur" xml:space="preserve">
+    <value>Döndür</value>
+  </data>
+  <data name="b_edusor" xml:space="preserve">
+    <value>Eduadvisor'a Sor</value>
+  </data>
+  <data name="b_egitimalinankurum" xml:space="preserve">
+    <value>Eğitim Aldığınız Kuruluş</value>
+  </data>
+  <data name="b_egitimdonemi" xml:space="preserve">
+    <value>Eğitim Aldığınız Dönem :</value>
+  </data>
+  <data name="b_egitimkurumsec" xml:space="preserve">
+    <value>Eğitim Kurumu Seçiniz</value>
+  </data>
+  <data name="b_egitimturuseciniz" xml:space="preserve">
+    <value>İlgilendiğiniz Eğitim Türlerini Seçiniz :</value>
+  </data>
+  <data name="b_egtaldoklla" xml:space="preserve">
+    <value>Eğitim Aldığım Okullar</value>
+  </data>
+  <data name="b_erkenkayittelnum" xml:space="preserve">
+    <value>Erken kayıt fırsatlarından yararlanmak için telefon numaranızı girmelisiniz</value>
+  </data>
+  <data name="b_evtel" xml:space="preserve">
+    <value>Ev Telefonu</value>
+  </data>
+  <data name="b_gecsifrekntrol" xml:space="preserve">
+    <value>Geçerli Şifrenizi Kontrol Edin</value>
+  </data>
+  <data name="b_guncelle" xml:space="preserve">
+    <value>Güncelle</value>
+  </data>
+  <data name="b_haladevam" xml:space="preserve">
+    <value>Hala Devam Ediyorum</value>
+  </data>
+  <data name="b_ilgilenmiyorum" xml:space="preserve">
+    <value>İlgilenmiyorum</value>
+  </data>
+  <data name="b_ilgili" xml:space="preserve">
+    <value>İlgileniyorum</value>
+  </data>
+  <data name="b_iltbilg" xml:space="preserve">
+    <value>İletişim Bilgileri</value>
+  </data>
+  <data name="b_kampus" xml:space="preserve">
+    <value>Kampüsü</value>
+  </data>
+  <data name="b_kisiselbilg" xml:space="preserve">
+    <value>Kişisel Bilgiler</value>
+  </data>
+  <data name="b_kullbilg" xml:space="preserve">
+    <value>Kullanıcı Bilgilerim</value>
+  </data>
+  <data name="b_kurshafta" xml:space="preserve">
+    <value>Kurs (Hafta)</value>
+  </data>
+  <data name="b_kurumsehir" xml:space="preserve">
+    <value>Eğitim Kurumunun Bulunduğu Şehir</value>
+  </data>
+  <data name="b_kurumturu" xml:space="preserve">
+    <value>Eğitim Kurumunun Türü</value>
+  </data>
+  <data name="b_kurumulke" xml:space="preserve">
+    <value>Eğitim Kurumunun Bulunduğu Ülke</value>
+  </data>
+  <data name="b_maililgisecim" xml:space="preserve">
+    <value>Mail almak istediğiniz ilgi alanlarınızdan en az 1 tanesi seçilmelidir</value>
+  </data>
+  <data name="b_mesajgiriniz" xml:space="preserve">
+    <value>Bir Mesaj Giriniz</value>
+  </data>
+  <data name="b_milliyeti" xml:space="preserve">
+    <value>Milliyeti</value>
+  </data>
+  <data name="b_okuladi" xml:space="preserve">
+    <value>Okul Adı</value>
+  </data>
+  <data name="b_okuldetaylitikla" xml:space="preserve">
+    <value>Okulu Detaylı İncelemek İçin Tıklayınız</value>
+  </data>
+  <data name="b_onkayitlarim" xml:space="preserve">
+    <value>Ön Kayıtlarım</value>
+  </data>
+  <data name="b_onkayittikla" xml:space="preserve">
+    <value>Ön Kayıt Formu İçin Tıklayınız</value>
+  </data>
+  <data name="b_passno" xml:space="preserve">
+    <value>Passaport No</value>
+  </data>
+  <data name="b_passtarih" xml:space="preserve">
+    <value>Passaport Tarih</value>
+  </data>
+  <data name="b_profresm" xml:space="preserve">
+    <value>Profil Resmi</value>
+  </data>
+  <data name="b_programadi" xml:space="preserve">
+    <value>Program Adı</value>
+  </data>
+  <data name="b_progturu" xml:space="preserve">
+    <value>Program Türü</value>
+  </data>
+  <data name="b_puani" xml:space="preserve">
+    <value>Puanı</value>
+  </data>
+  <data name="b_ressayisi" xml:space="preserve">
+    <value>Resim Sayısı</value>
+  </data>
+  <data name="b_seviyesis" xml:space="preserve">
+    <value>Seviye Sistemi</value>
+  </data>
+  <data name="b_sifreguncellebaslik" xml:space="preserve">
+    <value>Şifrenizi Güncelleştirmek İstiyor Musunuz ?</value>
+  </data>
+  <data name="b_sifrekaydet" xml:space="preserve">
+    <value>Şifre kaydet</value>
+  </data>
+  <data name="b_sifretekrar" xml:space="preserve">
+    <value>Şifre Tekrar</value>
+  </data>
+  <data name="b_simdigor" xml:space="preserve">
+    <value>Şimdi Görüntüle</value>
+  </data>
+  <data name="b_skypeid" xml:space="preserve">
+    <value>SKYPE-ID</value>
+  </data>
+  <data name="b_soyadim" xml:space="preserve">
+    <value>Soyadım</value>
+  </data>
+  <data name="b_tesekkur" xml:space="preserve">
+    <value>Teşekkür Ederiz.</value>
+  </data>
+  <data name="b_yas" xml:space="preserve">
+    <value>Yaş</value>
+  </data>
+  <data name="b_yasulkesehir" xml:space="preserve">
+    <value>Yaşadığınız Ülke - Şehir</value>
+  </data>
+  <data name="b_yasyer" xml:space="preserve">
+    <value>Yaşadığınız Yer</value>
+  </data>
+  <data name="b_yergirin" xml:space="preserve">
+    <value>Yer Adı Giriniz..</value>
+  </data>
+  <data name="b_yorum" xml:space="preserve">
+    <value>Yorumunuz</value>
+  </data>
+  <data name="b_yorumbasligi" xml:space="preserve">
+    <value>Yorum Başlığı</value>
+  </data>
+  <data name="b_yorumdurumu" xml:space="preserve">
+    <value>Yorum Durumu</value>
+  </data>
+  <data name="b_yorumicerigi" xml:space="preserve">
+    <value>Yorum İçeriği</value>
+  </data>
+  <data name="b_yorumtarihi" xml:space="preserve">
+    <value>Yorum Tarihi</value>
+  </data>
+  <data name="b_yrmlarim" xml:space="preserve">
+    <value>Yorumlarım</value>
+  </data>
+  <data name="b_zyrtedilenokll" xml:space="preserve">
+    <value>Ziyaret Edilen Okullar</value>
+  </data>
+  <data name="i_eduemailamak" xml:space="preserve">
+    <value>Eduedvisor'dan E-mail yolu ile bildirim almak istiyorum .</value>
+  </data>
+  <data name="i_eduilgiemail" xml:space="preserve">
+    <value>Eduedvisor'dan ilgilendiğim eğitim türleri ile ilgili e-posta almak istiyorum.</value>
+  </data>
+  <data name="i_edukayiticerikdevam" xml:space="preserve">
+    <value>Eduadvisor farkıyla istediğiniz eğitim kurumunu görüntüleyebilir ve bu eğitim kurumları hakkında yorumları okuyabilirsiniz.</value>
+  </data>
+  <data name="i_eduonkayiticerik" xml:space="preserve">
+    <value>Erken kayıt fırsatlarından yararlanmak artık Eduadvisor ile çok kolay!</value>
+  </data>
+  <data name="i_eduonkayityok" xml:space="preserve">
+    <value>Herhangi bir eğitim kurumuna ön kaydınız bulunmamaktadır .</value>
+  </data>
+  <data name="i_eduziyaret" xml:space="preserve">
+    <value>Merhaba . EduAdvisor ailesi olarak size yardımcı olmak için son ziyaret ettiğiniz okulları burada görüntüleyebilirsiniz.</value>
+  </data>
+  <data name="i_eduziyareticerik" xml:space="preserve">
+    <value>Hiçbir yerde bulamayacağınız Eduadvisor indirimlerinden faydalanabilir, diğer kullanıcıları bilgilendirmek için gittiğiniz okullara yorum bırakabilir ve puanlayabilirsiniz.</value>
+  </data>
+  <data name="i_kendindenbahset" xml:space="preserve">
+    <value>Bize kendinizden bahseder misiniz ?</value>
+  </data>
+  <data name="i_okulyorumyaz" xml:space="preserve">
+    <value>Okul hakkında yorum yazmaya başlayın</value>
+  </data>
+  <data name="i_onkayitdurumu" xml:space="preserve">
+    <value>Ön Kayıt Durumu</value>
+  </data>
+  <data name="i_puanver" xml:space="preserve">
+    <value>Puan veriniz</value>
+  </data>
+  <data name="i_ustaramadanara" xml:space="preserve">
+    <value>Yalnızca üst arama barından eğitim kurumunuzu aramanız yeterli.</value>
+  </data>
+  <data name="uyari" xml:space="preserve">
+    <value>YAZILACAK UYARI GELECEK</value>
+  </data>
+  <data name="u_ayrilman1" xml:space="preserve">
+    <value>Sadece bir süreliğine. Geri döneceğim.</value>
+  </data>
+  <data name="u_ayrilman2" xml:space="preserve">
+    <value>Hesabım başkasının eline geçti.</value>
+  </data>
+  <data name="u_ayrilman3" xml:space="preserve">
+    <value>Yorumumu kaldırmak istiyorum.</value>
+  </data>
+  <data name="u_ayrilman4" xml:space="preserve">
+    <value>EduAdvisor’dan çok fazla e-posta alıyorum.</value>
+  </data>
+  <data name="u_ayrilman5" xml:space="preserve">
+    <value>Başka nedenlerden dolayı ayrılıyorum.</value>
+  </data>
+  <data name="u_ayrilmanedeni" xml:space="preserve">
+    <value>Ayrılma Nedeni</value>
+  </data>
+  <data name="u_ayrluzgunuz" xml:space="preserve">
+    <value>Ayrıldığınız için üzgünüz. Ayrılmadan önce size yardımcı olabileceğimiz herhangi bir şey var mı?</value>
+  </data>
+  <data name="u_bildirimkayithata" xml:space="preserve">
+    <value>Bildiriminiz kaydedilirken bir sorun oluştu tekrar deneyiniz</value>
+  </data>
+  <data name="u_bildirimsilindi" xml:space="preserve">
+    <value>Bildiriminiz başarılı şekilde silinmiştir</value>
+  </data>
+  <data name="u_bildirimsilmehata" xml:space="preserve">
+    <value>Bildiriminiz silinirken bir sorun oluştu tekrar deneyiniz</value>
+  </data>
+  <data name="u_bizimlepaylasbilgi" xml:space="preserve">
+    <value>Paylaşmak istediğiniz başka şeyler de varsa, neleri daha iyi yapabileceğimizi anlamamız için lütfen bize bildirin:</value>
+  </data>
+  <data name="u_egitimdonemgir" xml:space="preserve">
+    <value>Lütfen Eğitim Aldığınız Dönemi Giriniz .</value>
+  </data>
+  <data name="u_guncbasarisiz" xml:space="preserve">
+    <value>Güncelleme işlemi sırasında bir sorun oluştu. Tekrar deneyiniz.</value>
+  </data>
+  <data name="u_guncellestirmabasarili" xml:space="preserve">
+    <value>Güncelleştirme İşleminiz Başarıyla Tamamlandı</value>
+  </data>
+  <data name="u_gunhata" xml:space="preserve">
+    <value>Güncelleştirme işleminiz sırasında hata oluştu</value>
+  </data>
+  <data name="u_hesapdondu" xml:space="preserve">
+    <value>Hesabınız Dondurulmuştur .</value>
+  </data>
+  <data name="u_hesapdondurma" xml:space="preserve">
+    <value>Hesabınız dondurulurken bir sorun oluştu. Tekrar Deneyiniz.</value>
+  </data>
+  <data name="u_mesajsorun" xml:space="preserve">
+    <value>Mesajınız gönderilirken bir sorun oluştu. Tekrar deneyiniz.</value>
+  </data>
+  <data name="u_okulkaydiyok" xml:space="preserve">
+    <value>Henüz sistemde okul kaydınız bulunmamaktadır.</value>
+  </data>
+  <data name="u_okulkayitgnderildionay" xml:space="preserve">
+    <value>Okul kaydı başarılı şekilde iletilmiştir. Onaylandığında girdiğiniz mail adresine gönderilecektir.</value>
+  </data>
+  <data name="u_okulkayitgndrlmdi" xml:space="preserve">
+    <value>Okul Kaydı Gönderilemedi</value>
+  </data>
+  <data name="u_okulkayitgonderildi" xml:space="preserve">
+    <value>Okul Kaydı Gönderildi!</value>
+  </data>
+  <data name="u_okulkayitsorunolustu" xml:space="preserve">
+    <value>Okul kaydı gönderilirken bir sorun oluştu</value>
+  </data>
+  <data name="u_oturumaciniz" xml:space="preserve">
+    <value>Oturum açınız!</value>
+  </data>
+  <data name="u_profilhata" xml:space="preserve">
+    <value>Profil resmi güncelleme sırasında bir sorun oluştu.Tekrar deneyiniz..</value>
+  </data>
+  <data name="u_sifrebasarili" xml:space="preserve">
+    <value>Şifreniz başarılı bir şekilde güncellenmiştir...</value>
+  </data>
+  <data name="u_sifrekontrolet" xml:space="preserve">
+    <value>Geçerli Şifrenizi Kontrol Ediniz ...</value>
+  </data>
+  <data name="u_sifreuyusmuyor" xml:space="preserve">
+    <value>Şifreler Uyuşmamaktadır ...</value>
+  </data>
+  <data name="u_taahhut" xml:space="preserve">
+    <value>Taahhüt Kabulu</value>
+  </data>
+  <data name="u_taahhutisaretle" xml:space="preserve">
+    <value>Lütfen yukarıdaki taahhüt kabul yazısını işaretleyiniz..</value>
+  </data>
+  <data name="u_tahhut" xml:space="preserve">
+    <value>Bu yorumun samimi görüşüm olduğunu ve yorumu yazmam için hiçbir teşvik ya da ödeme teklif edilmediğini taahhüt ediyorum.</value>
+  </data>
+  <data name="u_talepiletildi" xml:space="preserve">
+    <value>Talebiniz Eduadvisor yetkilisine iletilmiştir. En yakın sürede Eduadvisor sizinle iletişime geçecektir.</value>
+  </data>
+  <data name="u_yorumgunhata" xml:space="preserve">
+    <value>Yorum güncelleme sırasında bir sorun oluştu. Tekrar deneyiniz...</value>
+  </data>
+  <data name="u_yorumkaldirildi" xml:space="preserve">
+    <value>Yorumunuz başarılı şekilde kaldırılmıştır.</value>
+  </data>
+  <data name="u_yorumresimsorun" xml:space="preserve">
+    <value>Yoruma resim eklenirken bir sorun oluşmuştur</value>
+  </data>
+  <data name="u_yorumsilhata" xml:space="preserve">
+    <value>Yorum silme sırasında bir sorun oluştu. Tekrar deneyiniz...</value>
+  </data>
+  <data name="u_yorumyokeduara" xml:space="preserve">
+    <value>Henüz yorum yapılmamıştır. Eduadvisor da istediğiniz okulu üst arama barından arayabilir ve bu okula kolaylıkla yorum yapabilirsiniz.</value>
+  </data>
+  <data name="b_sil" xml:space="preserve">
+    <value>Sil</value>
+  </data>
+  <data name="b_enazbege" xml:space="preserve">
+    <value>En Az Beğenilen</value>
+  </data>
+  <data name="b_encokbege" xml:space="preserve">
+    <value>En Çok Beğenilen</value>
+  </data>
+  <data name="b_filtrele" xml:space="preserve">
+    <value>Filtrele</value>
+  </data>
+  <data name="b_seciniz" xml:space="preserve">
+    <value>Seçiniz</value>
+  </data>
+  <data name="b_sehir" xml:space="preserve">
+    <value>Şehir</value>
+  </data>
+  <data name="b_Sirala" xml:space="preserve">
+    <value>Sırala</value>
+  </data>
+  <data name="b_sistokulekle" xml:space="preserve">
+    <value>Aradığınız okulu sitemize eklemek ister misiniz ?</value>
+  </data>
+  <data name="b_ulke" xml:space="preserve">
+    <value>Ülke</value>
+  </data>
+  <data name="b_temizle" xml:space="preserve">
+    <value>Temizle</value>
+  </data>
+  <data name="b_biryorumyaz" xml:space="preserve">
+    <value>Bir Yorum Yaz</value>
+  </data>
+  <data name="b_detaylibilgi" xml:space="preserve">
+    <value>Detaylı Bilgi</value>
+  </data>
+  <data name="b_egitimprogadi" xml:space="preserve">
+    <value>Eğitim Aldığınız Program Adı :</value>
+  </data>
+  <data name="b_egitimprogturu" xml:space="preserve">
+    <value>Eğitim Aldığınız Program Türü :</value>
+  </data>
+  <data name="b_harita" xml:space="preserve">
+    <value>Harita</value>
+  </data>
+  <data name="b_kayitolmakistiyorum" xml:space="preserve">
+    <value>Kayıt Olmak İstiyorum</value>
+  </data>
+  <data name="b_kurumsalfoto" xml:space="preserve">
+    <value>Fotoğraflar</value>
+  </data>
+  <data name="b_okulwebsitesi" xml:space="preserve">
+    <value>Okul Web Sitesi</value>
+  </data>
+  <data name="b_yorumresmi" xml:space="preserve">
+    <value>Yorum Resimleriniz :</value>
+  </data>
+  <data name="i_okulyorumyazbasla" xml:space="preserve">
+    <value>Okul hakkında yorum yazmaya başlayın :</value>
+  </data>
+  <data name="i_tahhuticerikyazi" xml:space="preserve">
+    <value>Lütfen yukarıdaki taahhüt kabul yazısını işaretleyiniz</value>
+  </data>
+  <data name="i_yorumbasariliedu" xml:space="preserve">
+    <value>Yorumunuz başarılı bir şekilde Eduadvisora iletilmiştir.</value>
+  </data>
+  <data name="i_yorumbasliginiz" xml:space="preserve">
+    <value>Yorum Başlığınız :</value>
+  </data>
+  <data name="i_yorumburdangoruntule" xml:space="preserve">
+    <value>Yorumunuzun onaylandıktan sonra sistemde görüntüleyebilirsiniz. Eduadvisor ailesi olarak teşekkür ederiz.</value>
+  </data>
+  <data name="u_eduoturumac" xml:space="preserve">
+    <value>Eduadvisora özel ,başka hiçbir yerde bulamayacağınız bu indirimden faydalanabilmek için oturum açın .</value>
+  </data>
+  <data name="u_yormicinoturumac" xml:space="preserve">
+    <value>Yorum yapmak için önce oturum açınız</value>
+  </data>
+  <data name="u_yorumgitti" xml:space="preserve">
+    <value>Yorumunuz Gönderildi !</value>
+  </data>
+  <data name="u_yorumgonderlmedi" xml:space="preserve">
+    <value>Yorum Gönderilemedi !</value>
+  </data>
+  <data name="u_yorumsorun" xml:space="preserve">
+    <value>Yorumunuz gönderilirken bir sorun oluştu</value>
+  </data>
+  <data name="b_digersikayetnedeni" xml:space="preserve">
+    <value>Diğer Şikayet Nedenini Açıklayınız :</value>
+  </data>
+  <data name="b_gecerlisifre" xml:space="preserve">
+    <value>Geçerli Şifreniz :</value>
+  </data>
+  <data name="b_okulanketufak" xml:space="preserve">
+    <value>Okul Hakkında Ufak Bir Anket</value>
+  </data>
+  <data name="b_okulhakaciklama" xml:space="preserve">
+    <value>Okul Hakkında Açıklama</value>
+  </data>
+  <data name="b_okulprog" xml:space="preserve">
+    <value>Okul Programları</value>
+  </data>
+  <data name="b_sikayetigonder" xml:space="preserve">
+    <value>Şikayeti Gönder</value>
+  </data>
+  <data name="b_sikayetnedeni" xml:space="preserve">
+    <value>Şikayet Nedeni</value>
+  </data>
+  <data name="b_yorumsikayet" xml:space="preserve">
+    <value>Yorumu Şikayet Et</value>
+  </data>
+  <data name="i_kurumsalyorumicerik" xml:space="preserve">
+    <value>Bir okul eklemek için önce oturum açınız..</value>
+  </data>
+  <data name="b_acikadres" xml:space="preserve">
+    <value>Açık Adresiniz</value>
+  </data>
+  <data name="b_bay" xml:space="preserve">
+    <value>ERKEK</value>
+  </data>
+  <data name="b_bayan" xml:space="preserve">
+    <value>KADIN</value>
+  </data>
+  <data name="b_belirtmekistemiyorum" xml:space="preserve">
+    <value>BELİRTMEK İSTEMİYORUM</value>
+  </data>
+  <data name="b_dilseviye" xml:space="preserve">
+    <value>Yabancı Dil Seviyeniz</value>
+  </data>
+  <data name="b_dogumyerulke" xml:space="preserve">
+    <value>Doğum Yeri (Ülke)</value>
+  </data>
+  <data name="b_egitimdusuntarih" xml:space="preserve">
+    <value>Eğitime Başlamayı Düşündüğünüz Tarih</value>
+  </data>
+  <data name="b_ileri" xml:space="preserve">
+    <value>İleri</value>
+  </data>
+  <data name="b_kurssurehafta" xml:space="preserve">
+    <value>Kursa Katılım Süresi (Hafta)</value>
+  </data>
+  <data name="b_passgectarih" xml:space="preserve">
+    <value>Passaport Geçerlilik Tarihi</value>
+  </data>
+  <data name="b_soyadi" xml:space="preserve">
+    <value>Soyadı</value>
+  </data>
+  <data name="b_telcep" xml:space="preserve">
+    <value>Telefon No (Cep)</value>
+  </data>
+  <data name="b_telnoev" xml:space="preserve">
+    <value>Telefon No (Ev)</value>
+  </data>
+  <data name="b_tumu" xml:space="preserve">
+    <value>Tümü</value>
+  </data>
+  <data name="b_yasadiginizulke" xml:space="preserve">
+    <value>Yaşadığınız Ülke</value>
+  </data>
+  <data name="b_yasadiginsehir" xml:space="preserve">
+    <value>Yaşadığınız Şehir</value>
+  </data>
+  <data name="b_yorumlar" xml:space="preserve">
+    <value>Yorumlar</value>
+  </data>
+  <data name="u_kodedugorus" xml:space="preserve">
+    <value>Bu kod ile üzerinden Eduadvisor ile görüşme sağlayabilirsiniz.</value>
+  </data>
+  <data name="u_kodvarkayityapma" xml:space="preserve">
+    <value>Bu okula ön kaydınız önceden alınmıştır. Tekrar kayıt yapamazsınız.</value>
+  </data>
+  <data name="u_onkayitalindimailatildi" xml:space="preserve">
+    <value>Ön kayıt başvurunuz alınmıştır. Ön kayıt için gerekli kodunuz mail adresinize gönderilmiştir.</value>
+  </data>
+  <data name="u_tercihtesekkur" xml:space="preserve">
+    <value>Eduadvisor'u tercih ettiğiniz için teşekkür ederiz.</value>
+  </data>
+  <data name="u_uzgunuz" xml:space="preserve">
+    <value>Üzgünüz !</value>
+  </data>
+  <data name="b_okulekle" xml:space="preserve">
+    <value>Okul Ekle</value>
+  </data>
+  <data name="b_yorumyazmayabasla" xml:space="preserve">
+    <value>Yorum Yazmaya Başla</value>
+  </data>
+  <data name="yorum_bulunamadi" xml:space="preserve">
+    <value>https://eduadvisor.co.uk/Content/images/yorumbulunamadi.png</value>
+  </data>
+  <data name="b_dilsecin" xml:space="preserve">
+    <value>Lütfen Bir Dil Seçin ...</value>
+  </data>
+  <data name="b_ekle" xml:space="preserve">
+    <value>Ekle</value>
+  </data>
+  <data name="b_hesapdondur" xml:space="preserve">
+    <value>Hesabımı Dondur</value>
+  </data>
+  <data name="b_yorumguncelle" xml:space="preserve">
+    <value>Yorumu Güncelle</value>
+  </data>
+  <data name="b_yorumyap" xml:space="preserve">
+    <value>Yorum Yap</value>
+  </data>
+  <data name="b_beklemede" xml:space="preserve">
+    <value>Beklemede</value>
+  </data>
+  <data name="b_detayliincele" xml:space="preserve">
+    <value>Detaylı İncele</value>
+  </data>
+  <data name="b_indirimlipng" xml:space="preserve">
+    <value>/Content/img/indirimli.png</value>
+  </data>
+  <data name="b_onaylandi" xml:space="preserve">
+    <value>Onaylandı</value>
+  </data>
+  <data name="b_onaylanmadi" xml:space="preserve">
+    <value>Onaylanmadı</value>
+  </data>
+  <data name="b_Resimsec" xml:space="preserve">
+    <value>Resim Seçiniz</value>
+  </data>
+  <data name="b_resimsil" xml:space="preserve">
+    <value>Resmi Sil</value>
+  </data>
+  <data name="b_yorumresimyok" xml:space="preserve">
+    <value>Yoruma resim yüklenmemiş</value>
+  </data>
+  <data name="b_sifrebosolmaz" xml:space="preserve">
+    <value>Şifre Alanı Boş Geçilemez ! </value>
+  </data>
+  <data name="b_eyaletsec" xml:space="preserve">
+    <value>Eyalet Seçiniz</value>
+  </data>
+  <data name="b_dogumeyalet" xml:space="preserve">
+    <value>Doğum Yeri (Eyalet)</value>
+  </data>
+  <data name="b_dogumyersehir" xml:space="preserve">
+    <value>Doğum Yeri (Şehir)</value>
+  </data>
+  <data name="b_egitimeyalet" xml:space="preserve">
+    <value>Eğitim Kurumunun Bulunduğu Eyalet</value>
+  </data>
+  <data name="b_yasadigieyalet" xml:space="preserve">
+    <value>Yaşadığınız Eyalet</value>
+  </data>
+  <data name="aramakriterbulunamadi" xml:space="preserve">
+    <value>Arama kriterinize uygun okul bulunamadı.</value>
+  </data>
+  <data name="begen" xml:space="preserve">
+    <value>Beğen</value>
+  </data>
+  <data name="begenmekten_vazgec" xml:space="preserve">
+    <value>Beğenmekten Vazgeç</value>
+  </data>
+  <data name="buradan" xml:space="preserve">
+    <value>Buradan</value>
+  </data>
+  <data name="egitim_kurumunun_adi" xml:space="preserve">
+    <value>Eğitim Kurumunun Adı</value>
+  </data>
+  <data name="gizlilik_politikasi" xml:space="preserve">
+    <value>Gizlilik Politikası</value>
+  </data>
+  <data name="kampus_sube_adi" xml:space="preserve">
+    <value>Kampüs / Şube Adı</value>
+  </data>
+  <data name="kesfedin" xml:space="preserve">
+    <value>KEŞFEDİN</value>
+  </data>
+  <data name="kullanim_kosullari" xml:space="preserve">
+    <value>Kullanım Koşulları</value>
+  </data>
+  <data name="mesajiniz" xml:space="preserve">
+    <value>Mesajınız</value>
+  </data>
+  <data name="sikayet_et" xml:space="preserve">
+    <value>Şikayet Et</value>
+  </data>
+  <data name="toplam_yorum" xml:space="preserve">
+    <value>Toplam Yorum</value>
+  </data>
+  <data name="yeni_okul" xml:space="preserve">
+    <value>Yeni Okul</value>
+  </data>
+  <data name="yeni_okul_adi_bos_1" xml:space="preserve">
+    <value>Yeni Okul Adı Boş!</value>
+  </data>
+  <data name="yeni_okul_adi_bos_2" xml:space="preserve">
+    <value>Eklemek istediğiniz okul adını giriniz..</value>
+  </data>
+  <data name="yorum_puaniniz" xml:space="preserve">
+    <value>Yorum Puanınız</value>
+  </data>
+  <data name="dogrulama_kodu_sorun" xml:space="preserve">
+    <value>Doğrulama kodu gönderilirken bir sorun oluştu lütfen tekrar deneyiniz.</value>
+  </data>
+  <data name="posta_footer" xml:space="preserve">
+    <value>Content/images/nasilyardimci.png</value>
+  </data>
+  <data name="lisans" xml:space="preserve">
+    <value>Lisans</value>
+  </data>
+  <data name="lutfendahasonradene" xml:space="preserve">
+    <value>Lütfen daha sonra tekrar deneyiniz</value>
+  </data>
+  <data name="on_lisans" xml:space="preserve">
+    <value>Ön Lisans</value>
+  </data>
+  <data name="uyelikaktif" xml:space="preserve">
+    <value>Üyeliğiniz aktif edilmiştir</value>
+  </data>
+  <data name="uyelikaktifsorun" xml:space="preserve">
+    <value>Üyeliğiniz aktif edilirken bir sorun oluşmuştur.</value>
+  </data>
+  <data name="yonlendiriliyor" xml:space="preserve">
+    <value>Yönlendiriliyorsunuz</value>
+  </data>
+  <data name="yuksek_lisans" xml:space="preserve">
+    <value>Yüksek Lisans</value>
+  </data>
+  <data name="maskot" xml:space="preserve">
+    <value>Content/images/maskot1.png</value>
+  </data>
+  <data name="sistemdeokulyok" xml:space="preserve">
+    <value>Sistemde Okulunuz Yok Mu ?</value>
+  </data>
+  <data name="begeni" xml:space="preserve">
+    <value>Beğeni</value>
+  </data>
+  <data name="okul_ozellikleri" xml:space="preserve">
+    <value>Okul Özellikleri</value>
+  </data>
+  <data name="yonetim" xml:space="preserve">
+    <value>Yönetim</value>
+  </data>
+  <data name="bildirimleri_gor" xml:space="preserve">
+    <value>Tüm Bildirimleri Gör</value>
+  </data>
+  <data name="yorum_gonder" xml:space="preserve">
+    <value>Yorumu Gönder</value>
+  </data>
+  <data name="u_onkayitalinamadi" xml:space="preserve">
+    <value>Ön kayıt başvurunuz işleme alınırken bir sorun oluştu. Lütfen Tekrar Deneyiniz.</value>
+  </data>
+  <data name="uye_profil_okul_sil_onay" xml:space="preserve">
+    <value>Oluşturduğunuz okul kaydı silinecektir. Onaylıyor musunuz?</value>
+  </data>
+  <data name="silindi" xml:space="preserve">
+    <value>Silindi</value>
+  </data>
+  <data name="aciklama_alani_bos_birakilamaz" xml:space="preserve">
+    <value>Açıklama alanı boş bırakılamaz.</value>
+  </data>
+  <data name="kapat" xml:space="preserve">
+    <value>Kapat</value>
+  </data>
+  <data name="profil_resmi_sec" xml:space="preserve">
+    <value>Değiştirmek istediğiniz profil resmini seçiniz..</value>
+  </data>
+  <data name="footer_yardim_a_href" xml:space="preserve">
+    <value>mailto:yardim@eduadvisor.co.uk</value>
+  </data>
+  <data name="profil_yorum_sil_onay" xml:space="preserve">
+    <value>Yorumunuz silinecektir.Onaylıyor musunuz?</value>
+  </data>
+  <data name="yorum_resim_sil_onay" xml:space="preserve">
+    <value>Resimi silmek istediğinize emin misiniz?</value>
+  </data>
+  <data name="kurumsal_kayit" xml:space="preserve">
+    <value>Kurumsal Kayıt</value>
+  </data>
+  <data name="uye_dogrulama" xml:space="preserve">
+    <value>Üye Doğrulama</value>
+  </data>
+  <data name="uyeliginiz_henuz_dogrulanmamis" xml:space="preserve">
+    <value>Üyeliğiniz Henüz Doğrulanmamış.</value>
+  </data>
+  <data name="dogrulama_kodu" xml:space="preserve">
+    <value>Doğrulama Kodu</value>
+  </data>
+  <data name="aktiflestir" xml:space="preserve">
+    <value>Aktifleştir</value>
+  </data>
+  <data name="dogrulama_kodu_gonderildi" xml:space="preserve">
+    <value>Doğrulama kodu başarılı bir şekilde mail adresinize iletilmiştir.</value>
+  </data>
+  <data name="bu_bildirim_sil_onay" xml:space="preserve">
+    <value>Bu bildirimi silmek istediğinize emin misiniz?</value>
+  </data>
+  <data name="uye_profil_bildirim_onayla_onay" xml:space="preserve">
+    <value>Bu bildirim ile ilgilendiğiniz kaydedilecektir. Onaylıyor musunuz?</value>
+  </data>
+  <data name="siralaalfabeaz" xml:space="preserve">
+    <value>A-Z</value>
+  </data>
+  <data name="siralaalfabeza" xml:space="preserve">
+    <value>Z-A</value>
+  </data>
+  <data name="b_eyalet" xml:space="preserve">
+    <value>Eyalet</value>
+  </data>
+  <data name="anket_gonder" xml:space="preserve">
+    <value>Anket Gönder</value>
+  </data>
+  <data name="sayfa" xml:space="preserve">
+    <value>Sayfa</value>
+  </data>
+  <data name="okul_bul" xml:space="preserve">
+    <value>Okul Bul</value>
+  </data>
+  <data name="dil_a0" xml:space="preserve">
+    <value>A0 (Tamamen Başlangıç)</value>
+  </data>
+  <data name="dil_a1" xml:space="preserve">
+    <value>A1 (Başlangıç)</value>
+  </data>
+  <data name="dil_a2" xml:space="preserve">
+    <value>A2 (Temel)</value>
+  </data>
+  <data name="dil_b1" xml:space="preserve">
+    <value>B1 (Orta)</value>
+  </data>
+  <data name="dil_b2" xml:space="preserve">
+    <value>B2 (Üst Orta)</value>
+  </data>
+  <data name="dil_c1" xml:space="preserve">
+    <value>C1 (Gelişmiş)</value>
+  </data>
+  <data name="dil_c2" xml:space="preserve">
+    <value>C2 (Profesyonel)</value>
+  </data>
+  <data name="okulunuzu_kaydedin" xml:space="preserve">
+    <value>Okulunuzu Kaydedin</value>
+  </data>
+  <data name="giris" xml:space="preserve">
+    <value>Giriş</value>
+  </data>
+  <data name="katil" xml:space="preserve">
+    <value>Katıl</value>
+  </data>
+  <data name="guncel_yorumlar" xml:space="preserve">
+    <value>Okullar Hakkında En Güncel Öğrenci Yorumları</value>
+  </data>
+  <data name="anasayfa_harita_baslik" xml:space="preserve">
+    <value>Çevrenizdeki Okulları Haritada Bulun</value>
+  </data>
+  <data name="anasayfa_ustaramabari_yazi" xml:space="preserve">
+    <value>Dünya Çapında Binlerce Okul Hakkında En Güncel Öğrenci Yorum ve Tavsiyeleri</value>
+  </data>
+  <data name="anasayfa_aramatabs_yazi1" xml:space="preserve">
+    <value>İdeal okulunuzu kolayca arayın</value>
+  </data>
+  <data name="anasayfa_aramatabs_yazi2" xml:space="preserve">
+    <value>Daha pratik ve hızlı bir arama deneyimi için seçim yapın</value>
+  </data>
+  <data name="i_girilenepostamailgonderilemedi" xml:space="preserve">
+    <value>Girilen email adresine bilgilendirme maili gönderilirken bir sorun oluştu. Tekrar deneyiniz</value>
+  </data>
+  <data name="fakulte_adi" xml:space="preserve">
+    <value>Fakülte Adı</value>
+  </data>
+  <data name="kurumsal_kayit_baslik_ogrenci" xml:space="preserve">
+    <value>Eğitimini Aldığınız Okulu Sisteme Ekleme Formu</value>
+  </data>
+  <data name="kurumsal_kayit_baslik_yetkili" xml:space="preserve">
+    <value>Yetkilisi Olduğunuz Okulu Sisteme Ekleme Formu</value>
+  </data>
+  <data name="misyonumuz" xml:space="preserve">
+    <value>Misyonumuz</value>
+  </data>
+  <data name="diger_okullar" xml:space="preserve">
+    <value>Diğer Okullar</value>
+  </data>
+  <data name="ulke_kodu" xml:space="preserve">
+    <value>Ülke Kodu</value>
+  </data>
+  <data name="bolge_kodu" xml:space="preserve">
+    <value>Bölge Kodu</value>
+  </data>
+  <data name="yorum" xml:space="preserve">
+    <value>Yorum</value>
+  </data>
+  <data name="fiyat_listesi" xml:space="preserve">
+    <value>Fiyat Listesi</value>
+  </data>
+  <data name="fiyati" xml:space="preserve">
+    <value>Fiyatı</value>
+  </data>
+  <data name="hafta" xml:space="preserve">
+    <value>Hafta</value>
+  </data>
+  <data name="b_uygindir" xml:space="preserve">
+    <value>UYGULAMAYI İNDİRİN</value>
+  </data>
+</root>

@@ -1,0 +1,87 @@
+﻿@model EduApi.SiteModels.OnKayitModel
+@{
+    ViewBag.Title = "Ön Kayıt";
+}
+
+@section sayfa_css{
+    <link rel="stylesheet" href="~/Content/css/components/bs-rating.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/css/components/bs-filestyle.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/css/datepicker.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/css/components/timepicker.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/css/components/daterangepicker.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/css/magnific-popup.css" type="text/css" />
+}
+
+
+<section id="map-overlay" class="paddingtop10">
+    <div class="container clearfix" id="onkayitformu">
+        <div style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url(/Content/img/arka_plannn_r1.png) center center no-repeat; background-size: cover;">
+        </div>
+        <div class="contact-form-overlay clearfix" style="box-shadow: 0 1px 10px rgb(160, 47, 137);">
+            <div class="okul_sonuc col-xs-12">
+                <div class="row">
+                    <div class="col-md-12 solayasli">
+                        <div class="okul_sonuc_logo pull-left">
+                            <img src="~/Content/img/okul/@Model.logo" style="height: 55px; border: 2px solid #6ec7bb; border-radius: 15px; margin-right: 15px;min-height:55px;" alt="EduAdvisor @Model.okul_adi Logo">
+                        </div>
+                        <strong id="okuladi" class="okul_sonuc_adi_font">@Model.okul_adi</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contact-form-overlay" style="box-shadow: 0 1px 10px rgb(160, 47, 137);" class="clearfix">
+            <form id="on_kayit_form">
+                <div class="form-process" id="on_kayit_load"></div>
+                <div class="contact-widget">
+                    <div ID="kayitgonderildi" style="display:none">
+                        <div class="alert alert-success col-md-12">
+                            <h5 class="oturumac erguvan">@Resources.Varsayilan.u_tercihtesekkur</h5>
+                            <strong>
+                                @Resources.Varsayilan.u_onkayitalindimailatildi<br />
+                                @Resources.Varsayilan.u_kodedugorus
+                            </strong><br />
+                        </div>
+                    </div>
+                    <div Class="col-md-12" Style="padding: 0;display:none" id="onkayithata">
+                        <div class="alert alert-danger col-md-12">
+                            <h5 class="oturumac">@Resources.Varsayilan.u_uzgunuz</h5>
+                            <strong>@Resources.Varsayilan.u_onkayitalinamadi</strong>
+                        </div>
+                    </div>
+                    <div class="col-md-12" Style="padding: 0;display:none" id="onkayitvar">
+                        <div class="alert alert-danger col-md-12">
+                            <h5 class="oturumac">@Resources.Varsayilan.u_uzgunuz</h5>
+                            <strong>@Resources.Varsayilan.u_kodvarkayityapma</strong>
+                        </div>
+                    </div>
+                    <div ID="gonderildikapat">
+                        <div id="processTabs">
+                            <div id="tabsonkayit">
+                                <ul class="process-steps bottommargin clearfix">
+                                    <li id="tab1"><a href="#ptab1" class="i-circled i-bordered i-alt divcenter">1</a></li>
+                                    <li id="tab2"><a href="#ptab2" class="i-circled i-bordered i-alt divcenter">2</a></li>
+                                    <li id="tab3"><a href="#ptab3" class="i-circled i-bordered i-alt divcenter">3</a></li>
+                                    <li id="tab4"><a href="#ptab4" class="i-circled i-bordered i-alt divcenter">4</a></li>
+                                </ul>
+                            </div>
+                            @{Html.RenderPartial("OnKayitFormTabIcerik",Model);}
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <input type="hidden" class="onkayit-js" value="@Model.okul_id" name="okul_id" />
+            </form>
+        </div>
+    </div>
+</section>
+
+
+@section sayfa_js{
+    <script type="text/javascript" src="~/Content/js/datepicker.js"></script>
+    <script type="text/javascript" src="~/Content/js/components/timepicker.js"></script>
+    <script type="text/javascript" src="~/Content/js/components/daterangepicker.js"></script>
+    <script type="text/javascript" src="~/Content/locales/bootstrap-datepicker.tr.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/components/star-rating.js"></script>
+    <script type="text/javascript" src="~/Content/js/theia-sticky-sidebar.js"></script>
+    <script type="text/javascript" src="~/Content/js/components/bs-filestyle.js"></script>
+}

@@ -1,0 +1,35 @@
+﻿@{ 
+    ViewBag.Title = "Şifre Hatırlat";
+}
+<section id="content">
+    <div class="content-wrap nopadding">
+        <div style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url(/Content/img/arkaplansifre.jpg)center center no-repeat;  background-size: cover;"></div>
+        <div class="section nopadding nomargin"></div>
+        <div class="section nobg full-screen nopadding nomargin">
+            <div class="container vertical-middle divcenter clearfix">
+                <div class="panel panel-default divcenter noradius noborder" style="max-width: 400px;">
+                    <div class="form-process" id="sifremi_unuttum_load"></div>
+                    <div class="panel-body" style="padding: 40px;text-align:center">
+                        <h3>@Resources.Varsayilan.b_sifrehatirlatma </h3>
+                        <div class="input-group">
+                            <span class="input-group-addon" style="background-color: white; font-weight: bolder; color: #a02f89;">@Resources.Varsayilan.bslk_email :</span>
+                            <input type="text" id="txtmail" class="form-control" placeholder="@Resources.Varsayilan.bslk_seninemailadres" autocomplete="email" />
+                        </div>
+                        <button class="margintop15" ID="sifregonder" onclick="SifreHatirlat(event)">@Resources.Varsayilan.b_sifreyenile</button>
+                        <div class="line line-sm"></div>
+                        <div id="basarilisifrehatirlatma" style="display:none;">
+                            <div class="alert alert-info">
+                                @(Resources.Varsayilan.i_girilenepostamailgonderildi + " " + Resources.Varsayilan.i_mailkontrolet)
+                            </div>
+                        </div>
+                        <div id="basarisizsifrehatirlatma" style="display:none;">
+                            <div class="alert alert-danger">
+                                @Resources.Varsayilan.i_girilenepostamailgonderilemedi
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

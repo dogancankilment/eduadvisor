@@ -1,0 +1,21 @@
+﻿@model EduApi.SiteModels.KurumsalKayitProgramGetirModel
+<div id="programadi" class="col_half">
+    <label>@Resources.Varsayilan.b_programadi</label>
+    <select id="kurumsal_kayit_programlar" class="form-control krmsl-js" name="program_id">
+        <option value="-1">@Resources.Varsayilan.b_seciniz</option>
+        @for (int i = 0; i < Model.programlar.Count; i++)
+        {
+            <option value="@Model.programlar[i].value">@Model.programlar[i].text</option>
+        }
+    </select>
+</div>
+<div id="programturu" class="col_half col_last">
+    <label>@Resources.Varsayilan.b_progturu</label>
+    <select id="kurumsal_kayit_programtur" class="form-control krmsl-js" name="program_tur_id">
+        <option value="-1">@Resources.Varsayilan.b_seciniz</option>
+        @for (int i = 0; i < Model.turler.Count; i++)
+        {
+            <option value="@Model.turler[i].value">@Model.turler[i].text</option>
+        }
+    </select>
+</div>

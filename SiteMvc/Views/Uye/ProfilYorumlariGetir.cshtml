@@ -1,0 +1,64 @@
+﻿@model List<dll.Models.yorum>
+@if (Model.Count > 0)
+            {
+    <table class="grd_egitim" cellspacing="0" rules="all" border="1" id="Govde_GridView1" style="border-collapse:collapse;">
+        <tbody>
+            <tr>
+                <th class="templatepadding" scope="col">@Resources.Varsayilan.b_yorumbasligi</th>
+                <th class="templatepadding" scope="col">@Resources.Varsayilan.b_yorumtarihi</th>
+                <th class="templatepadding" scope="col">@Resources.Varsayilan.b_okuladi</th>
+                <th class="templatepadding" scope="col">@Resources.Varsayilan.b_puani</th>
+                <th class="templatepadding" scope="col">@Resources.Varsayilan.b_ressayisi</th>
+                <th class="templatepadding" scope="col">@Resources.Varsayilan.b_yorumdurumu</th>
+                <th class="templatepadding" scope="col">&nbsp;</th>
+            </tr>
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <tr>
+                    <td class="itempadding">
+                        <span style="margin-top: 50px">@Model[i].baslik</span>
+                    </td>
+                    <td class="itempadding">
+                        <span>@Model[i].tarih.ToString("dd/MM/yyyy HH:mm")</span>
+                    </td>
+                    <td class="itempadding">
+                        <span>@Model[i].okullar.okul_grup_iliski.FirstOrDefault().okul_gruplari.adi</span>
+                        <br />
+                        <small>@Model[i].okullar.adi</small>
+                    </td>
+                    <td class="itempadding">
+                        <span>@Model[i].puani</span>
+                    </td>
+                    <td class="itempadding">
+                        <span>@Model[i].yorum_resimleri.Count</span>
+                    </td>
+                    <td class="itempadding">
+                        @if (Model[i].onay == 1)
+                        {
+                            <span data-d="1" style="color:Green;">@Resources.Varsayilan.b_onaylandi</span>
+                        }
+                        else if (Model[i].onay == 0)
+                        {
+                            <span data-d="0" style="color:Red;">@Resources.Varsayilan.b_beklemede</span>
+                        }
+                        else if (Model[i].onay == 2)
+                        {
+                            <span data-d="2" style="color:Red;">@Resources.Varsayilan.b_onaylanmadi</span>
+                        }
+                    </td>
+                    <td class="itempadding">
+                        <input type="submit" value="@Resources.Varsayilan.b_detay" onclick="yorumdetaygoster(1,event);" class="button button-small button-circle button-sistem-yesil" data-v="@Model[i].id">
+                        <input type="submit" value="@Resources.Varsayilan.b_sil" onclick="UyeProfilYorumSil(event,'@Resources.Varsayilan.profil_yorum_sil_onay',@Model[i].id);" class="button button-small button-circle button-red" data-v="@Model[i].id">
+                        <span class="hide yorum-icerik-lbl-tmp">@Model[i].icerik</span>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-danger nobottommargin">
+        <i class="icon-gift"></i><strong>@Resources.Varsayilan.u_yorumyokeduara</strong>
+    </div>
+}

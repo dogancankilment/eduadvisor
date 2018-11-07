@@ -1,0 +1,35 @@
+﻿
+<div id="Tabs">
+    <ul id="tabsayarla" class="nav nav-pills nav-stacked col-md-2">
+        <li class="active col-lg-12 aktifrenk" style="width: 225px;">
+            <a href="#tab_kullanici" data-toggle="pill">@Resources.Varsayilan.b_kullbilg <i class="icon-user pull-right"></i></a>
+        </li>
+        <li class="col-lg-12 aktifrenk" style="width: 225px;">
+            <a href="#tab_profilresmi" data-toggle="pill">@Resources.Varsayilan.b_profresm <i class="icon-crop pull-right"></i></a>
+        </li>
+        <li class="col-lg-12 aktifrenk" style="width: 225px;">
+            <a href="#tab_seviye" data-toggle="pill">@Resources.Varsayilan.b_seviyesis <i class="icon icon-list-ol pull-right"></i></a>
+        </li>
+        <li class="col-lg-12 aktifrenk" style="width: 225px;">
+            <a href="#tab_egitim" data-toggle="pill">@Resources.Varsayilan.b_egtaldoklla <i class="glyphicon glyphicon-home pull-right"></i></a>
+        </li>
+        <li class="col-lg-12 aktifrenk" style="width: 225px;">
+            <a href="#tab_ziyaret" data-toggle="pill">@Resources.Varsayilan.b_zyrtedilenokll <i class="glyphicon glyphicon-bookmark pull-right"></i></a>
+        </li>
+        <li class="col-lg-12 aktifrenk" style="width: 225px;">
+            <a href="#tab_okul_kayit" data-toggle="pill">@Resources.Varsayilan.b_onkayitlarim <i class="glyphicon glyphicon-ok pull-right"></i></a>
+        </li>
+        <li class="col-lg-12 aktifrenk" style="width: 225px;">
+            <a href="#tab_yorumlar" data-toggle="pill">@Resources.Varsayilan.b_yrmlarim <i class="icon icon-comments pull-right"></i></a>
+        </li>
+        @if ((bool)ViewData["dogrulandi"] == false)
+        {
+            <li class="col-lg-12 aktifrenk" style="width: 225px;">
+                <a href="#tab_dogrula" data-toggle="pill">@Resources.Varsayilan.uye_dogrulama <i class="icon-cog pull-right"></i></a>
+            </li>
+        }
+        <li class="col-lg-12 aktifrenk" style="width: 225px;">
+            <a href="#tab_ayarlar" data-toggle="pill">@Resources.Varsayilan.b_ayarlar <i class="icon-cog pull-right"></i></a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,156 @@
+﻿@model dll.Models.okullar
+<form id="yorum_formu" class="col-xs-12">
+    <div id="geneloturumkontrol" class="alert alert-danger col-md-12 hide">
+        <strong>@Resources.Varsayilan.u_oturumaciniz </strong>@Resources.Varsayilan.u_yormicinoturumac..
+    </div>
+    <div class="form-process" id="yorum_load"></div>
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="content-wrap nopadding">
+            <div class="container clearfix" style="width: inherit !important">
+                <div class="row clearfix">
+                    <div class="col-md-12 bottommargin-sm" style="padding: 0">
+                        <label>@Resources.Varsayilan.i_okulyorumyazbasla</label>
+                        <input name="yorum_puan" type="number" id="txtYildiz" class="rating bottommargin-sm yrm-js form-control hide" max="5" data-step="1" data-size="sm" data-glyphicon="false" data-rating-class="fontawesome-icon">
+                        <span style="color: red; font-size: 12px; visibility: hidden;" id="rq">@Resources.Varsayilan.i_puanver</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <label for="shipping-form-name">@Resources.Varsayilan.i_yorumbasliginiz </label>
+        <input type="text" id="txtYorumBasligi" class="sm-form-control bottommargin-sm yrm-js" onblur="BosKontrol(this)" name="yorum_baslik">
+    </div>
+    <div class="col-md-8 col-sm-8">
+        <label for="shipping-form-message">@Resources.Varsayilan.b_yorum :</label>
+        <textarea rows="6" cols="30" id="txtYorumicerik" class="sm-form-control bottommargin-sm yrm-js" onblur="BosKontrol(this)" name="yorum_icerik"></textarea>
+    </div>
+    @if (Model.egitim_turleri.program_var)
+    {
+        <div id="yorumegitim_turu" class="col-md-8 col-sm-8 col-xs-8">
+            <label>@Resources.Varsayilan.b_egitimprogturu</label>
+            <select id="drpprogramturu" class="form-control yrm-js" onblur="BosKontrol(this)" name="program_tur_id">
+                <option value="-1">@Resources.Varsayilan.b_seciniz</option>
+                @if (Model.egitim_turleri.program_var)
+                {
+                    var turler = Model.egitim_turleri.onkayit_egitim_turleri.Where(x => x.id > 0).OrderBy(x => x.sira_no).ToList();
+                    for (int i = 0; i < turler.Count; i++)
+                    {
+                        <option value="@turler[i].id">@turler[i].adi</option>
+                    }
+                }
+            </select>
+        </div>
+        <div id="yorumprogram_adi" class="col-md-8 col-sm-8 col-xs-8">
+            <label>@Resources.Varsayilan.b_egitimprogadi</label>
+            <select id="drpprogramadi" class="form-control yrm-js" onblur="BosKontrol(this)" name="program_id">
+                <option value="-1">@Resources.Varsayilan.b_seciniz</option>
+                @if (Model.egitim_turleri.program_var)
+                {
+                    var programlar = Model.egitim_turleri.program_havuzu.ToList();
+                    for (int i = 0; i < programlar.Count; i++)
+                    {
+                        <option value="@programlar[i].egitim_id">@programlar[i].adi</option>
+                    }
+                }
+            </select>
+        </div>
+    }
+    else
+    {
+        <input type="hidden" id="drpprogramturu" name="program_tur_id" class="yrm-js" value="0" />
+        <input type="hidden" id="drpprogramadi" name="program_id" class="yrm-js" value="0" />
+    }
+    <div class="col-md-8 col-sm-8 col-xs-8">
+        <div id="okuldetaytarih" class="input-daterange travel-date-group">
+            <div class="row">
+                <div class="col-sm-6 bottommargin-sm">
+                    <label for="">@Resources.Varsayilan.b_egitimdonemi</label>
+                    <div class="input-daterange input-group" style="padding: 0">
+                        <input type="text" id="txtOkulBas" class="sm-form-control tleft yrm-js" placeholder="MM/YYYY" onblur="BosKontrol(this)" name="yorum_bas">
+                        <span class="input-group-addon">-</span>
+                        <input type="text" id="txtOkulBit" class="sm-form-control tleft yrm-js" placeholder="MM/YYYY" name="yorum_bitis">
+                    </div>
+                </div>
+                <div class="col-sm-6 bottommargin-sm" style="padding-left: 0;">
+                    <label class="margintop15">
+                        <span class="checkbox chck yrm-js">
+                            <input id="HalaDevamEdiyorChck" type="checkbox" onchange="DevamEdiyorChange(this,'txtOkulBit')" class="yrm-js" name="yorum_bitis_chck">
+                            <label for="HalaDevamEdiyorChck">@Resources.Varsayilan.b_haladevam</label>
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12" style="margin-bottom: 10px; float: left;" id="yorum_resimleri_cropit">
+        <label>@Resources.Varsayilan.b_yorumresmi</label><br>
+        <div class="col-md-4 image-editor pull-left" id="1_yorum_resmi">
+            <input type="file" id="yorumfileupload1" class="cropit-image-input">
+            <div class="cropit-preview"></div>
+            <input type="range" class="cropit-image-zoom-input" />
+            <button id="yorum_sol1" class="btn btn-xs btn-default rotate-ccw margintop10"><i class="icon-undo"></i></button>
+            <button id="yorum_sag1" class="btn btn-xs btn-default rotate-cw margintop10"><i class="icon-repeat"></i></button>
+            <button id="yorum_sil1" class="btn btn-xs btn-danger margintop10"><i class="icon-trash"></i></button>
+            <div class="select-image-btn7 btncropit" style="width: 250px; margin-top: 5px">@Resources.Varsayilan.b_Resimsec</div>
+        </div>
+        <div class="col-md-4 image-editor pull-left" id="2_yorum_resmi">
+            <input type="file" id="yorumfileupload2" class="cropit-image-input">
+            <div class="cropit-preview"></div>
+            <input type="range" class="cropit-image-zoom-input" />
+            <button id="yorum_sol2" class="btn btn-xs btn-default rotate-ccw margintop10"><i class="icon-undo"></i></button>
+            <button id="yorum_sag2" class="btn btn-xs btn-default rotate-cw margintop10"><i class="icon-repeat"></i></button>
+            <button id="yorum_sil2" class="btn btn-xs btn-danger margintop10"><i class="icon-trash"></i></button>
+            <div class="select-image-btn8 btncropit" style="width: 250px; margin-top: 5px">@Resources.Varsayilan.b_Resimsec</div>
+        </div>
+        <div class="col-md-4 image-editor pull-left" id="3_yorum_resmi">
+            <input type="file" id="yorumfileupload3" class="cropit-image-input">
+            <div class="cropit-preview"></div>
+            <input type="range" class="cropit-image-zoom-input" />
+            <button id="yorum_sol3" class="btn btn-xs btn-default rotate-ccw margintop10"><i class="icon-undo"></i></button>
+            <button id="yorum_sag3" class="btn btn-xs btn-default rotate-cw margintop10"><i class="icon-repeat"></i></button>
+            <button id="yorum_sil3" class="btn btn-xs btn-danger margintop10"><i class="icon-trash"></i></button>
+            <div class="select-image-btn9 btncropit" style="width: 250px; margin-top: 5px">@Resources.Varsayilan.b_Resimsec</div>
+        </div>
+        <input type="hidden" id="yorum_data1" class="yrm-js" name="yorum_resim1">
+        <input type="hidden" id="yorum_data2" class="yrm-js" name="yorum_resim2">
+        <input type="hidden" id="yorum_data3" class="yrm-js" name="yorum_resim3">
+        <input type="hidden" id="v">
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <span class="rdb">
+            <input id="tahhut" type="radio" value="tahhut">
+            <label for="tahhut">@Resources.Varsayilan.u_tahhut</label>
+        </span>
+    </div>
+    <div class="col-xs-12" style="margin-bottom: 10px;">
+        @if (HttpContext.Current.Session["giris_yapan"] == null)
+        {
+            <div class="alert alert-danger col-md-12">
+                <strong>@Resources.Varsayilan.u_oturumaciniz </strong>@Resources.Varsayilan.u_yormicinoturumac..
+            </div>
+        }
+        else
+        {
+            <button class="btn-block morbutton" onclick="YorumYap(event)">@Resources.Varsayilan.yorum_gonder</button>
+        }
+    </div>
+    <div class="col-xs-12">
+        <div id="panel1" class="alert alert-danger col-md-12" style="display:none">
+            <a style="font-size:33px" class="pull-right" href="#" onclick="gorunmezyap(event, panel1)">&times;</a>
+            <strong>@Resources.Varsayilan.u_oturumaciniz</strong>@Resources.Varsayilan.u_yormicinoturumac ...
+        </div>
+        <div id="panel2" class="alert alert-success col-md-12" style="display:none">
+            <a style="font-size:33px" class="pull-right" href="#" onclick="gorunmezyap(event, panel2)">&times;</a>
+            <p style="text-align: center; font-weight: bold; font-size: 22px;">@Resources.Varsayilan.u_yorumgitti </p>
+            <p style="text-align: center; font-size: 14px;">@Resources.Varsayilan.i_yorumbasariliedu @Resources.Varsayilan.i_yorumburdangoruntule</p>
+        </div>
+        <div id="panel3" class="alert alert-danger col-md-12" style="display:none">
+            <a style="font-size:33px" class="pull-right" href="#" onclick="gorunmezyap(event, panel3)">&times;</a>
+            <strong>@Resources.Varsayilan.u_yorumgonderlmedi</strong>@Resources.Varsayilan.u_yorumsorun ...
+        </div>
+        <div id="panel4" class="alert alert-danger col-md-12" style="display:none">
+            <a style="font-size:33px" class="pull-right" href="#" onclick="gorunmezyap(event, panel4)">&times;</a>
+            <strong>@Resources.Varsayilan.i_tahhuticerikyazi...</strong>
+        </div>
+    </div>
+    <input type="hidden" value="@Model.id" class="yrm-js" name="okul_id" />
+</form>

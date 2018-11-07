@@ -1,0 +1,26 @@
+﻿@model List<EduApi.SiteModels.AnasayfaEnlerOkulModel>
+<div class="yenitasarimenler" style="float: left; width: 100%">
+    <div class="gorselekle main_title col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 50px;">
+        <img src="~/Content/img/enler/@ViewData["icon"]" class="enler2" alt="EduAdvisor @ViewData["baslik"]" />
+        <p class="pfont" style="margin-left: 60px">
+        <p class="pull-left left67 positioninherit yaziyerayarla font15">@ViewData["baslik"]</p>        
+    </div>
+
+    <div class="ortala mgleft60 mgright60 kenarayasla">
+        @for (int i = 0; i < Model.Count; i++)
+            {
+            <div class="col-md-3 other_tours">
+                <ul class="anasayfaliste">
+                    <li>
+                        <a href="@Url.RouteUrl("GenelBilgi", new { GrupSeo = Model[i].grup_seo })" class="basliklink" title="@Model[i].okul_adi">
+                        @(Model[i].okul_adi.Length > 35 ? Model[i].okul_adi.Substring(0, 32) + ".." : Model[i].okul_adi)
+                        </a>
+                        <span class="other_tours_price">@(ViewData["icon"].ToString().Equals("num1.png") || ViewData["icon"].ToString().Equals("num2.png") ? Convert.ToInt32(Model[i].deger) : Math.Round(Model[i].deger,1))</span>
+                        <br />
+                        <span>@Model[i].yer</span>
+                    </li>
+                </ul>
+            </div>
+        }
+    </div>
+</div>

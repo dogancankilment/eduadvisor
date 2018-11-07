@@ -1,0 +1,104 @@
+﻿@model dll.Models.yorum
+<div id="yorumguncelhata" style="margin-bottom: 20px;display:none">
+    <div class="alert alert-danger nobottommargin">
+        <a style="font-size:33px" class="pull-right" href="#" onclick="gorunmezyap(event, yorumguncelhata)">&times;</a>
+        <i class="icon-remove-sign"></i><strong>@Resources.Varsayilan.u_yorumgunhata</strong>
+    </div>
+</div>
+<div class="form-process" id="yorumresim_load"></div>
+<div class="col-xs-12" style="background-color: #78c6bb; height: 30px;">
+    <a onclick="ProfilimYorumDetayKapat(event)" class="pull-right" href='#'><i class="icon-long-arrow-left" aria-hidden="true" style="font-size: 30px;color: #a02f89;"></i></a>
+</div>
+<div class="form-group col-md-6" style="padding: 0">
+    <label>@Resources.Varsayilan.b_yorumbasligi</label>
+    <span class="form-control">@Model.baslik</span>
+</div>
+<div class="form-group col-md-6" style="padding: 0">
+    <label>@Resources.Varsayilan.b_yorumtarihi</label>
+    <span class="form-control">@Model.tarih.ToString("dd/MM/yyyy HH:mm")</span>
+</div>
+<div class="form-group col-md-6" style="padding: 0">
+    <label>@Resources.Varsayilan.b_okuladi</label>
+    <span class="form-control">@(Model.okullar.okul_grup_iliski.FirstOrDefault().okul_gruplari.adi + " - " + Model.okullar.adi)</span>
+</div>
+<div class="form-group col-md-6" style="padding: 0">
+    <label>@Resources.Varsayilan.b_puani</label>
+    <span id="lblyorumdetay_puan" class="form-control">@Model.puani</span>
+</div>
+<div class="form-group col-md-12" style="padding: 0">
+    <label>@Resources.Varsayilan.b_yorumicerigi</label>
+    <span class="form-control">@Model.icerik</span>
+</div>
+<div class="form-group col-md-12" style="padding: 0">
+    <label>@Resources.Varsayilan.b_yorumdurumu</label>
+    <span class="form-control" style="color:@(Model.onay == 0 || Model.onay== 2 ? "Red" : "Green");">@(Model.onay == 0 ? Resources.Varsayilan.b_beklemede : Model.onay == 1 ? Resources.Varsayilan.b_onaylandi : Resources.Varsayilan.b_onaylanmadi)</span>
+</div>
+<form id="yorum_guncel_form">
+    <input type="hidden" id="id" value="@Model.id" class="yorum_guncel_js" name="id">
+    <div id="detay_yrm_cropit">
+        <div id="yorum_detay_resim" class="form-group col-md-12" style="padding: 0">
+            <span class="col-xs-12" style="padding:0"><strong>@Resources.Varsayilan.b_yorumresmi</strong></span>
+            <br />
+            @if (Model.yorum_resimleri.Count == 0)
+        {
+                <span class="col-xs-12" style="padding:0">@Resources.Varsayilan.b_yorumresimyok</span>
+        }
+        else
+        {
+            var resimler = Model.yorum_resimleri.ToList();
+            for (int i = 0; i < resimler.Count; i++)
+            {
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12" style="padding:0;">
+                        <img src="~/Content/img/yorum/@resimler[i].resim_adi" class="img-responsive" style="height:115px; margin:0 auto;" alt="EduAdvisor" />
+                        <a href="#" onclick="ProfilYorumResimSil(event,'@Resources.Varsayilan.yorum_resim_sil_onay',@resimler[i].yorum_id,@resimler[i].id)" style="margin-top:2px;height:28px;line-height:28px;margin-left:20px;" class="button button-small button-circle button-red">@Resources.Varsayilan.b_resimsil</a>
+                    </div>
+            }
+        }
+        </div>
+        @if (Model.yorum_resimleri.Count < 3)
+    {
+            <div id="yorum_resmi1" class="col-md-4 image-editor pull-left">
+                <input type="file" id="yorumfileupload1" class="cropit-image-input">
+                <div class="cropit-preview"></div>
+                <input type="range" class="cropit-image-zoom-input">
+                <a onclick="return false;" id="uye_yorum_sol1" class="btn btn-xs btn-default rotate-ccw margintop10" href="#"><i class="icon-undo"></i></a>
+                <a onclick="return false;" id="uye_yorum_sag1" class="btn btn-xs btn-default rotate-cw margintop10" href="#"><i class="icon-repeat"></i></a>
+                <a onclick="return false;" id="uye_yorum_sil1" class="btn btn-xs btn-danger margintop10" href="#"><i class="icon-trash"></i></a>
+                <div class="select-image-btn btncropit" style="width: 200px; margin-top: 5px">@Resources.Varsayilan.b_Resimsec</div>
+            </div>
+            <input type="hidden" id="yorum_data1">
+    }
+        @if (Model.yorum_resimleri.Count < 2)
+    {
+            <div id="yorum_resmi2" class="col-md-4 image-editor pull-left">
+                <input type="file" id="yorumfileupload2" class="cropit-image-input">
+                <div class="cropit-preview"></div>
+                <input type="range" class="cropit-image-zoom-input">
+                <a onclick="return false;" id="uye_yorum_sol2" class="btn btn-xs btn-default rotate-ccw margintop10" href="#"><i class="icon-undo"></i></a>
+                <a onclick="return false;" id="uye_yorum_sag2" class="btn btn-xs btn-default rotate-cw margintop10" href="#"><i class="icon-repeat"></i></a>
+                <a onclick="return false;" id="uye_yorum_sil2" class="btn btn-xs btn-danger margintop10" href="#"><i class="icon-trash"></i></a>
+                <div class="select-image-btn1 btncropit" style="width: 200px; margin-top: 5px">@Resources.Varsayilan.b_Resimsec</div>
+            </div>
+            <input type="hidden" id="yorum_data2">
+    }
+        @if (Model.yorum_resimleri.Count < 1)
+    {
+            <div id="yorum_resmi3" class="col-md-4 image-editor pull-left">
+                <input type="file" id="yorumfileupload3" class="cropit-image-input">
+                <div class="cropit-preview"></div>
+                <input type="range" class="cropit-image-zoom-input">
+                <a onclick="return false;" id="uye_yorum_sol3" class="btn btn-xs btn-default rotate-ccw margintop10" href="#"><i class="icon-undo"></i></a>
+                <a onclick="return false;" id="uye_yorum_sag3" class="btn btn-xs btn-default rotate-cw margintop10" href="#"><i class="icon-repeat"></i></a>
+                <a onclick="return false;" id="uye_yorum_sil3" class="btn btn-xs btn-danger margintop10" href="#"><i class="icon-trash"></i></a>
+                <div class="select-image-btn2 btncropit" style="width: 200px; margin-top: 5px">@Resources.Varsayilan.b_Resimsec</div>
+            </div>
+            <input type="hidden" id="yorum_data3">
+    }
+    </div>
+    @if (Model.yorum_resimleri.Count < 3)
+    {
+        <div class="form-group col-md-12 text-center" style="padding: 0">
+            <input type="submit" value="@Resources.Varsayilan.b_yorumguncelle" onclick="ProfilYorumGuncelle(@Model.id,event)" class="button button-small button-circle button-green">
+        </div>
+    }
+</form>

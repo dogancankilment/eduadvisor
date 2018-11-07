@@ -1,0 +1,98 @@
+﻿@model PagedList.IPagedList<EduApi.SiteModels.OkulSonuclariItemModel>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Okul Sonuçları";
+}
+
+<div class="container-fluid margintop10" onload="UlkeGetir()">
+    <div class="col-md-12">
+        <div class="form-process okul_loading" style="opacity:0.9"></div>
+        @{
+            Html.RenderPartial("OkulSonuclarFiltre");
+        }
+        <div class="col-lg-9 col-md-9 col-sm-9 marginleft15" id="aramasonucgrialan" style="padding: 0">
+            <div ID="okul_filtreleme">
+                <div class="filtrele">
+                    <div class="col-sm-9 col-xs-5" style="padding: 0; margin-top: 4px">
+                        <span class="pull-right siralamayazi" style="color: #000">@Resources.Varsayilan.b_Sirala :</span>
+                    </div>
+                    <div class="col-sm-2 col-xs-5" style="padding: 0; padding-left: 4px;">
+                        <select id="drp_okulsira" class="pull-right" style="background-color:transparent;color:black;" onchange="OkulSonuclariGetir(event)">
+                            <option value="0">@Resources.Varsayilan.b_encokbege</option>
+                            <option value="1">@Resources.Varsayilan.b_enazbege</option>
+                            <option value="2">@Resources.Varsayilan.siralaalfabeaz</option>
+                            <option value="3">@Resources.Varsayilan.siralaalfabeza</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="sonuclar">
+                @if (Model.Count == 0)
+                {
+                    <div id="okulsonuc" class="center okulsonucbulunamadi paddingtop20">
+                        <span class="okulsonucbulunamadi_yazi">
+                            @Resources.Varsayilan.aramakriterbulunamadi<br>
+                            @Resources.Varsayilan.b_sistokulekle
+                        </span>
+                        <br>
+                        <img src="/Content/images/arama_kriteri.png" alt="EduAdvisor @Resources.Varsayilan.aramakriterbulunamadi">
+                        <br>
+                        <a id="btn_okul_ekle" class="button button-small button-circle" href="@Url.RouteUrl("KurumsalKayit",new { tip="ogrenci"})">
+                            @Resources.Varsayilan.b_okulekle
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                        </a>
+                    </div>
+                }
+                else
+                {
+                    <div class="margintop10" id="okul_sonuclari">
+                        <div ID="okul_listesi">
+                            @for (int i = 0; i < Model.Count; i++)
+                            {
+                                <div class="okul_sonuc col-xs-12">
+                                    <div class="row">
+                                        <div class="col-md-10 solayasli">
+                                            <div class="okul_sonuc_logo pull-left">
+                                                <a href='@Url.RouteUrl("GenelBilgi", new { GrupSeo = Model[i].seo_url })'>
+                                                    <img src="https://eduadvisor.co.uk/Content/img/okul/@Model[i].logo" alt="@Model[i].okul_adi">
+                                                </a>
+                                            </div>
+                                            <a class="okul_sonuc_adi" href="@Url.RouteUrl("GenelBilgi", new { GrupSeo = Model[i].seo_url })">
+                                                <strong class="okul_sonuc_adi_font">@Model[i].okul_adi</strong>
+                                                <br />
+                                                <span class="okul_sonuclariulkesehir">@Model[i].yer</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-2  text-center solayaslama">
+                                            <span class="okul_puani_yazi">@Resources.Varsayilan.b_puani : @Model[i].puani.ToString().Replace(',', '.')</span>
+                                            <br />
+                                            <div Class="rating-container rating-lg fontawesome-icon okul_puani_yildiz" data-content="★★★★★">
+                                                <div class="rating-stars" data-content="★★★★★" style='width:@((Model[i].puani*20).ToString().Replace(',','.'))%'></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    <div id="okul_sonuc_sayfalar" class="col-xs-12">
+                        <label class="pull-right">
+                            @Resources.Varsayilan.sayfa @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+                        </label>
+                        <div class="text-center">
+                            @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section sayfa_css{
+    <link rel="stylesheet" href="~/Content/css/components/bs-rating.css" type="text/css" />
+}
+@section sayfa_js{
+    <script type="text/javascript" src="~/Content/js/components/star-rating.js"></script>
+}

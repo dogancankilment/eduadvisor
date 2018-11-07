@@ -1,0 +1,233 @@
+﻿
+<header id="header" class="static-sticky ansayfailk noborder">
+    <div id="header-wrap" style="height: auto; z-index: 1001">
+        <div class="clearfix margintop5">
+            <div class="col-md-12" style="height:60px;z-index:103;">
+                <a href="/" class="menu_mobil_logo">
+                    <img src="~/Content/images/yeni-logoyan.png" class="img-responsive max362" alt="EduAdvisor Logo">
+                    <img src="~/Content/images/yazisiz_logo.png" class="img-responsive max362 hide yazisizlogo" alt="EduAdvisor Logo">
+                </a>
+                <div class="ustislevler pull-left">
+                    <div class="pull-left ustislev_item">
+                        <a href="#" class="secilidil" data-toggle="dropdown" aria-expanded="false">
+                            <span class="flag flag-icon-@ViewBag.dil_kisa_kod flag-icon-background" data-toggle="tooltip" title="@Resources.Varsayilan.b_dilsecin"></span>
+                        </a>
+                        <div class="dropdown-menu dilici kucuk_dropdown_menu">
+                            @Resources.Varsayilan.b_dilsecin
+                            <div class="col-xs-12">
+                                <a href="#" id="ing" style="height: 25px; width: 25px; margin-left: 0;" onclick="DilDegistir(event,'en-US')">
+                                    <i class="flag flag-icon-gb flag-icon-background btn" style="width: 25px; border-radius: 25px !important; height: 25px; margin-right: 10px;"></i>English
+                                </a>
+                            </div>
+                            <div class="col-xs-12">
+                                <a href="#" id="turkce" style="height: 25px; width: 25px; margin-left: 0;" onclick="DilDegistir(event, 'tr-TR')">
+                                    <i class="flag flag-icon-tr flag-icon-background btn" style="width: 25px; border-radius: 25px !important; height: 25px; margin-right: 10px;"></i>Türkçe
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    @if (HttpContext.Current.Session["giris_yapan"] == null || ViewBag.giris_yapan == null)
+                    {
+                        <div class="btn-group ustislev_item pull-left">
+                            <a href="#" id="girisyap_link" data-toggle="modal" data-target="#BireyselKayitOlModal">
+                                <img src="~/Content/images/bireysel-icon.png" height="23" width="23" data-toggle="tooltip" alt="EduAdvisor @Resources.Varsayilan.giris" />
+                                <span class="bireyselana"></span>
+                            </a>
+                        </div>
+                        <div class="btn-group ustislev_item pull-left">
+                            <a href="#" class="btn-sm" style="color:White;background-color:#6ec7bb;" data-toggle="modal" data-target="#BireyselKayitOlModal">@Resources.Varsayilan.katil</a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="btn-group ustislev_item pull-left">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <i class="glyphicon glyphicon-envelope ustislev_item_icon" style="top:2px;"></i>
+                                @if (((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).okunmayan_mesaj > 0)
+                                {
+                                    <span class="ustislev_item_notification">@(((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).okunmayan_mesaj)</span>
+                                }
+                            </a>
+                            <div class="dropdown-menu buyuk_dropdown_menu">
+                                <h4 class="mesajlar" style="margin-bottom: 9px; border-bottom: 1px solid #e3e3e4;">
+                                    <label>@Resources.Varsayilan.baslik_mesajlar</label>
+                                </h4>
+                                @for (int i = 0; i < ((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).gelen_mesajlar.Count; i++)
+                                {
+                                    <div style="margin-bottom: 5px; border-bottom: 1px solid #e3e3e4;">
+                                        <i class="glyphicon glyphicon-envelope" style="margin-right: 2px; font-size: 14px; color: #a02f89; top: 2px;"></i>
+                                        <label>@(((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).gelen_mesajlar[i].Length > 57 ? ((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).gelen_mesajlar[i].Substring(0, 54) + "..." : ((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).gelen_mesajlar[i])</label>
+                                    </div>
+                                }
+                                @if (((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).gelen_mesajlar.Count == 0)
+                                {
+                                    <div class="help-block with-errors">@Resources.Varsayilan.baslik_gelenkutusubos</div>
+                                }
+                                <a href="@Url.RouteUrl("UyeMesajlar")" style="color: #a02f89">@Resources.Varsayilan.baslik_tummesajlarigor</a>
+                            </div>
+                        </div>
+                        <div class="btn-group ustislev_item pull-left">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <i class="icon-bell-alt ustislev_item_icon" style="top:1px;"></i>
+                                @if (((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).okunmayan_bildirim > 0)
+                                {
+                                    <span class="ustislev_item_notification">@(((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).okunmayan_bildirim)</span>
+                                }
+                            </a>
+                            <div class="dropdown-menu buyuk_dropdown_menu">
+                                <h5 style="margin-bottom: 9px; border-bottom: 1px solid #e3e3e4;">
+                                    <label style="color:#a02f89">@Resources.Varsayilan.baslik_kampanyabildirimi</label>
+                                </h5>
+                                @for (int i = 0; i < ((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).kampanya_bildirimler.Count; i++)
+                                {
+                                    <div style="margin-bottom: 5px;" id="@("top_bildirim_" + ((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).kampanya_bildirimler[i].value)">
+                                        <a href="@Url.RouteUrl("UyeMesajlar",new { v = ((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).kampanya_bildirimler[i].value })" style="color:black">
+                                            @(((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).kampanya_bildirimler[i].text.Length > 57 ? ((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).kampanya_bildirimler[i].text.Substring(0, 54) + "..." : ((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).kampanya_bildirimler[i].text)
+                                        </a>
+                                        @if (i + 1 != ((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).kampanya_bildirimler.Count)
+                                        {
+                                            <hr class="col-xs-12 paddingsagsol0 marginbottom0 margintop0" />
+                                        }
+                                    </div>
+                                }
+                                @if (((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).kampanya_bildirimler.Count == 0)
+                                {
+                                    <div class="help-block with-errors">@Resources.Varsayilan.baslik_bildirimbulunamadi</div>
+                                }
+                                <h5 style="margin-bottom: 9px; border-bottom: 1px solid #e3e3e4;">
+                                    <label style="color:#a02f89">@Resources.Varsayilan.baslik_edubild</label>
+                                </h5>
+                                @for (int i = 0; i < ((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).edu_bildirimler.Count; i++)
+                                {
+                                    <div style="margin-bottom: 5px;" id="@("top_bildirim_" + ((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).edu_bildirimler[i].value)">
+                                        <a href="@Url.RouteUrl("UyeMesajlar",new { v = ((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).edu_bildirimler[i].value })" style="color:black">
+                                            @(((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).edu_bildirimler[i].text.Length > 57 ? ((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).edu_bildirimler[i].text.Substring(0, 54) + "..." : ((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).edu_bildirimler[i].text)
+                                        </a>
+                                        @if (i + 1 != ((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).edu_bildirimler.Count)
+                                        {
+                                            <hr class="col-xs-12 paddingsagsol0 marginbottom0 margintop0" />
+                                        }
+                                    </div>
+                                }
+                                @if (((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).edu_bildirimler.Count == 0)
+                                {
+                                    <div class="help-block with-errors">@Resources.Varsayilan.baslik_bildirimbulunamadi</div>
+                                }
+                                <div class="col-xs-12">
+                                    <a href="@Url.RouteUrl("UyeMesajlar")" style="color: #a02f89" class="btn btn-block">@Resources.Varsayilan.bildirimleri_gor</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-group ustislev_item pull-left">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <i class="glyphicon glyphicon-user ustislev_item_icon"></i>
+                            </a>
+                            <div class="dropdown-menu buyuk_dropdown_menu">
+                                <img style="margin-left: 85px; width: 50px; height: 50px;" class="img-circle" src="~/Content/img/kul_profil/@(((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).fotograf)" />
+                                <h4 class="giriskuladi marginbottom0">
+                                    <label id="kullanici_adi">@(((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).adi)</label>
+                                </h4>
+                                <button id="btn_profil" onclick="ProfiliAc()" class="btn_drop outline">@Resources.Varsayilan.baslik_profil</button>
+                                <button id="btn_cikis" onclick="CikisYap()" class="btn_drop outline">@Resources.Varsayilan.baslik_cikis</button>
+                                @if (!(((EduApi.SiteModels.GirisYapanModel)ViewBag.giris_yapan).dogrulandi))
+                                {
+                                    <span class="text-center col-xs-12 label label-danger label-mini font12">@Resources.Varsayilan.uyeliginiz_henuz_dogrulanmamis</span>
+                                }
+                            </div>
+                        </div>
+
+                    }
+                    <div class="pull-left sosyalmedya ustislev_item">
+                        <a>
+                            <img src="~/Content/images/imlec/onay.png" height="23" width="23" alt="EduAdvisor Social" />
+                        </a>
+                        <div class="social_login_btns">
+                            <ul>
+                                @{
+                                    List<dll.Models.sosyal_medya> sosyal = (List<dll.Models.sosyal_medya>)ViewBag.SosyalMedyalar;
+                                    for (int i = 0; i < sosyal.Count; i++)
+                                    {
+                                        <li>
+                                            <a href="@sosyal[i].link" style="margin-left: 5px; margin-right: 5px;" data-toggle="tooltip" data-placement="top" title="@sosyal[i].adi">
+                                                <img src="@sosyal[i].image_url" alt="EduAdvisor-@sosyal[i].adi" />
+                                            </a>
+                                        </li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="primary-menu-trigger" class="pull-left ustislev_item">
+                        <i class="icon-reorder"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 top_gri_alan">
+                <nav id="primary-menu" class="style-2">
+                    <hr />
+                    <ul class="anasayfa">
+                        @{
+                            List<dll.Models.egitim_turleri> EgitimTurleri = (List<dll.Models.egitim_turleri>)ViewBag.EgitimTurleri;
+                        }
+                        <li style="border-right: 2px solid #bfbfbf;">
+                            <a href="@Url.RouteUrl("Home")" ID="home" OnClick="" class="ustmenu">
+                                <img src="~/Content/img/home.png" width="25" height="25" alt="EduAdvisor @Resources.Varsayilan.baslik_anasayfa" />
+                                <span>@Resources.Varsayilan.baslik_anasayfa</span>
+                            </a>
+                        </li>
+                        <li style="border-right: 2px solid #bfbfbf;">
+                            <a href="@Url.RouteUrl("OkulSonuclari" ,new { kat=EgitimTurleri.Where(x => x.id == 2).FirstOrDefault().seo_url })" ID="dilokullar" class="ustmenu">
+                                <img src="~/Content/img/dilokulu.png" width="25" height="25" alt="EduAdvisor @(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri.Where(x => x.id == 2).FirstOrDefault().adi : EgitimTurleri.Where(x => x.id == 2).FirstOrDefault().adi_ingilizce)" />
+                                <span>@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri.Where(x => x.id == 2).FirstOrDefault().adi : EgitimTurleri.Where(x => x.id == 2).FirstOrDefault().adi_ingilizce)</span>
+                            </a>
+                        </li>
+                        <li style="border-right: 2px solid #bfbfbf;">
+                            <a href="@Url.RouteUrl("OkulSonuclari", new { kat=EgitimTurleri.Where(x => x.id == 1).FirstOrDefault().seo_url })" ID="universite" ValidationGroup="universite_ana_button" Class="ustmenu">
+                                <img src="~/Content/img/unimenu.png" width="25" height="25" alt="EduAdvisor @(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri.Where(x => x.id == 1).FirstOrDefault().adi : EgitimTurleri.Where(x => x.id == 1).FirstOrDefault().adi_ingilizce)" />
+                                <span>@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri.Where(x => x.id == 1).FirstOrDefault().adi : EgitimTurleri.Where(x => x.id == 1).FirstOrDefault().adi_ingilizce)</span>
+                            </a>
+                        </li>
+                        <li style="border-right: 2px solid #bfbfbf;" class="menu_logo">
+                            <a href="@Url.RouteUrl("Home")" class="standard-logo" data-dark-logo="~/Content/img/yeniedu.png">
+                                <img src="~/Content/img/yeniedu.svg" alt="EduAdvisor Logo" height="88" />
+                                <br />
+                                <span>
+                                    <span class="erguvan lowercase"><strong>edu</strong></span><span class="turkuaz lowercase"><strong>advisor</strong></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li style="border-right: 2px solid #bfbfbf;">
+                            <a href="@Url.RouteUrl("OkulSonuclari" , new { kat=EgitimTurleri.Where(x => x.id == 3).FirstOrDefault().seo_url })" ID="kolejsonuclari" ValidationGroup="kolejsonuclari_ana_button" Class="ustmenu">
+                                <img src="~/Content/img/kolejmenu.png" width="25" height="25" alt="EduAdvisor @(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri.Where(x => x.id == 3).FirstOrDefault().adi : EgitimTurleri.Where(x => x.id == 3).FirstOrDefault().adi_ingilizce)" />
+                                <span>@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri.Where(x => x.id == 3).FirstOrDefault().adi : EgitimTurleri.Where(x => x.id == 3).FirstOrDefault().adi_ingilizce)</span>
+                            </a>
+                        </li>
+                        <li style="border-right: 2px solid #bfbfbf;">
+                            <a href="@Url.RouteUrl("OkulSonuclari" , new { kat=EgitimTurleri.Where(x => x.id == 4).FirstOrDefault().seo_url })" ID="lisesonuclari" ValidationGroup="lisesonuclari_ana_button" Class="ustmenu">
+                                <img src="~/Content/img/lisemenu.png" width="25" height="25" alt="EduAdvisor @(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri.Where(x => x.id == 4).FirstOrDefault().adi : EgitimTurleri.Where(x => x.id == 4).FirstOrDefault().adi_ingilizce)" />
+                                <span>@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri.Where(x => x.id == 4).FirstOrDefault().adi : EgitimTurleri.Where(x => x.id == 4).FirstOrDefault().adi_ingilizce)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="ustmenu">
+                                <img src="~/Content/img/digermenu.png" width="25" height="25" alt="EduAdvisor @Resources.Varsayilan.baslik_diger" />
+                                <span>@Resources.Varsayilan.baslik_diger</span>
+                            </a>
+                            <ul id="yanliste" style="display: none;">
+                                @{
+                                    EgitimTurleri = EgitimTurleri.Where(x => x.id > 4).ToList();
+                                    for (int i = 0; i < EgitimTurleri.Count; i++)
+                                    {
+                                        <li>
+                                            <a href="@Url.RouteUrl("OkulSonuclari", new { kat=EgitimTurleri[i].seo_url })"><div>@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri[i].adi : EgitimTurleri[i].adi_ingilizce)</div></a>
+                                        </li>
+                                    }
+                                }
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

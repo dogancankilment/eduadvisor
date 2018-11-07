@@ -1,0 +1,65 @@
+﻿@model EduApi.SiteModels.AnasayfaIcerikModel
+
+<div class="container-fluid" style="margin-bottom:-10px;">
+    <div class="marginleft15 marginright15 arkaplanresim" style="background-image: url(/Content/img/arama_back/@Model.arama_back);">
+        <div class="container-fluid aramacont margintop5 aramadefault" id="sabit-aramabar">
+            <div id="anasayfaaramailk" class="container" style="padding: 0 !important;">
+                <div class="col-sm-12 " style="padding: 0 !important;">
+                    <h2 class="text-center erguvan margintop0 marginbottom10">@Resources.Varsayilan.anasayfa_ustaramabari_yazi</h2>
+                    <div class="input-group col-sm-6 paddingsag0 pull-left height55">
+                        <label class="arama-tur-secilmedi anasayfa_aramaerror" style="display:none"><i class="glyphicon glyphicon-triangle-top"></i>@Resources.Varsayilan.baslik_egitimturuseciniz</label>
+                        <span class="input-group-btn" style="border-radius: 0px !important">
+                            <select id="anasayfa_ust_aramaegitim" class="form-control selectpicker height55" data-width="fit" style="z-index: 9999999 !important;">
+                                <option selected="selected" value="-1">@Resources.Varsayilan.b_seciniz</option>
+                                @{
+                                    List<dll.Models.egitim_turleri> EgitimTurleri = (List<dll.Models.egitim_turleri>)ViewBag.EgitimTurleri;
+                                    for (int i = 0; i < EgitimTurleri.Count; i++)
+                                    {
+                                        <option value="@EgitimTurleri[i].seo_url">@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri[i].adi : EgitimTurleri[i].adi_ingilizce)</option>
+                                    }
+                                }
+                            </select>
+                        </span>
+                        <input name="txt_aramaokuladi" type="text" id="anasayfaust_arama_aramaokuladi" class="typeahead form-control height55 noborder noborderradius" placeholder="@Resources.Varsayilan.baslik_okuladigir">
+                    </div>
+                    <div class="input-group col-sm-6 paddingsol0 pull-left marginleft0 height55 bordersag25radius" style="background-color: white; z-index: 2; border-left: 1px solid #f1efef;">
+                        <span class="input-group-addon noborder arkasi_beyaz noborderradius" style="font-weight: bolder; color: #a02f89;">@Resources.Varsayilan.baslik_yer</span>
+                        <input type="hidden" value="" id="anasayfa_ust_arama_ulkesehir" data-placeholder="@Resources.Varsayilan.b_yergirin" />
+                        <span class="input-group-btn aramabutonuustspan">
+                            <a hreflang="#" id="btn_okulara" class="btn btn-primary btnOkulAra height55" href="#" onclick="UstAramaBarOkulAra(event)">
+                                <span style="font-weight: bolder; margin-left: 10px; margin-top: 10px;">@Resources.Varsayilan.okul_bul</span>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @if (Model.ilkyorum != null)
+        {
+            <div class="container-fluid ">
+                <div class="container" id="yorumcont">
+                    <div id="yorumcol" class="col-lg-12 col-md-12 col-xs-12 col-sm-12 paddingsol15 paddingsag15 anasayfa-yorumlar" data-wow-delay="0.3s">
+                        <div class="review_strip_single" style="padding-bottom: 20px; margin: -10px !important;">
+                            <img src="/Content/img/kul_profil/@Model.ilkyorum.image_url" class="marginright5" style="height:100px;width:100px;border-radius: 50px; top: 10px!important">
+                            <p>
+                                <strong class="anasayfa-yorumlar-uye">
+                                    <span>@Model.ilkyorum.adi</span>
+                                </strong>
+                                <br>
+                                <strong>
+                                    <span>@Model.ilkyorum.yorum_baslik</span>(
+                                    <span class="rating-container rating-sm fontawesome-icon" id="Anasayfailkyorum_yildiz" data-content="★★★★★">
+                                        <span class="rating-stars" data-content="★★★★★" style="width:@(Model.ilkyorum.yorum_puani*20)"></span>
+                                    </span>
+                                    )
+                                </strong>
+                            </p>
+                            <p class="margintopeksi5">@Model.ilkyorum.yorum_icerik</p>
+                            <p><a href="@Url.RouteUrl("OkulDetay", new { GrupSeo = Model.ilkyorum.grup_seo, OkulSeo = Model.ilkyorum.okul_seo, id=Model.ilkyorum.okul_id })" id="Anasayfayorumokuladi">@Model.ilkyorum.okul_adi</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

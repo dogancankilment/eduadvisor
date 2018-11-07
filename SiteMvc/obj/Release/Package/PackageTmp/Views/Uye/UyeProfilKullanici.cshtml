@@ -1,0 +1,139 @@
+﻿@model dll.Models.uyeler
+<div class="tab-pane active" id="tab_kullanici" style="margin-left: 36px;">
+    <div class="row col-lg-12">
+        <form id="profil_kullanici_form">
+            <div class="form-process" id="profil_kullanici_load"></div>
+            <small class="pull-right"><small class="erguvan zorunlu_alan_yildiz">(*)</small> Zorunlu Alanlar</small>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="form-group">
+                        <label>@Resources.Varsayilan.b_adim <small class="erguvan zorunlu_alan_yildiz">(*)</small></label>
+                        <input type="text" id="uye_adi" name="adi" class="form-control kullanici-js" value="@Model.adi" onblur="BosKontrol(this)" />
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="form-group">
+                        <label>@Resources.Varsayilan.b_soyadim <small class="erguvan zorunlu_alan_yildiz">(*)</small></label>
+                        <input type="text" id="uye_soyadi" name="soyadi" class="form-control kullanici-js" value="@Model.soyadi" onblur="BosKontrol(this)" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="form-group">
+                        <label>@Resources.Varsayilan.b_cinsiyet</label>
+                        <select id="drp_Cinsiyet" class="form-control uyeprofilbilgileri kullanici-js" name="cinsiyet">
+                            <option value="0">&nbsp;</option>
+                            <option value="0" @(Model.Cinsiyet == 0 ? "selected" : "")>@Resources.Varsayilan.b_bayan</option>
+                            <option value="1" @(Model.Cinsiyet == 1 ? "selected" : "")>@Resources.Varsayilan.b_bay</option>
+                            <option value="2" @(Model.Cinsiyet == 2 ? "selected" : "")>@Resources.Varsayilan.b_belirtmekistemiyorum</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="form-group">
+                        <label>@Resources.Varsayilan.bslk_email</label>
+                        <input type="text" id="uye_mail" name="mail" class="form-control kullanici-js" value="@Model.mail" onblur="BosKontrol(this)" readonly/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="form-group">
+                        <label>@Resources.Varsayilan.b_yas <small class="erguvan zorunlu_alan_yildiz">(*)</small></label>
+                        <input type="text" id="uye_yas" name="yas" class="form-control sadece-sayi-girilecek kullanici-js" value="@Model.yas" onblur="BosKontrol(this)" />
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="form-group">
+                        <label>@Resources.Varsayilan.b_yasyer</label>
+                        <input type="text" id="uye_yasadigi_yer" name="adres" class="form-control kullanici-js" value="@Model.uye_adres" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="divider divider-border divider-center"><i class="glyphicon glyphicon-earphone"></i></div>
+                    <label>@Resources.Varsayilan.b_erkenkayittelnum <small class="erguvan zorunlu_alan_yildiz">(*)</small></label>
+                </div>
+                <div id="tel_no" class="col-xs-12">
+                    <div class="form-group col-md-3 paddingsol0">
+                        <label>@Resources.Varsayilan.ulke_kodu</label>
+                        <input type="text" id="uye_ulke_kodu" name="ulke_kodu" class="form-control telefon-girilecek kullanici-js" value="@Model.tel_ulke_kodu" onblur="BosKontrol(this)" />
+                    </div>
+                    <div class="form-group col-md-2 paddingsol0">
+                        <label>@Resources.Varsayilan.bolge_kodu</label>
+                        <input type="text" id="uye_bolge_kodu" name="bolge_kodu" class="form-control sadece-sayi-girilecek kullanici-js" value="@Model.tel_bolge_kodu" onblur="BosKontrol(this)" />
+                    </div>
+                    <div class="form-group col-md-7 paddingsol0">
+                        <label>@Resources.Varsayilan.b_telefon</label>
+                        <input type="text" id="uye_tel_no"  name="tel_no" class="form-control kullanici-js" value="@Model.tel_no" />
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="divider divider-border divider-center"><i class="icon-diamond"></i></div>
+                    <label>@Resources.Varsayilan.i_kendindenbahset</label>
+                    <div>
+                        <textarea id="uye_biyografi" name="biyografi" class="form-control kullanici-js" rows="2" cols="20" style="width:100%"></textarea>
+                        <div id="textarea_feedback"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="policy" class="col-lg-12">
+                <div class="divider divider-border divider-center"><i class="icon-like"></i></div>
+                <span class="chck" style="font-size:8pt;">
+                    <input id="chk_haber" type="checkbox" name="haber" @(Model.haber_bulten > 0 ? "checked" : "") class="kullanici-js">
+                    <label for="chk_haber">@Resources.Varsayilan.i_eduemailamak</label>
+                </span>
+                <span class="chck ilgianachck" style="font-size:8pt;">
+                    <input id="chk_ilgi_alani" name="chckilgimail" class="kullanici-js" type="checkbox" onclick="EgitimTurleriKontrol(event);" @(Model.uye_ilgi.Count > 0 ? "checked" : "") />
+                    <label for="chk_ilgi_alani">@Resources.Varsayilan.i_eduilgiemail</label>
+                </span>
+                <div id="ilgilendigimokullar" style="display:  @(Model.uye_ilgi.Count > 0 ? "block":"none");">
+                    <div class="col-xs-12" style="border-bottom: 2px solid #e5e5e5;">
+                        <label style="margin-bottom:4px;">@Resources.Varsayilan.b_egitimturuseciniz</label>
+                    </div>
+                    <div class="col-xs-12" style="margin-top: 5px;">
+
+                        @{
+                            var uye_ilgi = Model.uye_ilgi.ToList();
+                            List<dll.Models.egitim_turleri> EgitimTurleri = (List<dll.Models.egitim_turleri>)ViewBag.EgitimTurleri;
+                            for (int i = 0; i < EgitimTurleri.Count; i++)
+                            {
+                                <div class="col-xs-6">
+                                    <span class="chck" style="font-size:8pt;">
+                                        <input type="checkbox" class="ilgianachck_altlari" name="@EgitimTurleri[i].id" id="chckalan_@EgitimTurleri[i].id" @(uye_ilgi.Where(x => x.egitim_id == EgitimTurleri[i].id).ToList().Count > 0 ? "checked" : "") />
+                                        <label style="margin-bottom:4px;">@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri[i].adi : EgitimTurleri[i].adi_ingilizce)</label>
+                                    </span>
+                                </div>
+                            }
+                        }
+
+                    </div>
+                </div>
+            </div>
+            <div id="ilgihata" style="display: none;" class="col-xs-12">
+                <div class="alert alert-danger">
+                    <a style="font-size:33px;" class="pull-right" href="#" onclick="gorunmezyap(event, ilgihata)">&times;</a>
+                    <i class="icon-gift"></i><strong>@Resources.Varsayilan.b_maililgisecim .</strong>
+                </div>
+            </div>
+            <div id="kullaniciguncellemebasarili" style="display: none;" class="col-xs-12">
+                <div class="alert alert-success">
+                    <a style="font-size:33px" class="pull-right" href="#" onclick="gorunmezyap(event, kullaniciguncellemebasarili)">&times;</a>
+                    <i class="icon-gift"></i><strong>@Resources.Varsayilan.u_guncellestirmabasarili.</strong>
+                </div>
+            </div>
+            <div id="kullaniciguncellemehata" class="col-xs-12" style="display: none;">
+                <div class="alert alert-danger nobottommargin">
+                    <a style="font-size:33px" class="pull-right" href="#" onclick="gorunmezyap(event, kullaniciguncellemehata)">&times;</a>
+                    <i class="icon-remove-sign"></i><strong>@Resources.Varsayilan.u_gunhata.</strong>
+                </div>
+            </div>
+            <div style="text-align: center" class="col-lg-12">
+                <a href="#" id="uye_kullanici_guncelle" onclick="UyeProfilKullaniciGuncelle(event)" class="button button-small button-circle button-green">@Resources.Varsayilan.b_guncelle</a>
+
+            </div>
+        </form>
+    </div>
+</div>
