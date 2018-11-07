@@ -36,7 +36,7 @@
                     {
                         for (int i = 0; i < Model.okullar.Count; i++)
                         {
-                            <tr role="row" class="odd">
+                            <tr role="row" class="odd" style="background-color:white !important;">
                                 <td class="sorting_1">
                                     <a href="@Url.RouteUrl("OkulDetay", new { GrupSeo = Model.seo_url, OkulSeo = Model.okullar[i].seo_url, id = Model.okullar[i].id })" class="siyahyap">@Model.okullar[i].okul_adi</a>
                                 </td>
