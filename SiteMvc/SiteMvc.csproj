@@ -164,6 +164,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\select2.css" />
+    <Content Include="Content\images\app1.png" />
+    <Content Include="Content\images\appplay.png" />
     <Content Include="Content\js\jquery-2.1.0.js" />
     <Content Include="Content\images\kurumsal_kayit_arka_sol.png" />
     <Content Include="Content\css\anasayfa.css" />

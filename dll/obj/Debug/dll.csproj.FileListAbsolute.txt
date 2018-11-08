@@ -50,3 +50,13 @@ C:\Users\berka\OneDrive\Masaüstü\İŞ\EduApi\dll\obj\Debug\dll.csproj.CoreComp
 C:\Users\berka\OneDrive\Masaüstü\İŞ\EduApi\dll\obj\Debug\dll.csproj.CopyComplete
 C:\Users\berka\OneDrive\Masaüstü\İŞ\EduApi\dll\obj\Debug\dll.dll
 C:\Users\berka\OneDrive\Masaüstü\İŞ\EduApi\dll\obj\Debug\dll.pdb
+C:\Users\Dogruyer_5\Desktop\Github\eduadvisor\dll\bin\Debug\dll.dll.config
+C:\Users\Dogruyer_5\Desktop\Github\eduadvisor\dll\bin\Debug\dll.dll
+C:\Users\Dogruyer_5\Desktop\Github\eduadvisor\dll\bin\Debug\dll.pdb
+C:\Users\Dogruyer_5\Desktop\Github\eduadvisor\dll\bin\Debug\EntityFramework.dll
+C:\Users\Dogruyer_5\Desktop\Github\eduadvisor\dll\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dogruyer_5\Desktop\Github\eduadvisor\dll\bin\Debug\EntityFramework.xml
+C:\Users\Dogruyer_5\Desktop\Github\eduadvisor\dll\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dogruyer_5\Desktop\Github\eduadvisor\dll\obj\Debug\dll.csprojResolveAssemblyReference.cache
+C:\Users\Dogruyer_5\Desktop\Github\eduadvisor\dll\obj\Debug\dll.dll
+C:\Users\Dogruyer_5\Desktop\Github\eduadvisor\dll\obj\Debug\dll.pdb
