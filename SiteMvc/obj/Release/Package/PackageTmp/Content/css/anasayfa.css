@@ -72,11 +72,11 @@
         z-index: 102;
         width: 100% !important;
         padding-left: 0;
-        box-shadow: inset 0px -34px 46px -41px rgba(255,255,255,0);
+        /*box-shadow: inset 0px -34px 46px -41px rgba(255,255,255,0);*/
         padding-right: 0;
         padding-top: 5px;
         padding-bottom: 5px;
-        border-radius: 21px;
+        border-radius: 0px;
         background-color:white !important;
         top: 0 !important;
         position: absolute;
@@ -400,10 +400,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .yenitasarimenler {
     background-color: white;
-    border-radius: 15px;
-    margin-top: 18px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    border-radius: 0px;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .mgright60 {
@@ -520,7 +520,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #genel-bilgi-baslik {
     border: 1px solid #ddd;
-    background: #eee;
+    background: white;
     border-radius: 15px;
     padding: 5px;
     float: left;
@@ -540,10 +540,10 @@ h1, h2, h3, h4, h5, h6 {
     }
 
 #genel-bilgi-kurum-adi h5 {
-    text-align: center !important;
+    text-align: left !important;
     font-size: 22px !important;
-    margin-top: 6%;
-    color: black;
+    margin-top: 30px;
+    color: purple;
 }
 
 #genel-bilgi-yildizvepuan p {
@@ -599,7 +599,7 @@ h1, h2, h3, h4, h5, h6 {
 .tablo-genel-bilgi {
     margin-bottom: 0px !important;
     padding: 20px !important;
-    background: #eee !important;
+    background: white !important;
     border-radius: 15px !important;
 }
 
@@ -706,7 +706,7 @@ table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, 
 }
 
 #okul_sonuclari .okul_sonuc {
-    background-color: #efefef !important;
+    background-color: white  !important;
     height: 80px !important;
     padding: 7px !important;
     border-radius: 15px !important;

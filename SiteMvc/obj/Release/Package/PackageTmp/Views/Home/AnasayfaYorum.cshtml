@@ -1,16 +1,16 @@
 ﻿@model List<EduApi.SiteModels.AnasayfaYorumModel>
-<div class="container-fluid col-md-12 margintop20 marginbottom15 padding0">
+<div class="container-fluid col-md-12 padding0">
     <div class="col-sm-12">
         <div class="mlr15">
+            <div class="tabbaslik center">
+                <h3 class="marginbottom0 margintop0" style="border-bottom:1px purple solid;">@Resources.Varsayilan.guncel_yorumlar</h3>
+            </div>
             <div id="anasayfa_guncel_yorumlar">
-                <div class="row">
-                    <div class="tabbaslik paddingsol15">
-                        <h3 class="marginbottom0 margintop0" style="border-bottom:2px purple solid;">@Resources.Varsayilan.guncel_yorumlar</h3>
-                    </div>
+                <div class="row">                
                     @for (int i = 0; i < Model.Count; i++)
                     {
-                        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 anasayfa-yorumlar" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; border-bottom: 2px purple solid;">
-                            <div class="review_strip_single" style="padding-bottom: 0px;">
+                        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 anasayfa-yorumlar center" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; border-bottom: 1px purple solid;">
+                            <div class="review_strip_single">
                                 <img src="~/Content/img/kul_profil/@Model[i].image_url" class="marginright5" height="100" width="100" style="border-radius: 50px" alt="EduAdvisor @Model[i].adi">
                                 <small>- @Model[i].yorum_tarih.ToString("dd MMMMM yyyy") - &nbsp;&nbsp;&nbsp;</small>
                                 <p>
@@ -26,7 +26,7 @@
                                     )
                                 </strong>
                                 <p></p>
-                                <p class="margintopeksi5">
+                                <p class="margintopeksi5" style="font-size:16px;">
                                     @Model[i].yorum_icerik
                                 </p>
                             </div>

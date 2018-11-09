@@ -6,14 +6,14 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\Dogruyer_4\Desktop\EDU\publishsite</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\Dogruyer_2\Desktop\publishedu</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="App_GlobalResources/Varsayilan.en.resx">
-      <publishTime>10/30/2018 17:36:41</publishTime>
+      <publishTime>11/09/2018 11:25:11</publishTime>
     </File>
     <File Include="App_GlobalResources/Varsayilan.resx">
-      <publishTime>10/31/2018 10:32:27</publishTime>
+      <publishTime>10/31/2018 10:32:28</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>02/22/2013 08:43:40</publishTime>
@@ -22,7 +22,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/18/2018 18:43:04</publishTime>
     </File>
     <File Include="bin/EduApi.dll">
-      <publishTime>10/30/2018 13:58:57</publishTime>
+      <publishTime>10/30/2018 13:58:58</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>10/23/2017 13:15:18</publishTime>
@@ -100,7 +100,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/18/2015 20:19:46</publishTime>
     </File>
     <File Include="bin/SiteMvc.dll">
-      <publishTime>10/31/2018 10:56:28</publishTime>
+      <publishTime>11/09/2018 16:01:05</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
       <publishTime>01/28/2015 05:02:42</publishTime>
@@ -139,22 +139,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/17/2013 17:03:52</publishTime>
     </File>
     <File Include="Content/css/anasayfa.css">
-      <publishTime>10/30/2018 17:40:18</publishTime>
+      <publishTime>11/07/2018 12:18:07</publishTime>
     </File>
     <File Include="Content/css/animate.css">
       <publishTime>11/01/2017 18:16:36</publishTime>
     </File>
     <File Include="Content/css/bootstrap-rtl.css">
-      <publishTime>11/01/2017 18:16:36</publishTime>
+      <publishTime>11/09/2018 10:55:20</publishTime>
     </File>
     <File Include="Content/css/bootstrap-social.css">
       <publishTime>11/01/2017 18:16:36</publishTime>
     </File>
     <File Include="Content/css/bootstrap.css">
-      <publishTime>11/01/2017 18:16:36</publishTime>
+      <publishTime>11/06/2018 10:44:46</publishTime>
     </File>
     <File Include="Content/css/bootstrap.min.css">
-      <publishTime>11/01/2017 18:16:36</publishTime>
+      <publishTime>11/09/2018 11:13:09</publishTime>
     </File>
     <File Include="Content/css/calendar.css">
       <publishTime>11/01/2017 18:16:36</publishTime>
@@ -454,13 +454,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/02/2018 14:59:32</publishTime>
     </File>
     <File Include="Content/css/site.css">
-      <publishTime>10/31/2018 10:28:37</publishTime>
+      <publishTime>11/09/2018 11:09:55</publishTime>
     </File>
     <File Include="Content/css/swiper.css">
       <publishTime>11/01/2017 18:16:34</publishTime>
     </File>
     <File Include="Content/css/ust_islev.css">
-      <publishTime>04/03/2018 18:06:30</publishTime>
+      <publishTime>11/05/2018 11:07:15</publishTime>
     </File>
     <File Include="Content/css/vmap.css">
       <publishTime>11/01/2017 18:16:34</publishTime>
@@ -2100,6 +2100,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/images/Alpadia.jpg">
       <publishTime>11/01/2017 18:16:40</publishTime>
     </File>
+    <File Include="Content/images/app1.png">
+      <publishTime>11/08/2018 16:49:39</publishTime>
+    </File>
+    <File Include="Content/images/appplay.png">
+      <publishTime>11/08/2018 16:49:39</publishTime>
+    </File>
     <File Include="Content/images/arama_kriteri.png">
       <publishTime>11/01/2017 18:16:42</publishTime>
     </File>
@@ -3634,7 +3640,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/02/2018 14:59:40</publishTime>
     </File>
     <File Include="Content/js/site.js">
-      <publishTime>10/30/2018 13:56:39</publishTime>
+      <publishTime>10/30/2018 13:56:40</publishTime>
     </File>
     <File Include="Content/js/theia-sticky-sidebar.js">
       <publishTime>11/01/2017 18:16:54</publishTime>
@@ -4309,7 +4315,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/08/2018 18:10:06</publishTime>
     </File>
     <File Include="Views/Home/AnasayfaPin.cshtml">
-      <publishTime>10/30/2018 17:29:11</publishTime>
+      <publishTime>10/30/2018 17:29:12</publishTime>
     </File>
     <File Include="Views/Home/AnasayfaTabHeader.cshtml">
       <publishTime>04/30/2018 14:45:22</publishTime>
@@ -4321,19 +4327,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/06/2018 11:28:37</publishTime>
     </File>
     <File Include="Views/Home/AnasayfaUstAramaBar.cshtml">
-      <publishTime>10/29/2018 02:04:26</publishTime>
+      <publishTime>11/09/2018 10:59:32</publishTime>
     </File>
     <File Include="Views/Home/AnasayfaYorum.cshtml">
-      <publishTime>10/31/2018 10:12:08</publishTime>
+      <publishTime>11/05/2018 13:31:23</publishTime>
     </File>
     <File Include="Views/Home/Enler.cshtml">
-      <publishTime>05/23/2018 16:32:30</publishTime>
+      <publishTime>11/05/2018 11:57:41</publishTime>
     </File>
     <File Include="Views/Home/EnlerItem.cshtml">
       <publishTime>07/05/2018 11:54:44</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>10/30/2018 11:26:31</publishTime>
+      <publishTime>11/08/2018 16:49:39</publishTime>
     </File>
     <File Include="Views/Home/SehirleriGetir.cshtml">
       <publishTime>02/09/2018 18:13:02</publishTime>
@@ -4360,7 +4366,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/30/2018 13:12:24</publishTime>
     </File>
     <File Include="Views/OkulSonuclari/GenelBilgi.cshtml">
-      <publishTime>04/30/2018 15:01:42</publishTime>
+      <publishTime>11/07/2018 12:24:10</publishTime>
     </File>
     <File Include="Views/OkulSonuclari/Index.cshtml">
       <publishTime>04/30/2018 15:02:22</publishTime>
@@ -4411,7 +4417,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/05/2018 17:54:14</publishTime>
     </File>
     <File Include="Views/Shared/Footer.cshtml">
-      <publishTime>10/31/2018 10:55:42</publishTime>
+      <publishTime>11/08/2018 16:49:39</publishTime>
     </File>
     <File Include="Views/Shared/HeaderSosyalIcons.cshtml">
       <publishTime>02/06/2018 17:53:10</publishTime>
@@ -4420,7 +4426,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/14/2018 16:14:58</publishTime>
     </File>
     <File Include="Views/Shared/Menu.cshtml">
-      <publishTime>10/30/2018 11:08:32</publishTime>
+      <publishTime>11/06/2018 10:37:21</publishTime>
     </File>
     <File Include="Views/Shared/Script.cshtml">
       <publishTime>04/10/2018 13:26:14</publishTime>
@@ -4429,13 +4435,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/05/2018 17:54:14</publishTime>
     </File>
     <File Include="Views/Shared/StyleSheet.cshtml">
-      <publishTime>10/31/2018 10:24:45</publishTime>
+      <publishTime>10/31/2018 10:24:46</publishTime>
     </File>
     <File Include="Views/Shared/ValueTextSelectDoldur.cshtml">
       <publishTime>02/09/2018 18:15:18</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>10/30/2018 10:05:58</publishTime>
+      <publishTime>11/06/2018 09:55:25</publishTime>
     </File>
     <File Include="Views/Uye/MesajlariGetir.cshtml">
       <publishTime>02/16/2018 16:16:14</publishTime>
@@ -4525,7 +4531,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/05/2018 17:42:08</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/30/2018 13:59:00</publishTime>
+      <publishTime>11/09/2018 16:01:06</publishTime>
     </File>
   </ItemGroup>
 </Project>

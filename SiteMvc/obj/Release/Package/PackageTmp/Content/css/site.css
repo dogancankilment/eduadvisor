@@ -848,7 +848,7 @@ ul.tab-nav:not(.tab-nav-lg) {
 /*asdasd*/
 .review_strip_single small {
     float: right;
-    font-size: 14px;
+    font-size: 18px;
     margin-top: -10px;
     font-style: italic;
     margin-top: 16px;
@@ -871,11 +871,11 @@ ul.tab-nav:not(.tab-nav-lg) {
 }
 
     .review_strip_single p {
-        margin-bottom: 5px !important;
+        margin-bottom: 2px !important;
     }
 
     .review_strip_single h5 {
-        font-size: 16px;
+        font-size: 21px;
         float: left;
         padding: 0;
         font-family: eduFontLight;
@@ -885,7 +885,7 @@ ul.tab-nav:not(.tab-nav-lg) {
         top: -15px;
         position: inherit;
         left: 0;
-        border: 4px solid #fff;
+        border: 2px solid #fff;
         float: left;
     }
 
@@ -1102,7 +1102,7 @@ footer ul {
 
 body {
     background: #ffffff;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 20px;
     font-family: 'eduFont' !important;
     color: #565a5c;
@@ -1730,7 +1730,7 @@ footer p {
 
 @media(max-width:512px) {
     #mapsyerayarla {
-        margin-top: 107px !important;
+        margin-top: 80px !important;
     }
 }
 
@@ -2536,8 +2536,8 @@ footer #copyrights, footer #copyrights a {
 
 #sabit-aramabar .btn-default, #fix_arama_bar .btn-default {
     height: 55px;
-    border-bottom-left-radius: 30px;
-    border-top-left-radius: 30px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
 }
 
 #sabit-aramabar .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover, #fix_arama_bar .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
@@ -3562,11 +3562,11 @@ input.cropit-image-input {
 #sabit-aramabar .btnOkulAra, #fix_arama_bar .btnOkulAra {
     display: inline-block;
     width: 102%;
-    background-color: #A02F89;
+    background-color: #a02f89;
     border-color: Transparent;
     padding-top: 17px;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 #sabit-aramabar {
@@ -3647,7 +3647,7 @@ input.cropit-image-input {
     position: relative;
     top: -9px;
     background-position-y: bottom;
-    border-radius: 20px;
+    border-radius: 0px;
 }
 
 @media(min-width:1297px) {
@@ -3949,18 +3949,18 @@ input.cropit-image-input {
 .top_gri_alan {
     border: 2px solid #ddd;
     z-index: 99;
-    box-shadow: inset 0px -34px 46px -41px rgba(0,0,0,0.53);
+    /*box-shadow: inset 0px -34px 46px -41px rgba(0,0,0,0.53);*/
     width: 100% !important;
     padding-left: 0;
     padding-right: 0;
     padding-top: 5px;
     padding-bottom: 5px;
-    border-radius: 21px;
+    border-radius: 0px;
     background-color:white !important;
 }
 
     .top_gri_alan hr {
-        height: 8px;
+        height: 3px;
         background-color: #78c6bb;
         margin: 0 !important;
         position: relative;
@@ -4724,11 +4724,10 @@ input.cropit-image-input {
 }
 
 #anasayfa_guncel_yorumlar {
-    border:2px solid gray !important;
-    padding: 20px !important;
-    margin-top: 15px !important;
+    border:1px solid purple !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
     background-color: white !important;
-    border-radius: 15px !important;
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */

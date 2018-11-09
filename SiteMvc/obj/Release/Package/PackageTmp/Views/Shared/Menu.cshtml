@@ -2,7 +2,7 @@
 <header id="header" class="static-sticky ansayfailk noborder">
     <div id="header-wrap" style="height: auto; z-index: 1001">
         <div class="clearfix margintop5">
-            <div class="col-md-12" style="height:60px;z-index:103;">
+            <div class="col-md-12" style="height:40px;z-index:103;">
                 <a href="/" class="menu_mobil_logo">
                     <img src="~/Content/images/yeni-logoyan.png" class="img-responsive max362" alt="EduAdvisor Logo">
                     <img src="~/Content/images/yazisiz_logo.png" class="img-responsive max362 hide yazisizlogo" alt="EduAdvisor Logo">
@@ -164,7 +164,7 @@
             </div>
             <div class="col-md-12 top_gri_alan">
                 <nav id="primary-menu" class="style-2">
-                    <hr />
+                    <hr/>
                     <ul class="anasayfa">
                         @{
                             List<dll.Models.egitim_turleri> EgitimTurleri = (List<dll.Models.egitim_turleri>)ViewBag.EgitimTurleri;
@@ -172,19 +172,19 @@
                         <li style="border-right: 2px solid #bfbfbf;">
                             <a href="@Url.RouteUrl("Home")" ID="home" OnClick="" class="ustmenu">
                                 <img src="~/Content/img/home.png" width="25" height="25" alt="EduAdvisor @Resources.Varsayilan.baslik_anasayfa" />
-                                <span>@Resources.Varsayilan.baslik_anasayfa</span>
+                                <span style="font-size:25px !important;">@Resources.Varsayilan.baslik_anasayfa</span>
                             </a>
                         </li>
                         <li style="border-right: 2px solid #bfbfbf;">
                             <a href="@Url.RouteUrl("OkulSonuclari" ,new { kat=EgitimTurleri.Where(x => x.id == 2).FirstOrDefault().seo_url })" ID="dilokullar" class="ustmenu">
                                 <img src="~/Content/img/dilokulu.png" width="25" height="25" alt="EduAdvisor @(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri.Where(x => x.id == 2).FirstOrDefault().adi : EgitimTurleri.Where(x => x.id == 2).FirstOrDefault().adi_ingilizce)" />
-                                <span>@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri.Where(x => x.id == 2).FirstOrDefault().adi : EgitimTurleri.Where(x => x.id == 2).FirstOrDefault().adi_ingilizce)</span>
+                                <span style="font-size:25px !important;">@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri.Where(x => x.id == 2).FirstOrDefault().adi : EgitimTurleri.Where(x => x.id == 2).FirstOrDefault().adi_ingilizce)</span>
                             </a>
                         </li>
                         <li style="border-right: 2px solid #bfbfbf;">
                             <a href="@Url.RouteUrl("OkulSonuclari", new { kat=EgitimTurleri.Where(x => x.id == 1).FirstOrDefault().seo_url })" ID="universite" ValidationGroup="universite_ana_button" Class="ustmenu">
                                 <img src="~/Content/img/unimenu.png" width="25" height="25" alt="EduAdvisor @(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri.Where(x => x.id == 1).FirstOrDefault().adi : EgitimTurleri.Where(x => x.id == 1).FirstOrDefault().adi_ingilizce)" />
-                                <span>@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri.Where(x => x.id == 1).FirstOrDefault().adi : EgitimTurleri.Where(x => x.id == 1).FirstOrDefault().adi_ingilizce)</span>
+                                <span style="font-size:25px !important;">@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri.Where(x => x.id == 1).FirstOrDefault().adi : EgitimTurleri.Where(x => x.id == 1).FirstOrDefault().adi_ingilizce)</span>
                             </a>
                         </li>
                         <li style="border-right: 2px solid #bfbfbf;" class="menu_logo">
@@ -192,26 +192,26 @@
                                 <img src="~/Content/img/yeniedu.svg" alt="EduAdvisor Logo" height="88" />
                                 <br />
                                 <span>
-                                    <span class="erguvan lowercase"><strong>edu</strong></span><span class="turkuaz lowercase"><strong>advisor</strong></span>
+                                    <span class="erguvan lowercase" style="font-size:25px !important;"><strong>edu</strong></span><span class="turkuaz lowercase"style="font-size:25px !important;"><strong>advisor</strong></span>
                                 </span>
                             </a>
                         </li>
                         <li style="border-right: 2px solid #bfbfbf;">
                             <a href="@Url.RouteUrl("OkulSonuclari" , new { kat=EgitimTurleri.Where(x => x.id == 3).FirstOrDefault().seo_url })" ID="kolejsonuclari" ValidationGroup="kolejsonuclari_ana_button" Class="ustmenu">
                                 <img src="~/Content/img/kolejmenu.png" width="25" height="25" alt="EduAdvisor @(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri.Where(x => x.id == 3).FirstOrDefault().adi : EgitimTurleri.Where(x => x.id == 3).FirstOrDefault().adi_ingilizce)" />
-                                <span>@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri.Where(x => x.id == 3).FirstOrDefault().adi : EgitimTurleri.Where(x => x.id == 3).FirstOrDefault().adi_ingilizce)</span>
+                                <span style="font-size:25px !important;">@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri.Where(x => x.id == 3).FirstOrDefault().adi : EgitimTurleri.Where(x => x.id == 3).FirstOrDefault().adi_ingilizce)</span>
                             </a>
                         </li>
                         <li style="border-right: 2px solid #bfbfbf;">
                             <a href="@Url.RouteUrl("OkulSonuclari" , new { kat=EgitimTurleri.Where(x => x.id == 4).FirstOrDefault().seo_url })" ID="lisesonuclari" ValidationGroup="lisesonuclari_ana_button" Class="ustmenu">
                                 <img src="~/Content/img/lisemenu.png" width="25" height="25" alt="EduAdvisor @(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri.Where(x => x.id == 4).FirstOrDefault().adi : EgitimTurleri.Where(x => x.id == 4).FirstOrDefault().adi_ingilizce)" />
-                                <span>@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri.Where(x => x.id == 4).FirstOrDefault().adi : EgitimTurleri.Where(x => x.id == 4).FirstOrDefault().adi_ingilizce)</span>
+                                <span style="font-size:25px !important;">@(HttpContext.Current.Session["Dil"].ToString() == "tr-TR" ? EgitimTurleri.Where(x => x.id == 4).FirstOrDefault().adi : EgitimTurleri.Where(x => x.id == 4).FirstOrDefault().adi_ingilizce)</span>
                             </a>
                         </li>
                         <li>
                             <a class="ustmenu">
                                 <img src="~/Content/img/digermenu.png" width="25" height="25" alt="EduAdvisor @Resources.Varsayilan.baslik_diger" />
-                                <span>@Resources.Varsayilan.baslik_diger</span>
+                                <span style="font-size:25px !important;">@Resources.Varsayilan.baslik_diger</span>
                             </a>
                             <ul id="yanliste" style="display: none;">
                                 @{
