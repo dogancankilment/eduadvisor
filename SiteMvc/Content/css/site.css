@@ -1102,7 +1102,7 @@ footer ul {
 
 body {
     background: #ffffff;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 20px;
     font-family: 'eduFont' !important;
     color: #565a5c;
@@ -2536,8 +2536,8 @@ footer #copyrights, footer #copyrights a {
 
 #sabit-aramabar .btn-default, #fix_arama_bar .btn-default {
     height: 55px;
-    border-bottom-left-radius: 30px;
-    border-top-left-radius: 30px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
 }
 
 #sabit-aramabar .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover, #fix_arama_bar .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
